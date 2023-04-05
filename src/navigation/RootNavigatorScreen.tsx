@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -28,19 +28,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontWeight: 'bold',
     marginBottom: 100,
+    fontWeight: 'bold',
   },
   button: {
-    backgroundColor: 'white',
-    borderRadius: 30,
+    width: Platform.OS === 'ios' ? '100%' : '80%',
     paddingHorizontal: 20,
     paddingVertical: 10,
-    width: '100%',
+    borderRadius: 30,
+    backgroundColor: 'white',
   },
   buttonTitle: {
-    fontSize: 20,
+    width: Platform.OS === 'ios' ? '50%' : '100%',
     color: 'black',
     fontWeight: 'bold',
+    fontSize: 20,
+    textAlign: 'center',
   },
 });
