@@ -1,10 +1,11 @@
-import { RootNavigatorScreen } from './src/navigation/RootNavigatorScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { RootNavigator } from './src/navigation/RootNavigator';
 
 export default function App() {
   return (
-    <>
-    <RootNavigatorScreen/>
-    </>
+    <NavigationContainer>
+      <RootNavigator/>
+    </NavigationContainer>
   );
 }
 
