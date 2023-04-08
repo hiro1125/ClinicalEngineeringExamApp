@@ -45,11 +45,11 @@ export const ExamMenuScreen = ({navigation}:Props) => {
   const buttons = [
     {
       title: '分野別',
-      onPress: () => navigation.navigate('Exam1')
+      onPress: () => navigation.navigate('ByField')
     },
     {
       title: '90問試験',
-      onPress: () => navigation.navigate('Exam2')
+      onPress: () => navigation.navigate('NinetyQuestionTest')
     },
     {
       title: '戻る',
@@ -57,7 +57,69 @@ export const ExamMenuScreen = ({navigation}:Props) => {
     },
   ];
   return (
-    <AppScreen title="試験選択画面" buttons={buttons} navigation={navigation} />
+    <AppScreen title="試験選択" buttons={buttons} navigation={navigation} />
+  );
+};
+
+export const ByFieldScreen = ({navigation}: Props) => {
+  const buttons = [
+    {
+      title: '医学概論',
+      onPress: () => navigation.navigate('IntroductionToMedicine'),
+    },
+    {
+      title: '臨床医学総論',
+      onPress: () => navigation.navigate('ClinicalMedicineOverview'),
+    },
+    {
+      title: '生体計測装置学',
+      onPress: () => navigation.navigate('BiomedicalMeasurementInstrumentation'),
+    },
+    {
+      title: '医用治療機器学',
+      onPress: () => navigation.navigate('MedicalTherapeuticEquipment'),
+    },
+    {
+      title: '医用機器安全管理学',
+      onPress: () => navigation.navigate('MedDevSafety'),
+    },
+    {
+      title: '医用電気電子工学',
+      onPress: () => navigation.navigate('MedicalElectricalAndElectronicEngineering'),
+    },
+    {
+      title: '生体機能代行装置学',
+      onPress: () => navigation.navigate('BiologicalFunctionSubstitutionEquipment'),
+    },
+    {
+      title: '医用機械工学',
+      onPress: () => navigation.navigate('MedicalMechanicalEngineering'),
+    },
+    {
+      title: '生体物性材料工学',
+      onPress: () => navigation.navigate('BiologicalMaterialScienceAndEngineering'),
+    },
+    {
+      title: '戻る',
+      onPress: () => navigation.goBack()
+    },
+  ];
+  return <AppScreen title="分野別" buttons={buttons} navigation={navigation} />;
+};
+
+export const NinetyQuestionTestScreen = ({navigation}:Props) => {
+  const buttons = [
+    {
+      title: 'スタート',
+      onPress: () => navigation.navigate('NinetyQuestionTest')
+    },
+    {
+      title: '戻る',
+      onPress: () => navigation.goBack()
+    },
+  ];
+  return (
+    <AppScreen title="90問試験" buttons={buttons} navigation={navigation} />
   );
 };
 
@@ -71,7 +133,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    marginBottom: 100,
+    marginTop: 35,
+    marginBottom: 40,
     fontWeight: 'bold',
   },
   button: {
@@ -83,7 +146,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   buttonTitle: {
-    width: Platform.OS === 'ios' ? '50%' : '100%',
+    width: Platform.OS === 'ios' ? '60%' : '100%',
     color: 'black',
     fontWeight: 'bold',
     fontSize: 20,
