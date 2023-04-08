@@ -61,6 +61,7 @@ export const ExamMenuScreen = ({navigation}:Props) => {
   );
 };
 
+/** ByField画面 */
 export const ByFieldScreen = ({navigation}: Props) => {
   const buttons = [
     {
@@ -107,6 +108,7 @@ export const ByFieldScreen = ({navigation}: Props) => {
   return <AppScreen title="分野別" buttons={buttons} navigation={navigation} />;
 };
 
+/** NinetyQuestionTest画面 */
 export const NinetyQuestionTestScreen = ({navigation}:Props) => {
   const buttons = [
     {
