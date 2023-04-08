@@ -8,13 +8,18 @@ type Props = {
   navigation: NativeStackNavigationProp<RootStackParamList>;
 };
 
-const AppScreen = ({title,buttons}:ScreenProps & Props) => {
+const AppScreen = ({ title, buttons }: ScreenProps & Props) => {
   return (
-    <LinearGradient colors={['#a7ddff', '#2d82a8']} style={styles.linearGradient}>
+    <LinearGradient
+      colors={['#a7ddff', '#2d82a8']}
+      style={styles.linearGradient}
+    >
       <View style={styles.container}>
-        <Text h3 style={styles.text}>{title}</Text>
-        {buttons.map((button,key) => (
-            <Button
+        <Text h3 style={styles.text}>
+          {title}
+        </Text>
+        {buttons.map((button, key) => (
+          <Button
             key={key}
             title={button.title}
             onPress={button.onPress}
@@ -28,41 +33,45 @@ const AppScreen = ({title,buttons}:ScreenProps & Props) => {
 };
 
 /** Home画面 */
-export const HomeScreen = ({navigation}:Props) => {
+export const HomeScreen = ({ navigation }: Props) => {
   const buttons = [
     {
       title: 'スタート',
-      onPress: () => navigation.navigate('ExamMenu')
-    }
+      onPress: () => navigation.navigate('ExamMenu'),
+    },
   ];
   return (
-    <AppScreen title="臨床工学技士国家試験対策" buttons={buttons} navigation={navigation} />
+    <AppScreen
+      title='臨床工学技士国家試験対策'
+      buttons={buttons}
+      navigation={navigation}
+    />
   );
 };
 
 /** ExamMenu画面 */
-export const ExamMenuScreen = ({navigation}:Props) => {
+export const ExamMenuScreen = ({ navigation }: Props) => {
   const buttons = [
     {
       title: '分野別',
-      onPress: () => navigation.navigate('ByField')
+      onPress: () => navigation.navigate('ByField'),
     },
     {
       title: '90問試験',
-      onPress: () => navigation.navigate('NinetyQuestionTest')
+      onPress: () => navigation.navigate('NinetyQuestionTest'),
     },
     {
       title: '戻る',
-      onPress: () => navigation.goBack()
+      onPress: () => navigation.goBack(),
     },
   ];
   return (
-    <AppScreen title="試験選択" buttons={buttons} navigation={navigation} />
+    <AppScreen title='試験選択' buttons={buttons} navigation={navigation} />
   );
 };
 
 /** ByField画面 */
-export const ByFieldScreen = ({navigation}: Props) => {
+export const ByFieldScreen = ({ navigation }: Props) => {
   const buttons = [
     {
       title: '医学概論',
@@ -74,7 +83,8 @@ export const ByFieldScreen = ({navigation}: Props) => {
     },
     {
       title: '生体計測装置学',
-      onPress: () => navigation.navigate('BiomedicalMeasurementInstrumentation'),
+      onPress: () =>
+        navigation.navigate('BiomedicalMeasurementInstrumentation'),
     },
     {
       title: '医用治療機器学',
@@ -86,11 +96,13 @@ export const ByFieldScreen = ({navigation}: Props) => {
     },
     {
       title: '医用電気電子工学',
-      onPress: () => navigation.navigate('MedicalElectricalAndElectronicEngineering'),
+      onPress: () =>
+        navigation.navigate('MedicalElectricalAndElectronicEngineering'),
     },
     {
       title: '生体機能代行装置学',
-      onPress: () => navigation.navigate('BiologicalFunctionSubstitutionEquipment'),
+      onPress: () =>
+        navigation.navigate('BiologicalFunctionSubstitutionEquipment'),
     },
     {
       title: '医用機械工学',
@@ -98,30 +110,31 @@ export const ByFieldScreen = ({navigation}: Props) => {
     },
     {
       title: '生体物性材料工学',
-      onPress: () => navigation.navigate('BiologicalMaterialScienceAndEngineering'),
+      onPress: () =>
+        navigation.navigate('BiologicalMaterialScienceAndEngineering'),
     },
     {
       title: '戻る',
-      onPress: () => navigation.goBack()
+      onPress: () => navigation.goBack(),
     },
   ];
-  return <AppScreen title="分野別" buttons={buttons} navigation={navigation} />;
+  return <AppScreen title='分野別' buttons={buttons} navigation={navigation} />;
 };
 
 /** NinetyQuestionTest画面 */
-export const NinetyQuestionTestScreen = ({navigation}:Props) => {
+export const NinetyQuestionTestScreen = ({ navigation }: Props) => {
   const buttons = [
     {
       title: 'スタート',
-      onPress: () => navigation.navigate('NinetyQuestionTest')
+      onPress: () => navigation.navigate('NinetyQuestionTest'),
     },
     {
       title: '戻る',
-      onPress: () => navigation.goBack()
+      onPress: () => navigation.goBack(),
     },
   ];
   return (
-    <AppScreen title="90問試験" buttons={buttons} navigation={navigation} />
+    <AppScreen title='90問試験' buttons={buttons} navigation={navigation} />
   );
 };
 
