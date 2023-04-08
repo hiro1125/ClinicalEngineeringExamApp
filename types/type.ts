@@ -2,9 +2,17 @@
 export type RootStackParamList = {
   Home: undefined;
   ExamMenu: undefined;
-  Exam1: undefined;
-  Exam2: undefined;
-  Exam3: undefined;
+  ByField: undefined;
+  NinetyQuestionTest: undefined;
+  IntroductionToMedicine: undefined;
+  ClinicalMedicineOverview: undefined;
+  BiomedicalMeasurementInstrumentation: undefined;
+  MedicalTherapeuticEquipment: undefined;
+  MedDevSafety: undefined;
+  MedicalElectricalAndElectronicEngineering: undefined;
+  BiologicalFunctionSubstitutionEquipment: undefined;
+  MedicalMechanicalEngineering: undefined;
+  BiologicalMaterialScienceAndEngineering: undefined;
 };
 
 /** Screen画面のProps */
