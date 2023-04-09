@@ -1,9 +1,27 @@
-import { View, StyleSheet, Platform } from 'react-native';
+import { View, StyleSheet, Platform, FlatList } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Props, ScreenProps } from '../../types/type';
 
 const AppScreen = ({ title, buttons, navigation }: ScreenProps & Props) => {
+  const renderItem = ({ item, index }: any) => {
+    return (
+      <Button
+        key={index}
+        title={item.title}
+        onPress={() => {
+          if (item.title === '戻る') {
+            navigation.goBack();
+          } else {
+            navigation.navigate(item.navigationName);
+          }
+        }}
+        buttonStyle={styles.button}
+        titleStyle={styles.buttonTitle}
+      />
+    );
+  };
+
   return (
     <LinearGradient
       colors={['#a7ddff', '#2d82a8']}
@@ -13,21 +31,11 @@ const AppScreen = ({ title, buttons, navigation }: ScreenProps & Props) => {
         <Text h3 style={styles.text}>
           {title}
         </Text>
-        {buttons.map((item, key) => (
-          <Button
-            key={key}
-            title={item.title}
-            onPress={() => {
-              if (item.title === '戻る') {
-                navigation.goBack();
-              } else {
-                navigation.navigate(item.navigationName);
-              }
-            }}
-            buttonStyle={styles.button}
-            titleStyle={styles.buttonTitle}
-          />
-        ))}
+        <FlatList
+          data={buttons}
+          renderItem={renderItem}
+          keyExtractor={(_, index) => index.toString()}
+        />
       </View>
     </LinearGradient>
   );
