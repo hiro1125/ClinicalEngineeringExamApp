@@ -1,3 +1,5 @@
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+
 /** アプリケーションのルーティング */
 export type RootStackParamList = {
   Home: undefined;
@@ -15,12 +17,29 @@ export type RootStackParamList = {
   BiologicalMaterialScienceAndEngineering: undefined;
 };
 
-type Button = {
-  title: string;
-  navigationName: string;
+export type Props = {
+  navigation: NativeStackNavigationProp<RootStackParamList>;
 };
+
+export type Button = {
+  title: string;
+  navigationName:
+    | 'Home'
+    | 'ExamMenu'
+    | 'ByField'
+    | 'NinetyQuestionTest'
+    | 'IntroductionToMedicine'
+    | 'ClinicalMedicineOverview'
+    | 'BiomedicalMeasurementInstrumentation'
+    | 'MedicalTherapeuticEquipment'
+    | 'MedDevSafety'
+    | 'MedicalElectricalAndElectronicEngineering'
+    | 'BiologicalFunctionSubstitutionEquipment'
+    | 'MedicalMechanicalEngineering'
+    | 'BiologicalMaterialScienceAndEngineering';
+}[];
 
 export type ScreenProps = {
   title: string;
-  buttons: Button[];
+  buttons: Button;
 };
