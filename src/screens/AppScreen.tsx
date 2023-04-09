@@ -1,20 +1,20 @@
 import { View, StyleSheet, Platform } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList, ScreenProps } from '../../types/type';
 import {
   byFieldButton,
   examMenuButton,
   ninetyQuestionTestButton,
   startButton,
 } from '../contents';
+import { RootStackParamList, ScreenProps } from '../../types/type';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 type Props = {
   navigation: NativeStackNavigationProp<RootStackParamList>;
 };
 
-const AppScreen = ({ title, buttons }: ScreenProps & Props) => {
+const AppScreen = ({ title, buttons, navigation }: ScreenProps & Props) => {
   return (
     <LinearGradient
       colors={['#a7ddff', '#2d82a8']}
@@ -28,7 +28,7 @@ const AppScreen = ({ title, buttons }: ScreenProps & Props) => {
           <Button
             key={key}
             title={button.title}
-            onPress={button.onPress}
+            onPress={() => navigation.navigate(button.navigationName)}
             buttonStyle={styles.button}
             titleStyle={styles.buttonTitle}
           />
