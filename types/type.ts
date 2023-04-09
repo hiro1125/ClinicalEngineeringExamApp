@@ -15,11 +15,12 @@ export type RootStackParamList = {
   BiologicalMaterialScienceAndEngineering: undefined;
 };
 
-/** Screen画面のProps */
+type Button = {
+  title: string;
+  navigationName: string;
+};
+
 export type ScreenProps = {
   title: string;
-  buttons: {
-    title: string;
-    onPress: () => void;
-  }[];
+  buttons: Button[];
 };
