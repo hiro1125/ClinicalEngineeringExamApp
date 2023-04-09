@@ -1,11 +1,12 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../../types/type';
+import { Props, RootStackParamList } from '../../types/type';
 import {
-  ByFieldScreen,
-  ExamMenuScreen,
-  HomeScreen,
-  NinetyQuestionTestScreen,
-} from '../screens/AppScreen';
+  byFieldButton,
+  examMenuButton,
+  ninetyQuestionTestButton,
+  startButton,
+} from '../contents';
+import AppScreen from '../screens/AppScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -33,5 +34,45 @@ export const RootNavigator = () => {
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
+  );
+};
+
+/** Home画面 */
+export const HomeScreen = ({ navigation }: Props) => {
+  return (
+    <AppScreen
+      title='臨床工学技士国家試験対策'
+      buttons={startButton}
+      navigation={navigation}
+    />
+  );
+};
+
+/** ExamMenu画面 */
+export const ExamMenuScreen = ({ navigation }: Props) => {
+  return (
+    <AppScreen
+      title='試験選択'
+      buttons={examMenuButton}
+      navigation={navigation}
+    />
+  );
+};
+
+/** ByField画面 */
+export const ByFieldScreen = ({ navigation }: Props) => {
+  return (
+    <AppScreen title='分野別' buttons={byFieldButton} navigation={navigation} />
+  );
+};
+
+/** NinetyQuestionTest画面 */
+export const NinetyQuestionTestScreen = ({ navigation }: Props) => {
+  return (
+    <AppScreen
+      title='90問試験'
+      buttons={ninetyQuestionTestButton}
+      navigation={navigation}
+    />
   );
 };

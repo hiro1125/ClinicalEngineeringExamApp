@@ -1,5 +1,7 @@
+import { Button } from '../../types/type';
+
 // /** Home画面 */
-export const startButton = [
+export const startButton: Button = [
   {
     title: 'スタート',
     navigationName: 'ExamMenu',
@@ -7,7 +9,7 @@ export const startButton = [
 ];
 
 // /** ExamMenu画面 */
-export const examMenuButton = [
+export const examMenuButton: Button = [
   {
     title: '分野別',
     navigationName: 'ByField',
@@ -23,7 +25,7 @@ export const examMenuButton = [
 ];
 
 // /** ByField画面 */
-export const byFieldButton = [
+export const byFieldButton: Button = [
   {
     title: '医学概論',
     navigationName: 'IntroductionToMedicine',
@@ -67,7 +69,7 @@ export const byFieldButton = [
 ];
 
 /** NinetyQuestionTest画面 */
-export const ninetyQuestionTestButton = [
+export const ninetyQuestionTestButton: Button = [
   {
     title: 'スタート',
     navigationName: 'NinetyQuestionTest',
