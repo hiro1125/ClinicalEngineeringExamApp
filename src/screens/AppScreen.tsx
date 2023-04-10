@@ -4,7 +4,30 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Props, ScreenProps } from '../../types/type';
 
 const AppScreen = ({ title, buttons, navigation }: ScreenProps & Props) => {
-  const renderItem = ({ item, index }: any) => {
+  type Button = {
+    title: string;
+    navigationName:
+      | 'Home'
+      | 'ExamMenu'
+      | 'ByField'
+      | 'NinetyQuestionTest'
+      | 'IntroductionToMedicine'
+      | 'ClinicalMedicineOverview'
+      | 'BiomedicalMeasurementInstrumentation'
+      | 'MedicalTherapeuticEquipment'
+      | 'MedDevSafety'
+      | 'MedicalElectricalAndElectronicEngineering'
+      | 'BiologicalFunctionSubstitutionEquipment'
+      | 'MedicalMechanicalEngineering'
+      | 'BiologicalMaterialScienceAndEngineering';
+  };
+
+  type RenderItemProps = {
+    item: Button;
+    index: number;
+  };
+
+  const renderItem = ({ item, index }: RenderItemProps) => {
     return (
       <Button
         key={index}
@@ -53,9 +76,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    marginTop: 35,
+    marginTop: 50,
     marginBottom: 40,
     fontWeight: 'bold',
+    lineHeight: 100,
   },
   button: {
     width: Platform.OS === 'ios' ? '100%' : '80%',
@@ -64,12 +88,18 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: 'white',
     marginBottom: 20,
+    elevation: 5,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
   },
   buttonTitle: {
-    width: Platform.OS === 'ios' ? '60%' : '100%',
+    width: Platform.OS === 'ios' ? '70%' : '100%',
     color: 'black',
     fontWeight: 'bold',
     fontSize: 20,
     textAlign: 'center',
+    textTransform: 'uppercase',
   },
 });
