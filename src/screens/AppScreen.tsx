@@ -15,7 +15,7 @@ const AppScreen = ({
       | 'Home'
       | 'ExamMenu'
       | 'ByField'
-      | 'NinetyQuestionTest'
+      | 'QuestionTest'
       | 'IntroductionToMedicine'
       | 'ClinicalMedicineOverview'
       | 'BiomedicalMeasurementInstrumentation'

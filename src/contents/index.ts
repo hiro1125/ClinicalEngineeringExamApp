@@ -16,7 +16,7 @@ export const examMenuButton: Button = [
   },
   {
     title: '90問試験',
-    navigationName: 'NinetyQuestionTest',
+    navigationName: 'QuestionTest',
   },
   {
     title: '戻る',
@@ -72,7 +72,7 @@ export const byFieldButton: Button = [
 export const questionTestButton: Button = [
   {
     title: 'スタート',
-    navigationName: 'NinetyQuestionTest',
+    navigationName: 'QuestionTest',
   },
   {
     title: '戻る',

@@ -6,7 +6,7 @@ export type RootStackParamList = {
   Home: undefined;
   ExamMenu: undefined;
   ByField: undefined;
-  NinetyQuestionTest: undefined;
+  QuestionTest: undefined;
   IntroductionToMedicine: undefined;
   ClinicalMedicineOverview: undefined;
   BiomedicalMeasurementInstrumentation: undefined;
@@ -16,6 +16,7 @@ export type RootStackParamList = {
   BiologicalFunctionSubstitutionEquipment: undefined;
   MedicalMechanicalEngineering: undefined;
   BiologicalMaterialScienceAndEngineering: undefined;
+  NinetyQuestionTest?: undefined;
 };
 
 export type Props = {
@@ -28,7 +29,7 @@ export type Button = {
     | 'Home'
     | 'ExamMenu'
     | 'ByField'
-    | 'NinetyQuestionTest'
+    | 'QuestionTest'
     | 'IntroductionToMedicine'
     | 'ClinicalMedicineOverview'
     | 'BiomedicalMeasurementInstrumentation'
