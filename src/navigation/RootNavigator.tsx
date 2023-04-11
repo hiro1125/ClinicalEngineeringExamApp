@@ -3,7 +3,7 @@ import { Props, RootStackParamList } from '../../types/type';
 import {
   byFieldButton,
   examMenuButton,
-  ninetyQuestionTestButton,
+  questionTestButton,
   startButton,
 } from '../contents';
 import AppScreen from '../screens/AppScreen';
@@ -74,7 +74,7 @@ export const NinetyQuestionTestScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='90問試験'
-      buttons={ninetyQuestionTestButton}
+      buttons={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />

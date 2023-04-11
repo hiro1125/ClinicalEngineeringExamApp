@@ -68,8 +68,8 @@ export const byFieldButton: Button = [
   },
 ];
 
-/** NinetyQuestionTest画面 */
-export const ninetyQuestionTestButton: Button = [
+/** QuestionTest画面 */
+export const questionTestButton: Button = [
   {
     title: 'スタート',
     navigationName: 'NinetyQuestionTest',
