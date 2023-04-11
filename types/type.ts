@@ -43,5 +43,5 @@ export type Button = {
 export type ScreenProps = {
   title: string;
   buttons: Button;
-  style?: ViewStyle | TextStyle;
+  textStyle?: ViewStyle | TextStyle;
 };

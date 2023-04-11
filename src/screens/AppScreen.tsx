@@ -7,7 +7,7 @@ const AppScreen = ({
   title,
   buttons,
   navigation,
-  style,
+  textStyle,
 }: ScreenProps & Props) => {
   type Button = {
     title: string;
@@ -56,7 +56,7 @@ const AppScreen = ({
       style={styles.linearGradient}
     >
       <View style={styles.container}>
-        <Text h3 style={[styles.text, style]}>
+        <Text h3 style={[styles.text, textStyle]}>
           {title}
         </Text>
         <FlatList

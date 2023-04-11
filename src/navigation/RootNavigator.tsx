@@ -45,7 +45,7 @@ export const HomeScreen = ({ navigation }: Props) => {
       title='臨床工学技士国家試験対策'
       buttons={startButton}
       navigation={navigation}
-      style={styles.homeScreen}
+      textStyle={styles.homeScreenText}
     />
   );
 };
@@ -57,7 +57,7 @@ export const ExamMenuScreen = ({ navigation }: Props) => {
       title='試験選択'
       buttons={examMenuButton}
       navigation={navigation}
-      style={styles.examination}
+      textStyle={styles.examination}
     />
   );
 };
@@ -76,19 +76,15 @@ export const NinetyQuestionTestScreen = ({ navigation }: Props) => {
       title='90問試験'
       buttons={ninetyQuestionTestButton}
       navigation={navigation}
-      style={styles.examination}
+      textStyle={styles.examination}
     />
   );
 };
 
 const styles = StyleSheet.create({
-  homeScreen: {
-    alignItems: 'center',
-    justifyContent: 'center',
+  homeScreenText: {
     lineHeight: 500,
-    marginTop: 0,
     marginBottom: 0,
-    paddingTop: 50,
   },
   examination: {
     lineHeight: 300,
