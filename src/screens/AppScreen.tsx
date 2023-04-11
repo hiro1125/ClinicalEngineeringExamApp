@@ -3,7 +3,12 @@ import { Text, Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Props, ScreenProps } from '../../types/type';
 
-const AppScreen = ({ title, buttons, navigation }: ScreenProps & Props) => {
+const AppScreen = ({
+  title,
+  buttons,
+  navigation,
+  style,
+}: ScreenProps & Props) => {
   type Button = {
     title: string;
     navigationName:
@@ -51,7 +56,7 @@ const AppScreen = ({ title, buttons, navigation }: ScreenProps & Props) => {
       style={styles.linearGradient}
     >
       <View style={styles.container}>
-        <Text h3 style={styles.text}>
+        <Text h3 style={[styles.text, style]}>
           {title}
         </Text>
         <FlatList
@@ -79,7 +84,6 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginBottom: 40,
     fontWeight: 'bold',
-    lineHeight: 100,
   },
   button: {
     width: Platform.OS === 'ios' ? '100%' : '80%',
