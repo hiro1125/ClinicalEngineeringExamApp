@@ -1,4 +1,5 @@
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { TextStyle, ViewStyle } from 'react-native';
 
 /** アプリケーションのルーティング */
 export type RootStackParamList = {
@@ -42,4 +43,5 @@ export type Button = {
 export type ScreenProps = {
   title: string;
   buttons: Button;
+  style?: ViewStyle | TextStyle;
 };
