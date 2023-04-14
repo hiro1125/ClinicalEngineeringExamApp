@@ -20,7 +20,7 @@ const AppScreen = ({
         key={index}
         title={item.title}
         onPress={() => {
-          if (item.title === '戻る') {
+          if (item.title === 'Return_Button') {
             navigation.goBack();
           } else {
             navigation.navigate(item.navigationName);
