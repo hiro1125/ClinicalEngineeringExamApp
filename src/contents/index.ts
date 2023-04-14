@@ -80,4 +80,4 @@ export const questionTestButton: RouteButton[] = [
   },
 ];
 
-export const Return_Button = '戻る';
+export const RETURN_BUTTON = '戻る';
