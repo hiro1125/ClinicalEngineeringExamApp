@@ -23,7 +23,7 @@ export type Props = {
   navigation: NativeStackNavigationProp<RootStackParamList>;
 };
 
-export type Button = {
+export type RouteButton = {
   title: string;
   navigationName:
     | 'Home'
@@ -39,10 +39,10 @@ export type Button = {
     | 'BiologicalFunctionSubstitutionEquipment'
     | 'MedicalMechanicalEngineering'
     | 'BiologicalMaterialScienceAndEngineering';
-}[];
+};
 
 export type ScreenProps = {
   title: string;
-  buttons: Button;
+  buttons: RouteButton[];
   textStyle?: ViewStyle | TextStyle;
 };

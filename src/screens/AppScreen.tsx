@@ -1,7 +1,12 @@
 import { View, StyleSheet, Platform, FlatList } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Props, ScreenProps } from '../../types/type';
+import { Props, RouteButton, ScreenProps } from '../../types/type';
+
+type RenderItemProps = {
+  item: RouteButton;
+  index: number;
+};
 
 const AppScreen = ({
   title,
@@ -9,29 +14,6 @@ const AppScreen = ({
   navigation,
   textStyle,
 }: ScreenProps & Props) => {
-  type Button = {
-    title: string;
-    navigationName:
-      | 'Home'
-      | 'ExamMenu'
-      | 'ByField'
-      | 'QuestionTest'
-      | 'IntroductionToMedicine'
-      | 'ClinicalMedicineOverview'
-      | 'BiomedicalMeasurementInstrumentation'
-      | 'MedicalTherapeuticEquipment'
-      | 'MedDevSafety'
-      | 'MedicalElectricalAndElectronicEngineering'
-      | 'BiologicalFunctionSubstitutionEquipment'
-      | 'MedicalMechanicalEngineering'
-      | 'BiologicalMaterialScienceAndEngineering';
-  };
-
-  type RenderItemProps = {
-    item: Button;
-    index: number;
-  };
-
   const renderItem = ({ item, index }: RenderItemProps) => {
     return (
       <Button

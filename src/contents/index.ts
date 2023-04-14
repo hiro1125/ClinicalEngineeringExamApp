@@ -1,7 +1,7 @@
-import { Button } from '../../types/type';
+import { RouteButton } from '../../types/type';
 
 // /** Home画面 */
-export const startButton: Button = [
+export const startButton: RouteButton[] = [
   {
     title: 'スタート',
     navigationName: 'ExamMenu',
@@ -9,7 +9,7 @@ export const startButton: Button = [
 ];
 
 // /** ExamMenu画面 */
-export const examMenuButton: Button = [
+export const examMenuButton: RouteButton[] = [
   {
     title: '分野別',
     navigationName: 'ByField',
@@ -25,7 +25,7 @@ export const examMenuButton: Button = [
 ];
 
 // /** ByField画面 */
-export const byFieldButton: Button = [
+export const byFieldButton: RouteButton[] = [
   {
     title: '医学概論',
     navigationName: 'IntroductionToMedicine',
@@ -69,7 +69,7 @@ export const byFieldButton: Button = [
 ];
 
 /** QuestionTest画面 */
-export const questionTestButton: Button = [
+export const questionTestButton: RouteButton[] = [
   {
     title: 'スタート',
     navigationName: 'QuestionTest',
