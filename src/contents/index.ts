@@ -16,7 +16,7 @@ export const examMenuButton: RouteButton[] = [
   },
   {
     title: '90問試験',
-    navigationName: 'QuestionTest',
+    navigationName: 'NinetyQuestionTest',
   },
   {
     title: '戻る',
@@ -79,3 +79,5 @@ export const questionTestButton: RouteButton[] = [
     navigationName: 'ExamMenu',
   },
 ];
+
+export const Return_Button = '戻る';
