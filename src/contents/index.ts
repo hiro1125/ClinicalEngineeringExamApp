@@ -33,7 +33,7 @@ export const examMenuButton: RouteButton[] = [
     navigationName: 'NinetyQuestionTest',
   },
   {
-    title: '戻る',
+    title: RETURN_BUTTON,
     navigationName: 'Home',
   },
 ];
