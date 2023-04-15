@@ -75,7 +75,7 @@ export const questionTestButton: RouteButton[] = [
     navigationName: 'QuestionTest',
   },
   {
-    title: '戻る',
+    title: 'RETURN_BUTTON',
     navigationName: 'ExamMenu',
   },
 ];
