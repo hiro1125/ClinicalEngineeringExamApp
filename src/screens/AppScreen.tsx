@@ -2,6 +2,7 @@ import { View, StyleSheet, Platform, FlatList } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Props, RouteButton, ScreenProps } from '../../types/type';
+import { RETURN_BUTTON } from '../contents';
 
 type RenderItemProps = {
   item: RouteButton;
@@ -20,7 +21,7 @@ const AppScreen = ({
         key={index}
         title={item.title}
         onPress={() => {
-          if (item.title === 'RETURN_BUTTON') {
+          if (item.title === RETURN_BUTTON) {
             navigation.goBack();
           } else {
             navigation.navigate(item.navigationName);
