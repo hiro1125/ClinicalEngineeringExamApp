@@ -1,9 +1,23 @@
 import { RouteButton } from '../../types/type';
 
+export const RETURN_BUTTON = '戻る';
+
 // /** Home画面 */
 export const startButton: RouteButton[] = [
   {
     title: 'スタート',
+    navigationName: 'ExamMenu',
+  },
+];
+
+/** QuestionTest画面 */
+export const questionTestButton: RouteButton[] = [
+  {
+    title: 'スタート',
+    navigationName: 'QuestionTest',
+  },
+  {
+    title: '戻る',
     navigationName: 'ExamMenu',
   },
 ];
@@ -67,17 +81,3 @@ export const byFieldButton: RouteButton[] = [
     navigationName: 'ExamMenu',
   },
 ];
-
-/** QuestionTest画面 */
-export const questionTestButton: RouteButton[] = [
-  {
-    title: 'スタート',
-    navigationName: 'QuestionTest',
-  },
-  {
-    title: 'RETURN_BUTTON',
-    navigationName: 'ExamMenu',
-  },
-];
-
-export const RETURN_BUTTON = '戻る';
