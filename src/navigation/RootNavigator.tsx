@@ -36,52 +36,52 @@ export const RootNavigator = () => {
       <Stack.Screen
         name='NinetyQuestionTest'
         component={NinetyQuestionTestScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
         name='IntroductionToMedicine'
         component={IntroductionToMedicineScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
         name='ClinicalMedicineOverview'
         component={ClinicalMedicineOverviewScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
         name='BiomedicalMeasurementInstrumentation'
         component={BiomedicalMeasurementInstrumentationScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
         name='MedicalTherapeuticEquipment'
         component={MedicalTherapeuticEquipmentScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
         name='MedDevSafety'
         component={MedDevSafetyScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
         name='MedicalElectricalAndElectronicEngineering'
         component={MedicalElectricalAndElectronicEngineeringScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
         name='BiologicalFunctionSubstitutionEquipment'
         component={BiologicalFunctionSubstitutionEquipmentScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
         name='MedicalMechanicalEngineering'
         component={MedicalMechanicalEngineeringScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
         name='BiologicalMaterialScienceAndEngineering'
         component={BiologicalMaterialScienceAndEngineeringScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
     </Stack.Navigator>
   );
