@@ -17,6 +17,7 @@ export type RootStackParamList = {
   MedicalMechanicalEngineering: undefined;
   BiologicalMaterialScienceAndEngineering: undefined;
   NinetyQuestionTest: undefined;
+  IntroductionToMedicineTest: undefined;
 };
 
 export type Props = {
@@ -39,7 +40,8 @@ export type RouteButton = {
     | 'MedicalElectricalAndElectronicEngineering'
     | 'BiologicalFunctionSubstitutionEquipment'
     | 'MedicalMechanicalEngineering'
-    | 'BiologicalMaterialScienceAndEngineering';
+    | 'BiologicalMaterialScienceAndEngineering'
+    | 'IntroductionToMedicineTest';
 };
 
 export type ScreenProps = {
