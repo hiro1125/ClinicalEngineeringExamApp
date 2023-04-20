@@ -3,11 +3,13 @@ import { Props, RootStackParamList } from '../../types/type';
 import {
   byFieldButton,
   examMenuButton,
+  introductionToMedicineTestButton,
   questionTestButton,
   startButton,
 } from '../contents';
 import AppScreen from '../screens/AppScreen';
 import { StyleSheet } from 'react-native';
+import { QuizScreen } from '../screens/QuizScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -83,6 +85,11 @@ export const RootNavigator = () => {
         component={BiologicalMaterialScienceAndEngineeringScreen}
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
+      <Stack.Screen
+        name='IntroductionToMedicineTest'
+        component={QuestionTestScreen}
+        options={{ headerShown: true, presentation: 'fullScreenModal' }}
+      />
     </Stack.Navigator>
   );
 };
@@ -135,7 +142,7 @@ export const IntroductionToMedicineScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='医学概論'
-      buttons={questionTestButton}
+      buttons={introductionToMedicineTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -244,6 +251,11 @@ export const BiologicalMaterialScienceAndEngineeringScreen = ({
       textStyle={styles.examination}
     />
   );
+};
+
+/** クイズ画面 */
+export const QuestionTestScreen = ({ navigation }: Props) => {
+  return <QuizScreen />;
 };
 
 const styles = StyleSheet.create({
