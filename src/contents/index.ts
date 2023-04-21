@@ -1,11 +1,12 @@
 import { RouteButton } from '../../types/type';
 
 export const RETURN_BUTTON = '戻る';
+export const START_BUTTON = 'スタート';
 
 // /** Home画面 */
 export const startButton: RouteButton[] = [
   {
-    title: 'スタート',
+    title: START_BUTTON,
     navigationName: 'ExamMenu',
   },
 ];
@@ -13,8 +14,19 @@ export const startButton: RouteButton[] = [
 /** QuestionTest画面 */
 export const questionTestButton: RouteButton[] = [
   {
-    title: 'スタート',
+    title: START_BUTTON,
     navigationName: 'QuestionTest',
+  },
+  {
+    title: RETURN_BUTTON,
+    navigationName: 'ExamMenu',
+  },
+];
+
+export const introductionToMedicineTestButton: RouteButton[] = [
+  {
+    title: START_BUTTON,
+    navigationName: 'IntroductionToMedicineTest',
   },
   {
     title: RETURN_BUTTON,
