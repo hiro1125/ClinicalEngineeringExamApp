@@ -49,3 +49,10 @@ export type ScreenProps = {
   buttons: RouteButton[];
   textStyle?: ViewStyle | TextStyle;
 };
+
+export type QuizData = {
+  question: string;
+  options: string[];
+  answerIndex: number;
+  tags: string[];
+};
