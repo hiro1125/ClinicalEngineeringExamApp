@@ -1,21 +1,23 @@
-import { View, StyleSheet, Platform, FlatList } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Platform,
+  FlatList,
+  ListRenderItem,
+} from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Props, RouteButton, ScreenProps } from '../../types/type';
 import { RETURN_BUTTON } from '../contents';
+import { FC } from 'react';
 
-type RenderItemProps = {
-  item: RouteButton;
-  index: number;
-};
-
-const AppScreen = ({
-  title,
-  buttons,
+const AppScreen: FC<ScreenProps & Props> = ({
   navigation,
   textStyle,
-}: ScreenProps & Props) => {
-  const renderItem = ({ item, index }: RenderItemProps) => {
+  title,
+  buttonData,
+}) => {
+  const renderItem: ListRenderItem<RouteButton> = ({ item, index }) => {
     return (
       <Button
         key={index}
@@ -43,7 +45,7 @@ const AppScreen = ({
           {title}
         </Text>
         <FlatList
-          data={buttons}
+          data={buttonData}
           renderItem={renderItem}
           keyExtractor={(_, index) => index.toString()}
           showsVerticalScrollIndicator={false}

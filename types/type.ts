@@ -46,7 +46,7 @@ export type RouteButton = {
 
 export type ScreenProps = {
   title: string;
-  buttons: RouteButton[];
+  buttonData: RouteButton[];
   textStyle?: ViewStyle | TextStyle;
 };
 

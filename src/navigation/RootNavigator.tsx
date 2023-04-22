@@ -88,7 +88,7 @@ export const RootNavigator = () => {
       <Stack.Screen
         name='IntroductionToMedicineTest'
         component={QuestionTestScreen}
-        options={{ headerShown: true, presentation: 'fullScreenModal' }}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
     </Stack.Navigator>
   );
@@ -99,7 +99,7 @@ export const HomeScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='臨床工学技士国家試験対策'
-      buttons={startButton}
+      buttonData={startButton}
       navigation={navigation}
       textStyle={styles.homeScreenText}
     />
@@ -111,7 +111,7 @@ export const ExamMenuScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='試験選択'
-      buttons={examMenuButton}
+      buttonData={examMenuButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -121,7 +121,11 @@ export const ExamMenuScreen = ({ navigation }: Props) => {
 /** ByField画面 */
 export const ByFieldScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen title='分野別' buttons={byFieldButton} navigation={navigation} />
+    <AppScreen
+      title='分野別'
+      buttonData={byFieldButton}
+      navigation={navigation}
+    />
   );
 };
 
@@ -130,7 +134,7 @@ export const NinetyQuestionTestScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='90問試験'
-      buttons={questionTestButton}
+      buttonData={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -142,7 +146,7 @@ export const IntroductionToMedicineScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='医学概論'
-      buttons={introductionToMedicineTestButton}
+      buttonData={introductionToMedicineTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -154,7 +158,7 @@ export const ClinicalMedicineOverviewScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='臨床医学総論'
-      buttons={questionTestButton}
+      buttonData={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -168,7 +172,7 @@ export const BiomedicalMeasurementInstrumentationScreen = ({
   return (
     <AppScreen
       title='生体計測装置学'
-      buttons={questionTestButton}
+      buttonData={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -180,7 +184,7 @@ export const MedicalTherapeuticEquipmentScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='医用治療機器学'
-      buttons={questionTestButton}
+      buttonData={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -192,7 +196,7 @@ export const MedDevSafetyScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='医用機器安全管理学'
-      buttons={questionTestButton}
+      buttonData={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -206,7 +210,7 @@ export const MedicalElectricalAndElectronicEngineeringScreen = ({
   return (
     <AppScreen
       title='医用電気電子工学'
-      buttons={questionTestButton}
+      buttonData={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -220,7 +224,7 @@ export const BiologicalFunctionSubstitutionEquipmentScreen = ({
   return (
     <AppScreen
       title='生体機能代行装置学'
-      buttons={questionTestButton}
+      buttonData={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -232,7 +236,7 @@ export const MedicalMechanicalEngineeringScreen = ({ navigation }: Props) => {
   return (
     <AppScreen
       title='医用機械工学'
-      buttons={questionTestButton}
+      buttonData={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -246,7 +250,7 @@ export const BiologicalMaterialScienceAndEngineeringScreen = ({
   return (
     <AppScreen
       title='生体物性材料工学'
-      buttons={questionTestButton}
+      buttonData={questionTestButton}
       navigation={navigation}
       textStyle={styles.examination}
     />
@@ -255,7 +259,7 @@ export const BiologicalMaterialScienceAndEngineeringScreen = ({
 
 /** クイズ画面 */
 export const QuestionTestScreen = ({ navigation }: Props) => {
-  return <QuizScreen />;
+  return <QuizScreen navigation={navigation} />;
 };
 
 const styles = StyleSheet.create({
