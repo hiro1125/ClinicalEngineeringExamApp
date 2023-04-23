@@ -11,7 +11,7 @@ export const questions: QuizData[] = [
       '患者の理解が得られやすい',
       '医師の裁量権が強化される',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -23,7 +23,7 @@ export const questions: QuizData[] = [
       '重症急性呼吸器症候群(SARS)',
       '黄熱',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -35,21 +35,21 @@ export const questions: QuizData[] = [
       '酵素ごとの至適pHが存在する',
       'タンパク質で構成される',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
-      '薬物について正しいのはどれか。a. 脳には全身循環から薬物が移行しやすい。b. 直腸内投与の方が経口投与よりも効果発現は早い。c. 血衆蛋白と結合したものは薬理作用をもたない。d. 生体内利用率とは経口投与薬物のうち全身を循環する薬物の割合を示す。e. 生物学的半減期は投与薬物が血中から消失するまでの時間の 1/2 の時間である。',
+      '薬物について正しいのはどれか。\n\na. 脳には全身循環から薬物が移行しやすい。\n\nb. 直腸内投与の方が経口投与よりも効果発現は早い。\n\nc. 血衆蛋白と結合したものは薬理作用をもたない。\n\nd. 生体内利用率とは経口投与薬物のうち全身を循環する薬物の割合を示す。\n\ne. 生物学的半減期は投与薬物が血中から消失するまでの時間の 1/2 の時間である。',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
     question:
       '血栓形成を促進するのはどれか。a. 血管内皮傷害 b. 血流低下 c. 線溶系充進 d. 貧血 e. 血管透過性の充進',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 1,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -61,20 +61,20 @@ export const questions: QuizData[] = [
       '交感神経活動の冗進',
       '循環血液量の増加',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       'イヌリンクリアランスの検査を実施した。イヌリンは血築中濃度 0.80mg/dL、尿中濃度 65mg/dL、1分間の尿量は 1.6mLであった。イヌリンクリアランス[mL/min]はどれか。',
     options: ['33', '52', '83', '100', '130'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question: '錐体路が交叉するところはどれか。',
     options: ['大脳基底核', '脳梁', '中脳', '延髄', '脊髄'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   /** 28回(PM) */
@@ -87,7 +87,7 @@ export const questions: QuizData[] = [
       '心筋梗塞 ---------- 心電図検査',
       '骨折 ---------- リハビリテーション',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -99,13 +99,13 @@ export const questions: QuizData[] = [
       '患者の理解が得られやすい',
       '医師の裁量権が強化される',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question: 'DNAを構成する塩基でないのはどれか。',
     options: ['アデニン', 'チミン', 'グアニン', 'シトシン', 'キサンチン'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -117,7 +117,7 @@ export const questions: QuizData[] = [
       '患者の理解が得られやすい',
       '医師の裁量権が強化される',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -129,14 +129,14 @@ export const questions: QuizData[] = [
       'ノルアドレナリン',
       'アンフェタミン',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question:
       '物理的原因による障害のうちDNA損傷を伴うことが多いのはどれか。a. 放射線 b. 紫外線 c. 高温 d. 気圧変動 e. 電気 ',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -148,7 +148,7 @@ export const questions: QuizData[] = [
       'P : 5.0 mg/ dL',
       'HCO: 24 mEq/L',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -160,7 +160,7 @@ export const questions: QuizData[] = [
       '僧帽筋は菱形をしている',
       '三角筋は殿部にある',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -172,7 +172,7 @@ export const questions: QuizData[] = [
       'シュウ酸ナトリウム',
       'クエン酸ナトリウム',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -184,7 +184,7 @@ export const questions: QuizData[] = [
       'シュウ酸ナトリウム',
       'クエン酸ナトリウム',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -196,7 +196,7 @@ export const questions: QuizData[] = [
       '腎小体は髄質に存在する',
       '腎小体とそれに続く尿細管を合わせてネフロンという',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -208,7 +208,7 @@ export const questions: QuizData[] = [
       '肝小葉の中で肝細胞は放射状に配列している',
       '肝細胞はブドウ糖からアルブミンを作る',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   /** 29回(AM) */
@@ -222,7 +222,7 @@ export const questions: QuizData[] = [
       '児童虐待が疑われたので、市町村に児童名を通告した',
       '生徒の回復見込みについて、付き添ってきた担任教師に回答した',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -234,7 +234,7 @@ export const questions: QuizData[] = [
       '医師による不適切な発言',
       '臨床工学技士によるカルテの改ざん',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -246,7 +246,7 @@ export const questions: QuizData[] = [
       'セルロプラスミン',
       'アルブミン',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -258,14 +258,14 @@ export const questions: QuizData[] = [
       '肝小葉の中で肝細胞は放射状に配列している',
       '肝細胞はブドウ糖からアルブミンを作る',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
     question:
       '正しいのはどれか。a.ブドウ糖は二糖類である。b.核酸は脂質を含む。c.タンパク質はアミノ酸から構成される。d.アミノ酸はカルボキシル基をもつ。e.酵素は触媒の作用を有する。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -277,7 +277,7 @@ export const questions: QuizData[] = [
       '血栓形成',
       '肉芽組織の構築',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -289,7 +289,7 @@ export const questions: QuizData[] = [
       '細胞外の電位が上昇して0 に近づくことを脱分極という。',
       '細胞内の電位が上昇してあるレベルに達すると活動電位が発生する。',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -301,7 +301,7 @@ export const questions: QuizData[] = [
       '肝小葉の中で肝細胞は放射状に配列している',
       '肝細胞はブドウ糖からアルブミンを作る',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -313,7 +313,7 @@ export const questions: QuizData[] = [
       '気管は食道の背側を走行する。',
       '胸腔は壁側胸膜と臓側胸膜に囲まれている。',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -325,7 +325,7 @@ export const questions: QuizData[] = [
       'T波は心室興奮からの回復を表す。',
       'T波の後にU波が現れることがある。',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -337,7 +337,7 @@ export const questions: QuizData[] = [
       '緻密斑は遠位尿細管にある。',
       'アルドステロンは集合管に作用する。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   /** 29回(PM) */
@@ -350,7 +350,7 @@ export const questions: QuizData[] = [
       '医療事故後の追跡的HIV抗体検査',
       '日和見感染の予防',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -362,14 +362,14 @@ export const questions: QuizData[] = [
       '粗面小胞体----------蛋白質合成',
       'ゴルジ体----------遺伝情報の読み取り',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question:
       '重層扁平上皮をもつのはどれか。a.胃粘膜 b. 腟粘膜 c.食道粘膜 d.膀胱内壁 e.気管支内腔',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -381,7 +381,7 @@ export const questions: QuizData[] = [
       '左右の頭頂骨の間には矢状縫合がある。',
       '軸椎は第2 頸椎(C2)である。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -393,13 +393,13 @@ export const questions: QuizData[] = [
       '成人の安静時呼吸回数は1分間回程度である。',
       '予備吸気量は安静吸気位から吸入できる最大の吸入量である。',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question: 'ヒスタミン顆粒をもつのはどれか。',
     options: ['単 球', '好中球', '好酸球', '好塩基球', 'リンパ球'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -411,7 +411,7 @@ export const questions: QuizData[] = [
       'ヨードは甲状腺ホルモンの原料の一つである。',
       'グルカゴンは血糖値を上昇させる。',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -423,7 +423,7 @@ export const questions: QuizData[] = [
       '運動神経は有髄神経である。',
       '無髄神経では跳躍伝導が起こる。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   /** 30回(AM) */
@@ -436,7 +436,7 @@ export const questions: QuizData[] = [
       '温熱療法はがん細胞の温度を上昇させて死滅させる方法である。',
       '言語聴覚療法はことばによるコミュニケーションに障害があるものを対象とする。',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -448,14 +448,14 @@ export const questions: QuizData[] = [
       '人工呼吸業務における気管挿管',
       '条件付きMRI対応ペースメーカの検査前確認',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
     question:
       '水溶性ビタミンはどれか。a.ビタミンA b.ビタミンB6 c.ビタミンC d.ビタミンD e.ビタミンE',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -467,20 +467,20 @@ export const questions: QuizData[] = [
       '水溶性薬物の血中濃度が上昇する。',
       'ベンゾジアゼピン系薬物への感受性が高い。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       '下腿浮腫の原因となるのはどれか。a.胃潰瘍 b.肺 炎 c.深部静脈血栓症 d.ネフローゼ症候群 e.心不全',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question: 'ヒスタミン顆粒をもつのはどれか。',
     options: ['単 球', '好中球', '好酸球', '好塩基球', 'リンパ球'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -492,7 +492,7 @@ export const questions: QuizData[] = [
       '胸膜は臓側胸膜と壁側胸膜からなる。',
       '左主気管支は右主気管支に比べ、より体の長軸方向に分岐する。',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -504,13 +504,13 @@ export const questions: QuizData[] = [
       '乳頭筋は心室内に存在する。',
       '上行大動脈は主肺動脈の背側を走行する。',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question: 'バソプレシンが作用するのはネフロンのどの部位か。',
     options: ['糸球体', '近位尿細管', 'ヘンレ係蹄', '遠位尿細管', '集合管'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -522,7 +522,7 @@ export const questions: QuizData[] = [
       '上肢の振りが大きくなる。',
       '地面を蹴り出す力が強くなる。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   /** 30回(PM) */
@@ -530,27 +530,27 @@ export const questions: QuizData[] = [
     question:
       '令和4年における高齢者(65歳以上）人口の構成比率（高齢化率:％）はどれか。',
     options: ['13.8', '20.2', '29.0', '33.4', '60.6'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       '診断した医師が、法律に基づき直ちに届け出なければならない感染症(1類～4類）はどれか。a.結 核 b.痘そう c.破傷風 d.C型肝炎 e.重症急性呼吸器症候群(SARS)',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question: '必須アミノ酸でないのはどれか。',
     options: ['バリン', 'ロイシン', 'アルギニン', 'メチオニン', 'イソロイシン'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       'ある投与薬物の生物学的半減期の3倍の時間が経過したとき、その薬物の血中濃度は投与後ピーク値の何倍になるか。',
     options: ['1/3', '1/4', '1/6', '1/8', '1/9'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -562,7 +562,7 @@ export const questions: QuizData[] = [
       '血小板 180,000/μL',
       '血 糖 150mg/dL',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -574,7 +574,7 @@ export const questions: QuizData[] = [
       '肋骨は12対ある。',
       '右大腿には1本の長管骨がある。',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -586,27 +586,27 @@ export const questions: QuizData[] = [
       'カテコラミンは血圧を上昇させる。',
       '冠動脈血流量は拡張期より収縮期の方が多い。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question: '血液中で最も多い白血球はどれか。',
     options: ['単 球', '好中球', '好酸球', '好塩基球', 'リンパ球'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question:
       'インスリンについて正しいのはどれか。 a.1型糖尿病では分泌が低下する。 b.膵島α細胞から分泌される。 c.肝臓で脂肪分解を促進する。 d.筋細胞で糖の取り込みを促進する。 e.肥満ではインスリン感受性が低下する。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   /** 31回(AM) */
   {
     question: 'ホメオスタシスの意味に最も近いのはどれか。',
     options: ['永 続', '恒 常', '耐 久', '反 復', '連 続'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -619,26 +619,26 @@ export const questions: QuizData[] = [
       '汎用輸液ポンプ',
       '造影剤注入装置',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question:
       '血液中に移行する前に肝臓で代謝を受ける(初回通過効果がある)薬剤の投与方法はどれか。',
     options: ['舌 下', '経 口', '吸 入', '直腸内', '静脈注射'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question: '外眼筋を支配する脳神経はどれか。 a.II b.III c.IV d.VI e.VII',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
     question: 'ATPを最も多く合成するのはどれか。',
     options: ['小胞体', 'ゴルジ体', 'リボソーム', 'ミトコンドリア', '核'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -650,13 +650,13 @@ export const questions: QuizData[] = [
       '右総頸動脈は腕頭動脈から分岐する。',
       '大動脈壁は三層構造よりなる。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question: '近位尿細管で再吸収されないのはどれか。',
     options: ['水', 'アンモニア', ' Cl-', 'Na+', 'ブドウ糖'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -668,7 +668,7 @@ export const questions: QuizData[] = [
       'キラーT細胞がウイルスに感染した細胞を破壊する。',
       'リンパ球が体内に侵入した細菌を貪食する。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   /** 31回(PM) */
@@ -682,7 +682,7 @@ export const questions: QuizData[] = [
       '自分の気持ちを可能な限り相手に理解させる。',
       '相手の気持ちを自分の気持ちのように実感する。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -694,7 +694,7 @@ export const questions: QuizData[] = [
       'コルチゾールは末梢組織でのグルコース分解を抑制する。',
       'グルカゴンは肝臓でのグリコーゲン合成を抑制する。',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -706,7 +706,7 @@ export const questions: QuizData[] = [
       '組織圧の上昇',
       '線維芽細胞の増殖',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -718,28 +718,28 @@ export const questions: QuizData[] = [
       '肺動脈血の二酸化炭素分圧は肺静脈血のそれよりも高い。',
       '酸素は二酸化炭素よりも肺胞での拡散能が小さい。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       '体液調節に関わる物質の作用で正しいのはどれか。 a.レニンは血中アンギオテンシンを減少させる。b.アンギオテンシンIIは細動脈を拡張させる。c.アルドステロンはNa+の再吸収を促進する。 d.バソプレッシンは水の再吸収を促進する。 e.心房性ナトリウム利尿ペプチドは水の再吸収を抑制する。 ',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question:
       '細胞外液濃度よりも細胞内液濃度の方が高いイオンはどれか。 a.K+ b.Cl- c. Na+ d. HCO3- e. HPO42-',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question:
       'クレアチニンの血漿中濃度2.0mg/dL、尿中濃度60mg/dL、1時間の尿量は120 mLであった。クレアチニンクリアランス[mL/min]はどれか。',
     options: ['20', '30', '60', '90', '120'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   /** 32回(AM) */
@@ -753,7 +753,7 @@ export const questions: QuizData[] = [
       '表明された意思が尊重され、誇りを持って最期を生きることにつながる。',
       '一時的に生命維持が困難になった際の回復目的の救命も拒むことにつながる。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -766,7 +766,7 @@ export const questions: QuizData[] = [
       'サルモネラ属菌',
       'ボツリヌス菌',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -778,7 +778,7 @@ export const questions: QuizData[] = [
       '冠動脈ステント',
       '粒子線治療装置',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -790,13 +790,13 @@ export const questions: QuizData[] = [
       '化膿性炎 --------- 多数の好中球が滲出してくる炎症',
       '化 生 -------- 他の系統の分化した細胞への変化',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question: '健常人の測定値で基準範囲から外れるのは全体の何％か。',
     options: ['0.01', '0.05', '0.1', '0.2', '0.5'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -808,20 +808,20 @@ export const questions: QuizData[] = [
       '気管の後壁は平滑筋よりなる。',
       '水平裂は右肺に存在する。',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question:
       '正しいのはどれか。 a.心電図のP波に続いて心房が収縮する。 b.心音の第II音は動脈弁の閉鎖音である。 c.心臓の正常興奮伝導では、ヒス束がペースメーカとなる。 d.正常心では拡張期の心室容積が小さいほど心拍出量は増加する。 e.心電図ST部分の変化は心筋虚血の指標となる。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question: '成人の1日あたりの糸球体濾過量[L]はおよそいくらか。',
     options: ['1.6', '8', '16', '80', '160'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -833,7 +833,7 @@ export const questions: QuizData[] = [
       '膵臓は腹(膜)腔の中にある。',
       '膀胱は腹(膜)腔の外にある。',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   /** 32回(PM) */
@@ -847,20 +847,20 @@ export const questions: QuizData[] = [
       '労働者災害補償保険',
       '介護保険',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question:
       '糖代謝について正しいのはどれか。 a.糖質は1gあたり4 kcのエネルギーに相当する。 b.低酸素では解糖系からATPを生成できない。 c.糖質は主に胃で吸収される。 d.ペントースリン酸系ではリボースを合成する。 e.低血糖はインスリン過剰投与で誘発される。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question: '塩基のうち、DNAの構成成分でないのはどれか。',
     options: ['イノシン', 'アデニン', 'チミン', 'シトシン', 'グアニン'],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -872,14 +872,14 @@ export const questions: QuizData[] = [
       '肺塞栓の原因として深部静脈血栓が挙げられる。',
       '粥状硬化は動脈狭窄の原因の一つである。',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question:
       '血液・血清の測定値でパニック値(生命に危険が及ぶ値)はどれか。 a. K+ 4.5mEq/L b.Na- 148 mEq/L c.クレアチニン 1.5mg/dL d.ヘモグロビン 4.6 g/dL e. 血糖 38mg/dL',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -891,7 +891,7 @@ export const questions: QuizData[] = [
       '脈圧は収縮期血圧と拡張期血圧との平均値である。',
       '脈圧の左右差は動脈閉塞性疾患でみられる。',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -903,21 +903,21 @@ export const questions: QuizData[] = [
       'プラスミン',
       'ワルファリン',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
     question:
       'ある物質Aの血漿中濃度が30 mg/dL、1分間の尿中排泄量が11mgであった。糸球体濾過量が120mL/分のとき、物質Aは濾過されたうちのおよそ何％が排泄されているか。ただし、物質Aは血中で代謝を受けず糸球体で自由に濾過されるものとする。',
     options: ['0.1', '0.3', '0.5', '0.7', '0.9'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question:
       'ホルモンについて誤っているのはどれか。 a.バソプレッシンは主に腎臓の集合管に作用する。 b.成長ホルモンは副腎より分泌される。 c.原発性甲状腺機能亢進症では甲状腺刺激ホルモン(TSH)の分泌が亢進する。 d.副腎皮質刺激ホルモン(ACTH)は糖質コルチコイドの分泌を刺激する。 e.副甲状腺ホルモン(PTH)は血中カルシウム濃度を上昇させる。',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   /** 33回(AM) */
@@ -930,7 +930,7 @@ export const questions: QuizData[] = [
       '医薬品の安全管理体制',
       '医療安全管理体制の整備',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -942,7 +942,7 @@ export const questions: QuizData[] = [
       '粒子線治療装置',
       '中心静脈カテーテル',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -954,7 +954,7 @@ export const questions: QuizData[] = [
       '生体内化学反応を無理なく進行させる働きをもつ。',
       '温度が高いほど酵素の活性は高くなる。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -966,7 +966,7 @@ export const questions: QuizData[] = [
       'アトロピン -------- 抗コリン薬',
       'デキサメタゾン -------- 副腎皮質ホルモン',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -978,14 +978,14 @@ export const questions: QuizData[] = [
       '薬効と副作用が薬物の血中濃度と強く相関する。',
       '腎障害のある患者に薬物を投与する。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       '再生能力が高いのはどれか。 a.心筋細胞 b.中枢神経細胞 c.皮膚表皮細胞 d.骨髄造血細胞 e.消化管上皮細胞',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -997,14 +997,14 @@ export const questions: QuizData[] = [
       '胸腔内圧の低下',
       '静脈還流量の減少',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question:
       '正しいのはどれか。 a.肺動脈弁は二尖である。 b.三尖弁は房室弁である。 c.大動脈弁は左心室の出口にある。 d.僧帽弁は腱索で乳頭筋につながる。 e.冠状静脈洞は右心室に開口する。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   /** 33回(PM) */
@@ -1012,13 +1012,13 @@ export const questions: QuizData[] = [
     question:
       '医療法に規定されているのはどれか。 a.病院の管理 b.保健所の開設 c.感染症の類型 d.診療所の開設 e.特定機能病院の要件',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question: 'DNA を構成する塩基でないのはどれか。',
     options: ['ウラシル', 'アデニン', 'チミン', 'シトシン', 'グアニン'],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -1031,7 +1031,7 @@ export const questions: QuizData[] = [
       '①低下して ②増加する',
       '①増加して ②低下する',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -1043,13 +1043,13 @@ export const questions: QuizData[] = [
       '血漿タンパク質で最も多いのはアルブミンである。',
       '全血液に対する血漿の容積比をヘマトクリットという。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question: '腎糸球体濾過量推定に有用な物質はどれか。',
     options: ['ブドウ糖', 'アミノ酸', 'Na+', 'クレアチニン', 'Ca2+'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -1061,20 +1061,20 @@ export const questions: QuizData[] = [
       '精巣 -------- アンドロゲン',
       'グアニ膵臓 -------- インスリンン',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   /** 34回(AM) */
   {
     question: 'PDCAサイクルに含まれないのはどれか。',
     options: ['イノシン', 'アデニン', 'チミン', 'シトシン', 'グアニン'],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question: '塩基のうち、DNAの構成成分でないのはどれか。',
     options: ['実施', '処置', '点検', '依頼', '計画'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -1086,7 +1086,7 @@ export const questions: QuizData[] = [
       '労働環境の改善',
       'リハビリテーション',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -1099,20 +1099,20 @@ export const questions: QuizData[] = [
       '四類感染症',
       '五類感染症',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question:
       '単糖はどれか。a.マルトース b.ガラクトース c.フルクトース d.スクロース e.ラクトース',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question: '薬剤治療に影響を与える因子として考えにくいのはどれか。',
     options: ['投与経路', 'ABO式血液型', '体重', '併用薬', '年齢'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -1124,20 +1124,20 @@ export const questions: QuizData[] = [
       'ケトン体',
       '比重',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question:
       '大気圧が480mmHgの高地における吸入気酸素分圧（PIO2）[mmHg]はおよそいくらか。ただし、体温は37℃、大気の酸素濃度は21％、飽和水蒸気圧は47mmHgである。',
     options: ['91', '100', '150', '160', '433'],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question: '糖が最も再吸収されるのはどの部位か。',
     options: ['糸球体', '近位尿細管', 'ヘンレ係蹄', '遠位尿細管', '集合管'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   /** 34回(PM) */
@@ -1150,7 +1150,7 @@ export const questions: QuizData[] = [
       '院内感染した職員の診療記録の全職員への開示',
       '感染リスクの分類に基づく医療器材の消毒滅菌',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -1162,7 +1162,7 @@ export const questions: QuizData[] = [
       'じん肺 -------- 鉱山掘削作業',
       '振動障害 -------- 削岩機作業',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -1174,13 +1174,13 @@ export const questions: QuizData[] = [
       '酵素ごとの至適pHが存在する。',
       'タンパク質で構成される。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question: '炎症の5徴に含まれないのはどれか。',
     options: ['発赤', '発熱', '掻痒感', '疼痛', '機能障害'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -1192,14 +1192,14 @@ export const questions: QuizData[] = [
       '気管は食道の背側を走行する。',
       '胸膜腔は壁側胸膜と臓側胸膜に囲まれている。',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
     question:
       '心臓の刺激伝導系と心電図について正しいのはどれか。 a.洞房結節と房室結節の間にヒス束がある。 b.プルキンエ線維は主に心室筋の収縮を担う。 c.P波は心房筋の興奮を表す。 d.心房細動ではP波を認めない。 e.QRS波とともに拡張期が始まる。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -1211,7 +1211,7 @@ export const questions: QuizData[] = [
       'エリスロポエチン -------- 腎臓',
       'サイロキシン -------- 甲状腺',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -1223,7 +1223,7 @@ export const questions: QuizData[] = [
       '血圧の調節機能が低下する。',
       '蝸牛の有毛細胞が増える。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   /** 35回(AM) */
@@ -1237,7 +1237,7 @@ export const questions: QuizData[] = [
       '医療行為の拒絶',
       'セカンドオピニオンの取得',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -1249,7 +1249,7 @@ export const questions: QuizData[] = [
       '胃がん検診',
       '予防接種',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -1261,7 +1261,7 @@ export const questions: QuizData[] = [
       'グルコースは肝臓でグリコーゲンとして貯蔵される',
       '糖質のカロリーは4kcal/gである。',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -1273,21 +1273,21 @@ export const questions: QuizData[] = [
       'サイアザイド系利尿薬',
       'アンギオテンシンⅡ受容体拮抗薬',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question:
       '循環障害について正しいのはどれか。 a.動脈血栓は抗血小板薬で予防する。 b.急性心筋梗塞は冠動脈の閉塞で起こる。 c.腫瘍や炎症によりリンパ浮腫が起こる。 d.血漿膠質浸透圧上昇により浮腫が起こる。 e.組織内血流量低下により充血が起こる。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question:
       'ヒトは約24時間の周期で睡眠と覚醒を行うがこの本来持っている日内リズムをさーかサーカディアンリズムという。このリズムが認められるのはどれか。 a.筋力 b.視力 c.体重 d.ホルモン分泌 e.血圧',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
@@ -1299,13 +1299,13 @@ export const questions: QuizData[] = [
       'プラスミン',
       'ワルファリン',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
     question: 'ナトリウムイオンの再吸収率が最も高い部位はどれか。',
     options: ['糸球体', '近位尿細管', 'ヘンレ係蹄', '遠位尿細管', '集合管'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   /** 35回(PM) */
@@ -1319,13 +1319,13 @@ export const questions: QuizData[] = [
       '腸管出血性大腸菌感染症',
       '新型コロナウイルス感染症',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question: 'アミノ酸をリボソームに運搬するのはどれか。',
     options: ['DNA', 'tRNA', 'rRNA', 'mRNA', 'miRNA'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -1338,7 +1338,7 @@ export const questions: QuizData[] = [
       '膜を介した浸透圧差',
       '膜を介した薬剤の濃度差',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -1350,7 +1350,7 @@ export const questions: QuizData[] = [
       '線維芽細胞の増殖',
       '肉芽組織の形成',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -1362,21 +1362,21 @@ export const questions: QuizData[] = [
       '胸膜は臓側胸膜と壁側胸膜からなる。',
       '主気管支の分岐角度は右から左の方が小さい。',
     ],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
     question:
       '心周期について正しいのはどれか。 a.I音と共に収縮期が始まる。 b.拡張期は収縮期より長い。 c.QRS波と共にII音が聴取される。 d.拡張期には左心房圧は左心室圧より低い。 e.拡張期には大動脈圧は左心室圧より高い。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
     question:
       'インスリンについて正しいのはどれか。 a.I型糖尿病では分泌では分泌が低下する。 b.膵島α細胞から分泌される。 c.肝臓で脂肪分解を促進される。 d.筋細胞で糖の取り込みを促進する。 e.肥満ではインスリン感受性が低下する。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -1388,7 +1388,7 @@ export const questions: QuizData[] = [
       '赤外線を浴びるとビタミンD前駆体が活性化する。',
       '水溶性物質は皮膚をほとんど透過しない。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   /** 36回(AM) */
@@ -1401,27 +1401,27 @@ export const questions: QuizData[] = [
       '医療事故に該当する事例は日本医療安全調査機構に報告する。',
       '事故や障害につながったかもしれない事例をインシデントと呼ぶ。',
     ],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question:
       '厚生労働省令和3年人口動態月報年計による「主な死因別にみた死 亡率(人口 10 万対)の年次推移」の第2位はどれか。',
     options: ['悪性新生物', '脳血管疾患', '心疾患', '老 衰', '肺 炎'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       'ビタミンについて正しいのはどれか。 a.ビタミンAは体内でカロテンを合成する材料になる。 b.脚気はビタミンB2の欠乏により生じる。 c.ビタミンB12の吸収には胃から分泌される内因子が必要である。 d.ビタミンCは抗酸化作用をもつ。 e.ビタミンDの生成には赤外線が必要である。',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
     question: '投与後に最高薬物血中濃度に達するのが最も速い投与経路はどれか。',
     options: ['静脈内注射', '筋肉内注射', '皮下注射', '直腸内投与', '経口投与'],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
@@ -1433,14 +1433,14 @@ export const questions: QuizData[] = [
       'リンパ行性転移',
       '血行性転移',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       '細胞小器官について正しいのはどれか。 a.リボソームはタンパク質を合成する。 b.細胞膜は電位勾配を形成する。 c.ゴルジ体はATPを産生する。 d.リソソームは分泌を行う。 e.染色体は核内にある。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -1452,14 +1452,14 @@ export const questions: QuizData[] = [
       '血漿タンパク質で最も多いのはアルブミンである。',
       '全血液に対する血漿の容積比をヘマトクリットという。',
     ],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question:
       '腎臓の集合管に作用するホルモンはどれか。 a.レニン b.アンジオテンシンII c.アルドステロン d.バソプレシン e.エリスロポエチン',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
   {
@@ -1471,7 +1471,7 @@ export const questions: QuizData[] = [
       '脊髄神経のうち、胸神経は12対からなる。',
       '脳、脊髄では灰白質に神経細胞が密集している。',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   /** 36回(PM) */
@@ -1485,7 +1485,7 @@ export const questions: QuizData[] = [
       '臨床工学技士は生命維持管理装置の操作及び保守点検を行う。',
       '生命維持管理装置の先端部の身体への接続については具体的に施行令で定められている。',
     ],
-    answerIndex: 2,
+    answerIndex: 1,
     tags: ['医学概論'],
   },
   {
@@ -1497,20 +1497,20 @@ export const questions: QuizData[] = [
       '温度と反応速度は正比例する。',
       '基質濃度と反応速度は正比例する。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       '医薬品添付文書において赤枠で記載される項目はどれか。 a.禁忌 b.警告 c.副作用 d.効果又は効能 e.重要な基本的注意',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 1,
+    answerIndex: 0,
     tags: ['医学概論'],
   },
   {
     question: '細胞傷害の適応現象として適切でないのはどれか。',
     options: ['萎縮', '過形成', '低形成', '肥大', '化生'],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
@@ -1523,21 +1523,21 @@ export const questions: QuizData[] = [
       '1回肺胞換気量は換気Aが一番多い。',
       '分時肺胞換気量は換気Eが一番多い。',
     ],
-    answerIndex: 3,
+    answerIndex: 2,
     tags: ['医学概論'],
   },
   {
     question:
       '上腕動脈の血圧について正しいのはどれか。 a.平均血圧は収縮期血圧と拡張期血圧の加算平均である。 b.聴診法による血圧測定ではクスマウル音を聴取する。 c.収縮期血圧と拡張期血圧との差が脈圧である。 d.細動脈の血管抵抗増加により上昇する。 e.交感神経興奮により上昇する。',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 5,
+    answerIndex: 4,
     tags: ['医学概論'],
   },
   {
     question:
       '消化酵素と消化液との組合せで誤っているのはどれか。a.ペプシン -------- 胃 液 b.トリプシン -------- 膵 液 c.アミラーゼ -------- 胆 汁 d.スクラーゼ -------- 唾 液 e.リパーゼ -------- 膵 液',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 4,
+    answerIndex: 3,
     tags: ['医学概論'],
   },
 ];
