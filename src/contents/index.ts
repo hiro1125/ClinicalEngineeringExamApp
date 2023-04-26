@@ -2,6 +2,7 @@ import { RouteButton } from '../../types/type';
 
 export const RETURN_BUTTON = '戻る';
 export const START_BUTTON = 'スタート';
+export const TOTAL_QUESTIONS = 10;
 
 // /** Home画面 */
 export const startButton: RouteButton[] = [

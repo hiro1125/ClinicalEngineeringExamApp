@@ -11,10 +11,11 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Props } from '../../types/type';
 import { shuffle } from 'lodash';
 import { questions } from '../quiz/IntroductionToMedicine';
+import { TOTAL_QUESTIONS } from '../contents';
 
 export const QuizScreen: FC<Props> = ({ navigation }) => {
   const [index, setIndex] = useState<number>(0);
-  const shuffledQuestions = shuffle(questions).slice(0, 10);
+  const shuffledQuestions = shuffle(questions).slice(0, TOTAL_QUESTIONS);
 
   const correctAnswer = () => {
     Alert.alert('正解', 'おめでとうございます！', [
