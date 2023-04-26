@@ -13,16 +13,16 @@ import { shuffle } from 'lodash';
 import { questions } from '../quiz/IntroductionToMedicine';
 
 export const QuizScreen: FC<Props> = ({ navigation }) => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
-  const shuffleQuestions = shuffle(questions).slice(0, 10);
+  const [index, setIndex] = useState<number>(0);
+  const shuffledQuestions = shuffle(questions).slice(0, 10);
 
   const correctAnswer = () => {
     Alert.alert('正解', 'おめでとうございます！', [
       {
         text: 'OK',
         onPress: () => {
-          if (currentQuestionIndex < shuffleQuestions.length - 1) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
+          if (index < shuffledQuestions.length - 1) {
+            setIndex(index + 1);
           } else {
           }
         },
@@ -31,7 +31,7 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
   };
 
   const incorrectAnswer = () => {
-    const currentQuestion = shuffleQuestions[currentQuestionIndex];
+    const currentQuestion = shuffledQuestions[index];
     Alert.alert(
       '不正解',
       `残念！正解は${
@@ -41,8 +41,8 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
         {
           text: 'OK',
           onPress: () => {
-            if (currentQuestionIndex < shuffleQuestions.length - 1) {
-              setCurrentQuestionIndex(currentQuestionIndex + 1);
+            if (index < shuffledQuestions.length - 1) {
+              setIndex(index + 1);
             } else {
             }
           },
@@ -52,13 +52,15 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
   };
 
   const answerButton = (optionIndex: number) => {
-    const currentQuestion = shuffleQuestions[currentQuestionIndex];
+    const currentQuestion = shuffledQuestions[index];
     if (currentQuestion.answerIndex === optionIndex) {
       correctAnswer();
     } else {
       incorrectAnswer();
     }
   };
+
+  const isFinished = index === shuffledQuestions.length;
 
   return (
     <LinearGradient
@@ -67,29 +69,27 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
     >
       <Button title='戻る' onPress={() => navigation.goBack()} />
       <View style={styles.container}>
-        {currentQuestionIndex === shuffleQuestions.length ? (
+        {isFinished ? (
           <Text>回答終了です。</Text>
         ) : (
           <View>
             <Text style={styles.questionNumber}>
-              問題{currentQuestionIndex + 1} / {shuffleQuestions.length}
+              問題{index + 1} / {shuffledQuestions.length}
             </Text>
             <Text style={styles.questionText}>
-              {shuffleQuestions[currentQuestionIndex].question}
+              {shuffledQuestions[index].question}
             </Text>
-            {shuffleQuestions[currentQuestionIndex].options.map(
-              (item, index) => {
-                return (
-                  <TouchableOpacity
-                    key={index}
-                    onPress={() => answerButton(index)}
-                    style={styles.answerButton}
-                  >
-                    <Text style={styles.buttonText}>{item}</Text>
-                  </TouchableOpacity>
-                );
-              }
-            )}
+            {shuffledQuestions[index].options.map((item, index) => {
+              return (
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => answerButton(index)}
+                  style={styles.answerButton}
+                >
+                  <Text style={styles.buttonText}>{item}</Text>
+                </TouchableOpacity>
+              );
+            })}
           </View>
         )}
       </View>
