@@ -16,10 +16,28 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const shuffleQuestions = shuffle(questions).slice(0, 10);
 
-  const answerButton = (optionIndex: number) => {
+  const correctAnswer = () => {
+    Alert.alert('正解', 'おめでとうございます！', [
+      {
+        text: 'OK',
+        onPress: () => {
+          if (currentQuestionIndex < shuffleQuestions.length - 1) {
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+          } else {
+          }
+        },
+      },
+    ]);
+  };
+
+  const incorrectAnswer = () => {
     const currentQuestion = shuffleQuestions[currentQuestionIndex];
-    if (currentQuestion.answerIndex === optionIndex) {
-      Alert.alert('正解', 'おめでとうございます！', [
+    Alert.alert(
+      '不正解',
+      `残念！正解は${
+        currentQuestion.options[currentQuestion.answerIndex]
+      }でした。`,
+      [
         {
           text: 'OK',
           onPress: () => {
@@ -29,25 +47,16 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
             }
           },
         },
-      ]);
+      ]
+    );
+  };
+
+  const answerButton = (optionIndex: number) => {
+    const currentQuestion = shuffleQuestions[currentQuestionIndex];
+    if (currentQuestion.answerIndex === optionIndex) {
+      correctAnswer();
     } else {
-      Alert.alert(
-        '不正解',
-        `残念！正解は${
-          currentQuestion.options[currentQuestion.answerIndex]
-        }でした。`,
-        [
-          {
-            text: 'OK',
-            onPress: () => {
-              if (currentQuestionIndex < shuffleQuestions.length - 1) {
-                setCurrentQuestionIndex(currentQuestionIndex + 1);
-              } else {
-              }
-            },
-          },
-        ]
-      );
+      incorrectAnswer();
     }
   };
 
