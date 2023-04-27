@@ -1,13 +1,13 @@
 import { RouteButton } from '../../types/type';
 
-export const RETURN_BUTTON = '戻る';
-export const START_BUTTON = 'スタート';
+export const RETURN_BUTTON_TEXT = '戻る';
+export const START_BUTTON_TEXT = 'スタート';
 export const TOTAL_QUESTIONS = 10;
 
 // /** Home画面 */
 export const startButton: RouteButton[] = [
   {
-    title: START_BUTTON,
+    title: START_BUTTON_TEXT,
     navigationName: 'ExamMenu',
   },
 ];
@@ -15,22 +15,22 @@ export const startButton: RouteButton[] = [
 /** QuestionTest画面 */
 export const questionTestButton: RouteButton[] = [
   {
-    title: START_BUTTON,
+    title: START_BUTTON_TEXT,
     navigationName: 'QuestionTest',
   },
   {
-    title: RETURN_BUTTON,
+    title: RETURN_BUTTON_TEXT,
     navigationName: 'ExamMenu',
   },
 ];
 
 export const introductionToMedicineTestButton: RouteButton[] = [
   {
-    title: START_BUTTON,
+    title: START_BUTTON_TEXT,
     navigationName: 'IntroductionToMedicineTest',
   },
   {
-    title: RETURN_BUTTON,
+    title: RETURN_BUTTON_TEXT,
     navigationName: 'ExamMenu',
   },
 ];
@@ -46,7 +46,7 @@ export const examMenuButton: RouteButton[] = [
     navigationName: 'NinetyQuestionTest',
   },
   {
-    title: RETURN_BUTTON,
+    title: RETURN_BUTTON_TEXT,
     navigationName: 'Home',
   },
 ];
@@ -90,7 +90,7 @@ export const byFieldButton: RouteButton[] = [
     navigationName: 'BiologicalMaterialScienceAndEngineering',
   },
   {
-    title: RETURN_BUTTON,
+    title: RETURN_BUTTON_TEXT,
     navigationName: 'ExamMenu',
   },
 ];
