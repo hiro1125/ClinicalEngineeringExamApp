@@ -8,7 +8,7 @@ import {
 import { Text, Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Props, RouteButton, ScreenProps } from '../../types/type';
-import { RETURN_BUTTON } from '../contents';
+import { RETURN_BUTTON_TEXT } from '../contents';
 import { FC } from 'react';
 
 const AppScreen: FC<ScreenProps & Props> = ({
@@ -23,7 +23,7 @@ const AppScreen: FC<ScreenProps & Props> = ({
         key={index}
         title={item.title}
         onPress={() => {
-          if (item.title === RETURN_BUTTON) {
+          if (item.title === RETURN_BUTTON_TEXT) {
             navigation.goBack();
           } else {
             navigation.navigate(item.navigationName);
