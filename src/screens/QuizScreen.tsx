@@ -15,9 +15,11 @@ import { TOTAL_QUESTIONS } from '../contents';
 
 export const QuizScreen: FC<Props> = ({ navigation }) => {
   const [index, setIndex] = useState<number>(0);
+  const [score, setScore] = useState<number>(0);
   const shuffledQuestions = shuffle(questions).slice(0, TOTAL_QUESTIONS);
 
   const showCorrectAnswerAlert = () => {
+    setScore(score + 1);
     Alert.alert('正解', 'おめでとうございます！', [
       {
         text: 'OK',
