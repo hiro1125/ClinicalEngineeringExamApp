@@ -1,12 +1,5 @@
 import React, { FC, useState } from 'react';
-import {
-  Text,
-  View,
-  Button,
-  StyleSheet,
-  Alert,
-  TouchableOpacity,
-} from 'react-native';
+import { Text, View, StyleSheet, Alert, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Props } from '../../types/type';
 import { shuffle } from 'lodash';
@@ -21,12 +14,12 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
   const shuffledQuestions = shuffle(questions).slice(0, TOTAL_QUESTIONS);
 
   const showCorrectAnswerAlert = () => {
-    setScore(score + 1);
     Alert.alert('正解', 'おめでとうございます！', [
       {
         text: 'OK',
         onPress: () => {
           if (index < shuffledQuestions.length - 1) {
+            setScore(score + 1);
           } else {
             setShowResultScreen(true);
           }
@@ -73,18 +66,19 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
       colors={['#a7ddff', '#2d82a8']}
       style={styles.linearGradient}
     >
-      <Button title='戻る' onPress={() => navigation.goBack()} />
       <View style={styles.container}>
         {isFinished ? (
           <Text>回答終了です。</Text>
         ) : (
           <View>
-            <Text style={styles.questionNumber}>
-              問題{index + 1} / {shuffledQuestions.length}
-            </Text>
-            <Text style={styles.questionText}>
-              {shuffledQuestions[index].question}
-            </Text>
+            <View style={styles.titleQuestion}>
+              <Text style={styles.questionNumber}>
+                【問題{index + 1} / {shuffledQuestions.length}】
+              </Text>
+              <Text style={styles.questionText}>
+                {shuffledQuestions[index].question}
+              </Text>
+            </View>
             {shuffledQuestions[index].options.map((item, index) => {
               return (
                 <TouchableOpacity
@@ -113,30 +107,48 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   questionNumber: {
-    marginBottom: 20,
     textAlign: 'center',
+    position: 'absolute',
+    top: 10,
   },
   questionText: {
     fontSize: 15,
-    marginBottom: 20,
     textAlign: 'center',
   },
   answerButton: {
-    backgroundColor: '#ffffff',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 25,
-    borderWidth: 2,
-    borderColor: '#000000',
-    elevation: 3,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 30,
+    backgroundColor: 'white',
+    marginBottom: 20,
+    elevation: 5,
+    shadowColor: 'rgba(0, 0, 0, 0.4)',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
   },
   buttonText: {
-    fontSize: 16,
-    lineHeight: 21,
+    color: 'black',
     fontWeight: 'bold',
-    letterSpacing: 0.25,
-    color: '#000000',
+    fontSize: 15,
     textAlign: 'center',
     textTransform: 'lowercase',
+  },
+  titleQuestion: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    width: 360,
+    height: 205,
+    borderRadius: 15,
+    backgroundColor: 'white',
+    fontSize: 15,
+    textAlign: 'center',
+    textTransform: 'capitalize',
+    shadowColor: '#aaa',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    marginBottom: 20,
   },
 });
