@@ -20,7 +20,7 @@ export const ResultScreen: FC<Props> = ({ score }) => {
       <Text style={styles.score}>
         あなたのスコアは {score}/{TOTAL_QUESTIONS} です。
       </Text>
-      <Button title='TOPに戻る' onPress={handleGoBack} />
+      <Button title='再挑戦' onPress={handleGoBack} />
     </View>
   );
 };
