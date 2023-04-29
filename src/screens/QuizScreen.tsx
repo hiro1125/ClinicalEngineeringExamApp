@@ -12,10 +12,12 @@ import { Props } from '../../types/type';
 import { shuffle } from 'lodash';
 import { questions } from '../quiz/IntroductionToMedicine';
 import { TOTAL_QUESTIONS } from '../contents';
+import { ResultScreen } from './ResultScreen';
 
 export const QuizScreen: FC<Props> = ({ navigation }) => {
   const [index, setIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
+  const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
   const shuffledQuestions = shuffle(questions).slice(0, TOTAL_QUESTIONS);
 
   const showCorrectAnswerAlert = () => {
@@ -27,6 +29,7 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
           if (index < shuffledQuestions.length - 1) {
             setIndex(index + 1);
           } else {
+            setShowResultScreen(true);
           }
         },
       },
@@ -44,6 +47,7 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
           if (index < shuffledQuestions.length - 1) {
             setIndex(index + 1);
           } else {
+            setShowResultScreen(true);
           }
         },
       },
@@ -60,6 +64,10 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
   };
 
   const isFinished = index === shuffledQuestions.length;
+
+  if (showResultScreen) {
+    return <ResultScreen score={score} />;
+  }
 
   return (
     <LinearGradient
@@ -118,7 +126,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     paddingVertical: 12,
     paddingHorizontal: 32,
-    borderRadius: 4,
+    borderRadius: 25,
+    borderWidth: 2,
+    borderColor: '#000000',
     elevation: 3,
   },
   buttonText: {
@@ -128,5 +138,6 @@ const styles = StyleSheet.create({
     letterSpacing: 0.25,
     color: '#000000',
     textAlign: 'center',
+    textTransform: 'uppercase',
   },
 });
