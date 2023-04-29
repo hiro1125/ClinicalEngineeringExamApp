@@ -27,9 +27,6 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
         text: 'OK',
         onPress: () => {
           if (index < shuffledQuestions.length - 1) {
-            setTimeout(() => {
-              setIndex(index + 1);
-            }, 2000);
           } else {
             setShowResultScreen(true);
           }
@@ -47,9 +44,7 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
         text: 'OK',
         onPress: () => {
           if (index < shuffledQuestions.length - 1) {
-            setTimeout(() => {
-              setIndex(index + 1);
-            }, 2000);
+            setIndex(index + 1);
           } else {
             setShowResultScreen(true);
           }
