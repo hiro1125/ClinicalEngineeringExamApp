@@ -27,7 +27,9 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
         text: 'OK',
         onPress: () => {
           if (index < shuffledQuestions.length - 1) {
-            setIndex(index + 1);
+            setTimeout(() => {
+              setIndex(index + 1);
+            }, 2000);
           } else {
             setShowResultScreen(true);
           }
@@ -45,7 +47,9 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
         text: 'OK',
         onPress: () => {
           if (index < shuffledQuestions.length - 1) {
-            setIndex(index + 1);
+            setTimeout(() => {
+              setIndex(index + 1);
+            }, 2000);
           } else {
             setShowResultScreen(true);
           }
@@ -138,6 +142,6 @@ const styles = StyleSheet.create({
     letterSpacing: 0.25,
     color: '#000000',
     textAlign: 'center',
-    textTransform: 'uppercase',
+    textTransform: 'lowercase',
   },
 });
