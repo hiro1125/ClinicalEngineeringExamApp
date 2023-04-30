@@ -44,22 +44,13 @@ const AppScreen: FC<ScreenProps & Props> = ({
         <Text h3 style={[styles.text, textStyle]}>
           {title}
         </Text>
-        {buttonData.length > 3 ? (
-          <FlatList
-            data={buttonData}
-            renderItem={renderItem}
-            keyExtractor={(_, index) => index.toString()}
-            showsVerticalScrollIndicator={false}
-          />
-        ) : (
-          <FlatList
-            data={buttonData}
-            renderItem={renderItem}
-            keyExtractor={(_, index) => index.toString()}
-            showsVerticalScrollIndicator={false}
-            scrollEnabled={false}
-          />
-        )}
+        <FlatList
+          data={buttonData}
+          renderItem={renderItem}
+          keyExtractor={(_, index) => index.toString()}
+          showsVerticalScrollIndicator={false}
+          scrollEnabled={buttonData.length > 3}
+        />
       </View>
     </LinearGradient>
   );
