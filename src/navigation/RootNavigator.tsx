@@ -10,7 +10,6 @@ import {
 import AppScreen from '../screens/AppScreen';
 import { StyleSheet } from 'react-native';
 import { QuizScreen } from '../screens/QuizScreen';
-import { ResultScreen } from '../screens/ResultScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -91,7 +90,6 @@ export const RootNavigator = () => {
         component={QuestionTestScreen}
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
-      <Stack.Screen name='Result' component={ResultScreenList} />
     </Stack.Navigator>
   );
 };
@@ -262,10 +260,6 @@ export const BiologicalMaterialScienceAndEngineeringScreen = ({
 /** クイズ画面 */
 export const QuestionTestScreen = ({ navigation }: Props) => {
   return <QuizScreen navigation={navigation} />;
-};
-
-export const ResultScreenList = ({ score }: any) => {
-  return <ResultScreen score={score} />;
 };
 
 const styles = StyleSheet.create({
