@@ -58,3 +58,12 @@ export type QuizData = {
   answerIndex: number;
   tags: string[];
 };
+
+export type QuizAlertProps = {
+  score: number;
+  setScore: (score: number) => void;
+  setShowResultScreen: (show: boolean) => void;
+  shuffledQuestions: Array<QuizData>;
+  index: number;
+  setIndex: (index: number) => void;
+};
