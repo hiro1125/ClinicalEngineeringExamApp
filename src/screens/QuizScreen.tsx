@@ -1,57 +1,36 @@
 import React, { FC, useState } from 'react';
 import { Text, View, StyleSheet, Alert, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Props } from '../../types/type';
+import { Props, QuizAlertProps } from '../../types/type';
 import { shuffle } from 'lodash';
 import { questions } from '../quiz/IntroductionToMedicine';
 import { TOTAL_QUESTIONS } from '../contents';
 import { ResultScreen } from './ResultScreen';
+import { showCorrectAnswerAlert, showIncorrectAnswerAlert } from '../function';
 
-export const QuizScreen: FC<Props> = ({ navigation }) => {
+export const QuizScreen: FC<Props> = () => {
   const [index, setIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
   const shuffledQuestions = shuffle(questions).slice(0, TOTAL_QUESTIONS);
 
-  const showCorrectAnswerAlert = () => {
-    Alert.alert('正解', 'おめでとうございます！', [
-      {
-        text: 'OK',
-        onPress: () => {
-          if (index < shuffledQuestions.length - 1) {
-            setScore(score + 1);
-          } else {
-            setShowResultScreen(true);
-          }
-        },
-      },
-    ]);
-  };
-
-  const showIncorrectAnswerAlert = () => {
-    const currentQuestion = shuffledQuestions[index];
-    const correctAnswer = currentQuestion.options[currentQuestion.answerIndex];
-    const message = `残念！正解は${correctAnswer}でした。`;
-    Alert.alert('不正解', message, [
-      {
-        text: 'OK',
-        onPress: () => {
-          if (index < shuffledQuestions.length - 1) {
-            setIndex(index + 1);
-          } else {
-            setShowResultScreen(true);
-          }
-        },
-      },
-    ]);
-  };
-
   const answerButton = (optionIndex: number) => {
     const currentQuestion = shuffledQuestions[index];
     if (currentQuestion.answerIndex === optionIndex) {
-      showCorrectAnswerAlert();
+      showCorrectAnswerAlert({
+        score,
+        setScore,
+        setShowResultScreen,
+        shuffledQuestions,
+        index,
+      } as QuizAlertProps);
     } else {
-      showIncorrectAnswerAlert();
+      showIncorrectAnswerAlert({
+        shuffledQuestions,
+        index,
+        setIndex,
+        setShowResultScreen,
+      } as QuizAlertProps);
     }
   };
 
