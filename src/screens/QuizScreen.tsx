@@ -88,18 +88,20 @@ const styles = StyleSheet.create({
   questionNumber: {
     textAlign: 'center',
     position: 'absolute',
-    top: 10,
+    top: 5,
+    margin: 5,
   },
   questionText: {
     fontSize: 15,
     textAlign: 'center',
+    padding: 5,
   },
   answerButton: {
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 30,
     backgroundColor: 'white',
-    marginBottom: 20,
+    margin: 10,
     elevation: 5,
     shadowColor: 'rgba(0, 0, 0, 0.4)',
     shadowOffset: { width: 0, height: 4 },
@@ -129,5 +131,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 4,
     marginBottom: 20,
+    margin: 10,
   },
 });
