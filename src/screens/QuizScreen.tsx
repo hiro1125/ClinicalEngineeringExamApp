@@ -23,6 +23,7 @@ export const QuizScreen: FC<Props> = () => {
         setShowResultScreen,
         shuffledQuestions,
         index,
+        setIndex,
       } as QuizAlertProps);
     } else {
       showIncorrectAnswerAlert({
@@ -34,20 +35,14 @@ export const QuizScreen: FC<Props> = () => {
     }
   };
 
-  const isFinished = index === shuffledQuestions.length;
-
-  if (showResultScreen) {
-    return <ResultScreen score={score} />;
-  }
-
   return (
     <LinearGradient
       colors={['#a7ddff', '#2d82a8']}
       style={styles.linearGradient}
     >
       <View style={styles.container}>
-        {isFinished ? (
-          <Text>回答終了です。</Text>
+        {showResultScreen ? (
+          <ResultScreen score={score} />
         ) : (
           <View>
             <View style={styles.titleQuestion}>
