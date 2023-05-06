@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Props } from '../../types/type';
@@ -12,7 +12,20 @@ export const QuizScreen: FC<Props> = () => {
   const [index, setIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
-  const shuffledQuestions = shuffle(questions).slice(0, TOTAL_QUESTIONS);
+  const [timer, setTimer] = useState<number>(10);
+  const [isRunning, setIsRunning] = useState<boolean>(false);
+  const [shuffledQuestions, setShuffledQuestions] = useState(
+    shuffle(questions).slice(0, TOTAL_QUESTIONS)
+  );
+
+  useEffect(() => {
+    if (!isRunning && timer > 0) {
+      const interval = setInterval(() => {
+        setTimer((prevTimer) => prevTimer - 1);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [timer, isRunning]);
 
   const answerButton = (optionIndex: number) => {
     const currentQuestion = shuffledQuestions[index];
@@ -43,7 +56,7 @@ export const QuizScreen: FC<Props> = () => {
       <View style={styles.container}>
         {showResultScreen ? (
           <ResultScreen score={score} />
-        ) : (
+        ) : timer > 0 ? (
           <View>
             <View style={styles.titleQuestion}>
               <Text style={styles.questionNumber}>
@@ -53,6 +66,7 @@ export const QuizScreen: FC<Props> = () => {
                 {shuffledQuestions[index].question}
               </Text>
             </View>
+            <Text style={styles.timerText}>{timer}</Text>
             {shuffledQuestions[index].options.map((item, index) => {
               return (
                 <TouchableOpacity
@@ -64,6 +78,34 @@ export const QuizScreen: FC<Props> = () => {
                 </TouchableOpacity>
               );
             })}
+          </View>
+        ) : (
+          <View style={styles.resultContainer}>
+            <Text style={styles.resultText}>
+              正解数: {score}/{TOTAL_QUESTIONS}
+            </Text>
+            <TouchableOpacity
+              onPress={() => {
+                setTimer(10);
+                setIndex(index);
+              }}
+              style={styles.resumeButton}
+            >
+              <Text style={styles.playButtonText}>続きからプレイする</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                setIndex(0);
+                setScore(0);
+                setTimer(10);
+                setShuffledQuestions(
+                  shuffle(questions).slice(0, TOTAL_QUESTIONS)
+                );
+              }}
+              style={styles.restartButton}
+            >
+              <Text style={styles.playButtonText}>最初からプレイする</Text>
+            </TouchableOpacity>
           </View>
         )}
       </View>
@@ -127,5 +169,36 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     marginBottom: 20,
     margin: 10,
+  },
+  timerText: {
+    color: 'white',
+    fontSize: 16,
+    marginLeft: 5,
+  },
+  resultContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  resultText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  resumeButton: {
+    backgroundColor: '#27ae60',
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 10,
+  },
+  restartButton: {
+    backgroundColor: '#c0392b',
+    padding: 15,
+    borderRadius: 10,
+  },
+  playButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
