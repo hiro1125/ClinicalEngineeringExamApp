@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
-import { Text, View, StyleSheet, Alert, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Props, QuizAlertProps } from '../../types/type';
+import { Props } from '../../types/type';
 import { shuffle } from 'lodash';
 import { questions } from '../quiz/IntroductionToMedicine';
 import { TOTAL_QUESTIONS } from '../contents';
@@ -24,14 +24,14 @@ export const QuizScreen: FC<Props> = () => {
         shuffledQuestions,
         index,
         setIndex,
-      } as QuizAlertProps);
+      });
     } else {
       showIncorrectAnswerAlert({
         shuffledQuestions,
         index,
         setIndex,
         setShowResultScreen,
-      } as QuizAlertProps);
+      });
     }
   };
 

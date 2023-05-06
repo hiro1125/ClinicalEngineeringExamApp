@@ -1,4 +1,7 @@
-import { QuizAlertProps } from '../../types/type';
+import {
+  QuizAlertCorrectProps,
+  QuizAlertIncorrectProps,
+} from '../../types/type';
 import { Alert } from 'react-native';
 import { AVPlaybackSource, Audio } from 'expo-av';
 
@@ -22,7 +25,7 @@ export const showCorrectAnswerAlert = async ({
   shuffledQuestions,
   index,
   setIndex,
-}: QuizAlertProps) => {
+}: QuizAlertCorrectProps) => {
   await playSound(correctSound);
   Alert.alert('正解', 'おめでとうございます！', [
     {
@@ -44,7 +47,7 @@ export const showIncorrectAnswerAlert = async ({
   index,
   setIndex,
   setShowResultScreen,
-}: QuizAlertProps) => {
+}: QuizAlertIncorrectProps) => {
   const currentQuestion = shuffledQuestions[index];
   const correctAnswer = currentQuestion.options[currentQuestion.answerIndex];
   const message = `残念！正解は${correctAnswer}でした。`;

@@ -59,9 +59,16 @@ export type QuizData = {
   tags: string[];
 };
 
-export type QuizAlertProps = {
+export type QuizAlertCorrectProps = {
   score: number;
   setScore: (score: number) => void;
+  setShowResultScreen: (show: boolean) => void;
+  shuffledQuestions: Array<QuizData>;
+  index: number;
+  setIndex: (index: number) => void;
+};
+
+export type QuizAlertIncorrectProps = {
   setShowResultScreen: (show: boolean) => void;
   shuffledQuestions: Array<QuizData>;
   index: number;
