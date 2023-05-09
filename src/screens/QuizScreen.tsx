@@ -1,12 +1,13 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Props } from '../../types/type';
+import { Props, RouteButton } from '../../types/type';
 import { shuffle } from 'lodash';
 import { questions } from '../quiz/IntroductionToMedicine';
-import { TOTAL_QUESTIONS } from '../contents';
+import { TOTAL_QUESTIONS, examMenuButton } from '../contents';
 import { ResultScreen } from './ResultScreen';
 import { showCorrectAnswerAlert, showIncorrectAnswerAlert } from '../function';
+import { useNavigation } from '@react-navigation/native';
 
 export const QuizScreen: FC<Props> = () => {
   const [index, setIndex] = useState<number>(0);
@@ -16,6 +17,15 @@ export const QuizScreen: FC<Props> = () => {
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [shuffledQuestions, setShuffledQuestions] = useState(
     shuffle(questions).slice(0, TOTAL_QUESTIONS)
+  );
+
+
+  const navigation = useNavigation();
+  const handleNavigation = (navigationName: string) => {
+    navigation.navigate(navigationName as never);
+  };
+  const byFieldMenuButtons = examMenuButton.filter(
+    (button: RouteButton) => button.navigationName === 'ByField'
   );
 
   useEffect(() => {
@@ -58,6 +68,17 @@ export const QuizScreen: FC<Props> = () => {
           <ResultScreen score={score} />
         ) : timer > 0 ? (
           <View>
+            <View style={styles.returnContainer}>
+              {byFieldMenuButtons.map((button, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.byFieldButton}
+                  onPress={() => handleNavigation(button.navigationName)}
+                >
+                  <Text style={styles.playButtonText}>戻る</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
             <View style={styles.titleQuestion}>
               <Text style={styles.questionNumber}>
                 【問題{index + 1} / {shuffledQuestions.length}】
@@ -121,6 +142,16 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  returnContainer: {
+    alignItems: 'flex-end',
+    marginRight: 20,
+  },
+  byFieldButton: {
+    backgroundColor: '#2d82a8',
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 10,
   },
   questionNumber: {
     textAlign: 'center',
