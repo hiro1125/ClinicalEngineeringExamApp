@@ -18,6 +18,15 @@ export const QuizScreen: FC<Props> = () => {
     shuffle(questions).slice(0, TOTAL_QUESTIONS)
   );
 
+
+  const navigation = useNavigation();
+  const handleNavigation = (navigationName: string) => {
+    navigation.navigate(navigationName as never);
+  };
+  const byFieldMenuButtons = examMenuButton.filter(
+    (button: RouteButton) => button.navigationName === 'ByField'
+  );
+
   useEffect(() => {
     if (!isRunning && timer > 0) {
       const interval = setInterval(() => {
@@ -58,6 +67,17 @@ export const QuizScreen: FC<Props> = () => {
           <ResultScreen score={score} />
         ) : timer > 0 ? (
           <View>
+            <View style={styles.returnContainer}>
+              {byFieldMenuButtons.map((button, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.byFieldButton}
+                  onPress={() => handleNavigation(button.navigationName)}
+                >
+                  <Text style={styles.playButtonText}>戻る</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
             <View style={styles.titleQuestion}>
               <Text style={styles.questionNumber}>
                 【問題{index + 1} / {shuffledQuestions.length}】
@@ -121,6 +141,16 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  returnContainer: {
+    alignItems: 'flex-end',
+    marginRight: 20,
+  },
+  byFieldButton: {
+    backgroundColor: '#2d82a8',
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 10,
   },
   questionNumber: {
     textAlign: 'center',
