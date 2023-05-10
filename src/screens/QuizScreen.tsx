@@ -13,12 +13,14 @@ export const QuizScreen: FC<Props> = () => {
   const [index, setIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
-  const [timer, setTimer] = useState<number>(10);
-  const [isRunning, setIsRunning] = useState<boolean>(false);
+  const [timer, setTimer] = useState<number>(60);
+
   const [shuffledQuestions, setShuffledQuestions] = useState(
     shuffle(questions).slice(0, TOTAL_QUESTIONS)
   );
 
+  const min = Math.floor(timer / 60);
+  const rem = timer % 60;
 
   const navigation = useNavigation();
   const handleNavigation = (navigationName: string) => {
@@ -29,13 +31,13 @@ export const QuizScreen: FC<Props> = () => {
   );
 
   useEffect(() => {
-    if (!isRunning && timer > 0) {
+    if (timer > 0) {
       const interval = setInterval(() => {
         setTimer((prevTimer) => prevTimer - 1);
       }, 1000);
       return () => clearInterval(interval);
     }
-  }, [timer, isRunning]);
+  }, [timer]);
 
   const answerButton = (optionIndex: number) => {
     const currentQuestion = shuffledQuestions[index];
@@ -87,7 +89,9 @@ export const QuizScreen: FC<Props> = () => {
                 {shuffledQuestions[index].question}
               </Text>
             </View>
-            <Text style={styles.timerText}>{timer}</Text>
+            <Text style={styles.timeRestart}>
+              {min === 0 ? `残り時間：${rem}秒` : `残り時間：${min}分${rem}秒`}
+            </Text>
             {shuffledQuestions[index].options.map((item, index) => {
               return (
                 <TouchableOpacity
@@ -222,10 +226,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 10,
   },
-  restartButton: {
-    backgroundColor: '#c0392b',
-    padding: 15,
-    borderRadius: 10,
+  timeRestart: {
+    marginLeft: 10,
+    marginRight: 10,
+    shadowRadius: 6,
+    backgroundColor: '#2e44bc',
+    color: '#ffffff',
+    fontSize: 20,
+    textAlign: 'center',
   },
   playButtonText: {
     color: '#fff',
