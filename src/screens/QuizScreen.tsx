@@ -61,80 +61,14 @@ export const QuizScreen: FC<Props> = () => {
   };
 
   return (
-    <LinearGradient
-      colors={['#a7ddff', '#2d82a8']}
-      style={styles.linearGradient}
-    >
-      <View style={styles.container}>
-        {showResultScreen ? (
-          <ResultScreen score={score} />
-        ) : timer > 0 ? (
-          <View>
-            <View style={styles.returnContainer}>
-              {byFieldMenuButtons.map((button, index) => (
-                <TouchableOpacity
-                  key={index}
-                  style={styles.byFieldButton}
-                  onPress={() => handleNavigation(button.navigationName)}
-                >
-                  <Text style={styles.playButtonText}>戻る</Text>
-                </TouchableOpacity>
-              ))}
-            </View>
-            <View style={styles.titleQuestion}>
-              <Text style={styles.questionNumber}>
-                【問題{index + 1} / {shuffledQuestions.length}】
-              </Text>
-              <Text style={styles.questionText}>
-                {shuffledQuestions[index].question}
-              </Text>
-            </View>
-            <Text style={styles.timeRestart}>
-              {min === 0 ? `残り時間：${rem}秒` : `残り時間：${min}分${rem}秒`}
-            </Text>
-            {shuffledQuestions[index].options.map((item, index) => {
-              return (
-                <TouchableOpacity
-                  key={index}
-                  onPress={() => answerButton(index)}
-                  style={styles.answerButton}
-                >
-                  <Text style={styles.buttonText}>{item}</Text>
-                </TouchableOpacity>
-              );
-            })}
-          </View>
-        ) : (
-          <View style={styles.resultContainer}>
-            <Text style={styles.resultText}>
-              正解数: {score}/{TOTAL_QUESTIONS}
-            </Text>
-            <TouchableOpacity
-              onPress={() => {
-                setTimer(10);
-                setIndex(index);
-              }}
-              style={styles.resumeButton}
-            >
-              <Text style={styles.playButtonText}>続きからプレイする</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => {
-                setIndex(0);
-                setScore(0);
-                setTimer(10);
-                setShuffledQuestions(
-                  shuffle(questions).slice(0, TOTAL_QUESTIONS)
-                );
-              }}
-              style={styles.restartButton}
-            >
-              <Text style={styles.playButtonText}>最初からプレイする</Text>
-            </TouchableOpacity>
-          </View>
-        )}
-      </View>
-    </LinearGradient>
+        <TimeOverScreen
+          score={score}
+          setScore={setScore}
+          setTimer={setTimer}
+          index={index}
+          setIndex={setIndex}
+          setShuffledQuestions={setShuffledQuestions}
+        />
   );
 };
 
