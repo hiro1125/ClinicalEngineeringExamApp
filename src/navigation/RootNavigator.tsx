@@ -10,6 +10,8 @@ import {
 import AppScreen from '../screens/AppScreen';
 import { StyleSheet } from 'react-native';
 import { QuizScreen } from '../screens/QuizScreen';
+import { LinearGradient } from 'expo-linear-gradient';
+import { color } from '../styles';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -97,71 +99,83 @@ export const RootNavigator = () => {
 /** Home画面 */
 export const HomeScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen
-      title='臨床工学技士国家試験対策'
-      buttonData={startButton}
-      navigation={navigation}
-      textStyle={styles.homeScreenText}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='臨床工学技士国家試験対策'
+        buttonData={startButton}
+        navigation={navigation}
+        textStyle={styles.homeScreenText}
+      />
+    </LinearGradient>
   );
 };
 
 /** ExamMenu画面 */
 export const ExamMenuScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen
-      title='試験選択'
-      buttonData={examMenuButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='試験選択'
+        buttonData={examMenuButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
 /** ByField画面 */
 export const ByFieldScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen
-      title='分野別'
-      buttonData={byFieldButton}
-      navigation={navigation}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='分野別'
+        buttonData={byFieldButton}
+        navigation={navigation}
+      />
+    </LinearGradient>
   );
 };
 
 /** NinetyQuestionTest画面 */
 export const NinetyQuestionTestScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen
-      title='90問試験'
-      buttonData={questionTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='90問試験'
+        buttonData={questionTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
 /** IntroductionToMedicine画面 */
 export const IntroductionToMedicineScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen
-      title='医学概論'
-      buttonData={introductionToMedicineTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='医学概論'
+        buttonData={introductionToMedicineTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
 /** ClinicalMedicineOverview画面 */
 export const ClinicalMedicineOverviewScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen
-      title='臨床医学総論'
-      buttonData={questionTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='臨床医学総論'
+        buttonData={questionTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
@@ -170,36 +184,42 @@ export const BiomedicalMeasurementInstrumentationScreen = ({
   navigation,
 }: Props) => {
   return (
-    <AppScreen
-      title='生体計測装置学'
-      buttonData={questionTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='生体計測装置学'
+        buttonData={questionTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
 /** MedicalTherapeuticEquipment画面 */
 export const MedicalTherapeuticEquipmentScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen
-      title='医用治療機器学'
-      buttonData={questionTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='医用治療機器学'
+        buttonData={questionTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
 /** MedDevSafety画面 */
 export const MedDevSafetyScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen
-      title='医用機器安全管理学'
-      buttonData={questionTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='医用機器安全管理学'
+        buttonData={questionTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
@@ -208,12 +228,14 @@ export const MedicalElectricalAndElectronicEngineeringScreen = ({
   navigation,
 }: Props) => {
   return (
-    <AppScreen
-      title='医用電気電子工学'
-      buttonData={questionTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='医用電気電子工学'
+        buttonData={questionTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
@@ -222,24 +244,28 @@ export const BiologicalFunctionSubstitutionEquipmentScreen = ({
   navigation,
 }: Props) => {
   return (
-    <AppScreen
-      title='生体機能代行装置学'
-      buttonData={questionTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='生体機能代行装置学'
+        buttonData={questionTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
 /** MedicalMechanicalEngineering画面 */
 export const MedicalMechanicalEngineeringScreen = ({ navigation }: Props) => {
   return (
-    <AppScreen
-      title='医用機械工学'
-      buttonData={questionTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='医用機械工学'
+        buttonData={questionTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
@@ -248,21 +274,30 @@ export const BiologicalMaterialScienceAndEngineeringScreen = ({
   navigation,
 }: Props) => {
   return (
-    <AppScreen
-      title='生体物性材料工学'
-      buttonData={questionTestButton}
-      navigation={navigation}
-      textStyle={styles.examination}
-    />
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <AppScreen
+        title='生体物性材料工学'
+        buttonData={questionTestButton}
+        navigation={navigation}
+        textStyle={styles.examination}
+      />
+    </LinearGradient>
   );
 };
 
 /** クイズ画面 */
 export const QuestionTestScreen = ({ navigation }: Props) => {
-  return <QuizScreen navigation={navigation} />;
+  return (
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <QuizScreen navigation={navigation} />
+    </LinearGradient>
+  );
 };
 
 const styles = StyleSheet.create({
+  linearGradient: {
+    flex: 1,
+  },
   homeScreenText: {
     lineHeight: 500,
     marginBottom: 0,

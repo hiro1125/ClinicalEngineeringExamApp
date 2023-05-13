@@ -6,7 +6,6 @@ import {
   ListRenderItem,
 } from 'react-native';
 import { Text, Button } from 'react-native-elements';
-import { LinearGradient } from 'expo-linear-gradient';
 import { Props, RouteButton, ScreenProps } from '../../types/type';
 import { RETURN_BUTTON_TEXT } from '../contents';
 import { FC } from 'react';
@@ -36,32 +35,24 @@ const AppScreen: FC<ScreenProps & Props> = ({
   };
 
   return (
-    <LinearGradient
-      colors={['#a7ddff', '#2d82a8']}
-      style={styles.linearGradient}
-    >
-      <View style={styles.container}>
-        <Text h3 style={[styles.text, textStyle]}>
-          {title}
-        </Text>
-        <FlatList
-          data={buttonData}
-          renderItem={renderItem}
-          keyExtractor={(_, index) => index.toString()}
-          showsVerticalScrollIndicator={false}
-          scrollEnabled={buttonData.length > 3}
-        />
-      </View>
-    </LinearGradient>
+    <View style={styles.container}>
+      <Text h3 style={[styles.text, textStyle]}>
+        {title}
+      </Text>
+      <FlatList
+        data={buttonData}
+        renderItem={renderItem}
+        keyExtractor={(_, index) => index.toString()}
+        showsVerticalScrollIndicator={false}
+        scrollEnabled={buttonData.length > 3}
+      />
+    </View>
   );
 };
 
 export default AppScreen;
 
 const styles = StyleSheet.create({
-  linearGradient: {
-    flex: 1,
-  },
   container: {
     flex: 1,
     alignItems: 'center',
@@ -89,7 +80,7 @@ const styles = StyleSheet.create({
     width: Platform.OS === 'ios' ? '70%' : '100%',
     color: 'black',
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 18,
     textAlign: 'center',
     textTransform: 'uppercase',
   },
