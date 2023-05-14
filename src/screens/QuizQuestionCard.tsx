@@ -1,5 +1,11 @@
 import React, { FC, useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView,
+} from 'react-native';
 import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
 import { examMenuButton } from '../contents';
@@ -38,7 +44,7 @@ export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
   }, [timer]);
 
   return (
-    <View>
+    <SafeAreaView>
       <View style={styles.returnContainer}>
         {byFieldMenuButtons.map((button, index) => (
           <TouchableOpacity
@@ -72,7 +78,7 @@ export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
           </TouchableOpacity>
         );
       })}
-    </View>
+    </SafeAreaView>
   );
 };
 
