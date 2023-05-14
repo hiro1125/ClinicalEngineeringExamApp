@@ -10,7 +10,7 @@ import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
 import { examMenuButton } from '../contents';
 import { StackActions } from '@react-navigation/native';
-import { useTimer } from '../hooks';
+import { useTimer } from '../hooks/useTimer';
 
 type QuizQuestionCardProps = {
   shuffledQuestions: Array<QuizData>;

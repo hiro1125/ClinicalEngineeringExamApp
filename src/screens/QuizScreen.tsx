@@ -8,7 +8,7 @@ import { ResultScreen } from './ResultScreen';
 import { showCorrectAnswerAlert, showIncorrectAnswerAlert } from '../function';
 import { TimeOverScreen } from './TimeOverScreen';
 import QuizQuestionCard from './QuizQuestionCard';
-import { useTimer } from '../hooks';
+import { useTimer } from '../hooks/useTimer';
 
 export const QuizScreen: FC<Props> = () => {
   const [index, setIndex] = useState<number>(0);
