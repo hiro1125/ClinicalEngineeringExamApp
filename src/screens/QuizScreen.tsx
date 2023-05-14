@@ -8,25 +8,18 @@ import { ResultScreen } from './ResultScreen';
 import { showCorrectAnswerAlert, showIncorrectAnswerAlert } from '../function';
 import { TimeOverScreen } from './TimeOverScreen';
 import QuizQuestionCard from './QuizQuestionCard';
+import { useTimer } from '../hooks';
 
 export const QuizScreen: FC<Props> = () => {
   const [index, setIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
-  const [timer, setTimer] = useState<number>(10);
 
   const [shuffledQuestions, setShuffledQuestions] = useState(
     shuffle(questions).slice(0, TOTAL_QUESTIONS)
   );
 
-  useEffect(() => {
-    if (timer > 0) {
-      const interval = setInterval(() => {
-        setTimer((prevTimer) => prevTimer - 1);
-      }, 1000);
-      return () => clearInterval(interval);
-    }
-  }, [timer]);
+  const { timer, setTimer } = useTimer();
 
   const answerButton = (optionIndex: number) => {
     const currentQuestion = shuffledQuestions[index];

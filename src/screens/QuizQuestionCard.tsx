@@ -9,6 +9,8 @@ import {
 import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
 import { examMenuButton } from '../contents';
+import { StackActions } from '@react-navigation/native';
+import { useTimer } from '../hooks';
 
 type QuizQuestionCardProps = {
   shuffledQuestions: Array<QuizData>;
@@ -22,35 +24,28 @@ export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
   index,
   answerButton,
 }) => {
-  const [timer, setTimer] = useState<number>(10);
-
-  const min = Math.floor(timer / 60);
-  const rem = timer % 60;
   const navigation = useNavigation();
-  const handleNavigation = (navigationName: string) => {
-    navigation.navigate(navigationName as never);
+  const handleNavigation = () => {
+    navigation.dispatch(StackActions.pop(2));
   };
+
   const byFieldMenuButtons = examMenuButton.filter(
     (button: RouteButton) => button.navigationName === 'ByField'
   );
 
-  useEffect(() => {
-    if (timer > 0) {
-      const interval = setInterval(() => {
-        setTimer((prevTimer) => prevTimer - 1);
-      }, 1000);
-      return () => clearInterval(interval);
-    }
-  }, [timer]);
+  const { timer } = useTimer();
+
+  const min = Math.floor(timer / 60);
+  const rem = timer % 60;
 
   return (
     <SafeAreaView>
       <View style={styles.returnContainer}>
-        {byFieldMenuButtons.map((button, index) => (
+        {byFieldMenuButtons.map((_, index) => (
           <TouchableOpacity
             key={index}
             style={styles.byFieldButton}
-            onPress={() => handleNavigation(button.navigationName)}
+            onPress={handleNavigation}
           >
             <Text style={styles.playButtonText}>戻る</Text>
           </TouchableOpacity>
