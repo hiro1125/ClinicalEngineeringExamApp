@@ -13,7 +13,7 @@ import { StackActions } from '@react-navigation/native';
 import { useTimer } from '../hooks/useTimer';
 
 type QuizQuestionCardProps = {
-  shuffledQuestions: Array<QuizData>;
+  shuffledQuestions: QuizData[];
   index: number;
   timer: number;
   answerButton: (index: number) => void;
