@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   SafeAreaView,
+  Alert,
 } from 'react-native';
 import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
@@ -26,7 +27,17 @@ export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
 }) => {
   const navigation = useNavigation();
   const handleNavigation = () => {
-    navigation.dispatch(StackActions.pop(2));
+    Alert.alert('確認', '本当に戻りますか？', [
+      {
+        text: 'キャンセル',
+      },
+      {
+        text: '戻る',
+        onPress: () => {
+          navigation.dispatch(StackActions.pop(2));
+        },
+      },
+    ]);
   };
 
   const byFieldMenuButtons = examMenuButton.filter(
