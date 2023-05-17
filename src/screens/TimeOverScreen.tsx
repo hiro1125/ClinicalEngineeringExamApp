@@ -1,6 +1,5 @@
 import { FC } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { TOTAL_QUESTIONS, examMenuButton } from '../contents';
 import { shuffle } from 'lodash';
 import { questions } from '../quiz/IntroductionToMedicine';
