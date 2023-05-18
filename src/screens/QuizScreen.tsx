@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Props } from '../../types/type';
 import { shuffle } from 'lodash';

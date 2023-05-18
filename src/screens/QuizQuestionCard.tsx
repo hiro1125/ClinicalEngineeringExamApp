@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import {
   View,
   Text,
@@ -26,6 +26,7 @@ export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
   answerButton,
 }) => {
   const navigation = useNavigation();
+
   const handleNavigation = () => {
     Alert.alert('確認', '本当に戻りますか？', [
       {
