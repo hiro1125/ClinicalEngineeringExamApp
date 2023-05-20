@@ -2,9 +2,10 @@ import { FC } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { TOTAL_QUESTIONS, examMenuButton } from '../contents';
 import { shuffle } from 'lodash';
-import { questions } from '../quiz/IntroductionToMedicine';
+
 import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
+import { questions } from '../quiz/introductionToMedicine';
 
 type GameRestartScreenProps = {
   score: number;

@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Props } from '../../types/type';
 import { shuffle } from 'lodash';
-import { questions } from '../quiz/IntroductionToMedicine';
+import { questions } from '../quiz/introductionToMedicine';
 import { TOTAL_QUESTIONS } from '../contents';
 import { ResultScreen } from './ResultScreen';
 import { showCorrectAnswerAlert, showIncorrectAnswerAlert } from '../function';
