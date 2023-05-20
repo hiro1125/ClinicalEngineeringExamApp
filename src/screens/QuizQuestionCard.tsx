@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
-import { examMenuButton } from '../contents';
+import { RETURN_BUTTON_TEXT, examMenuButton } from '../contents';
 import { StackActions } from '@react-navigation/native';
 import { useTimer } from '../hooks/useTimer';
 
@@ -33,7 +33,7 @@ export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
         text: 'キャンセル',
       },
       {
-        text: '戻る',
+        text: RETURN_BUTTON_TEXT,
         onPress: () => {
           navigation.dispatch(StackActions.pop(2));
         },

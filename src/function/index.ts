@@ -4,6 +4,7 @@ import {
 } from '../../types/type';
 import { Alert } from 'react-native';
 import { AVPlaybackSource, Audio } from 'expo-av';
+import { DECISION_BUTTON_TEXT } from '../contents';
 
 const correctSound = require('../../assets/sounds/correct.mp3');
 const inCorrectSound = require('../../assets/sounds/incorrect.mp3');
@@ -29,7 +30,7 @@ export const showCorrectAnswerAlert = async ({
   await playSound(correctSound);
   Alert.alert('正解', 'おめでとうございます！', [
     {
-      text: 'OK',
+      text: DECISION_BUTTON_TEXT,
       onPress: () => {
         if (index < shuffledQuestions.length - 1) {
           setIndex(index + 1);
@@ -54,7 +55,7 @@ export const showIncorrectAnswerAlert = async ({
   await playSound(inCorrectSound);
   Alert.alert('不正解', message, [
     {
-      text: 'OK',
+      text: DECISION_BUTTON_TEXT,
       onPress: () => {
         if (index < shuffledQuestions.length - 1) {
           setIndex(index + 1);

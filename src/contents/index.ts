@@ -2,6 +2,7 @@ import { RouteButton } from '../../types/type';
 
 export const RETURN_BUTTON_TEXT = '戻る';
 export const START_BUTTON_TEXT = 'スタート';
+export const DECISION_BUTTON_TEXT = 'OK';
 export const TOTAL_QUESTIONS = 10;
 
 // /** Home画面 */
