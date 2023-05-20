@@ -53,15 +53,13 @@ export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
   return (
     <SafeAreaView>
       <View style={styles.returnContainer}>
-        {byFieldMenuButtons.map((_, index) => (
-          <TouchableOpacity
-            key={index}
-            style={styles.byFieldButton}
-            onPress={handleNavigation}
-          >
-            <Text style={styles.playButtonText}>戻る</Text>
-          </TouchableOpacity>
-        ))}
+        <TouchableOpacity
+          key={index}
+          style={styles.byFieldButton}
+          onPress={handleNavigation}
+        >
+          <Text style={styles.playButtonText}>戻る</Text>
+        </TouchableOpacity>
       </View>
       <View style={styles.titleQuestion}>
         <Text style={styles.questionNumber}>
