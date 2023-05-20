@@ -41,10 +41,6 @@ export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
     ]);
   };
 
-  const byFieldMenuButtons = examMenuButton.filter(
-    (button: RouteButton) => button.navigationName === 'ByField'
-  );
-
   const { timer } = useTimer();
 
   const min = Math.floor(timer / 60);
