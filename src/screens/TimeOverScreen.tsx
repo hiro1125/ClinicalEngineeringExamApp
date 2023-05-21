@@ -2,10 +2,9 @@ import { FC } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { TOTAL_QUESTIONS, examMenuButton } from '../contents';
 import { shuffle } from 'lodash';
-
 import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
-import { questions } from '../quiz/introductionToMedicine';
+import { introductionToMedicineData } from '../quiz/introductionToMedicine';
 
 type GameRestartScreenProps = {
   score: number;
@@ -33,7 +32,9 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
     setIndex(0);
     setScore(0);
     setTimer(10);
-    setShuffledQuestions(shuffle(questions).slice(0, TOTAL_QUESTIONS));
+    setShuffledQuestions(
+      shuffle(introductionToMedicineData).slice(0, TOTAL_QUESTIONS)
+    );
   };
 
   const navigation = useNavigation();
