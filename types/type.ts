@@ -44,6 +44,7 @@ export type RouteButton = {
     | 'BiologicalMaterialScienceAndEngineering'
     | 'IntroductionToMedicineTest'
     | 'Result';
+  quizData?: QuizData[];
 };
 
 export type ScreenProps = {

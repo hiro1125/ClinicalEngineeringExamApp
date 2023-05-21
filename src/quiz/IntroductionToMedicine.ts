@@ -1,6 +1,6 @@
 import { QuizData } from '../../types/type';
 
-export const questions: QuizData[] = [
+export const introductionToMedicine: QuizData[] = [
   /** 28回(AM) */
   {
     question: 'クリニカルパス導入の効果で誤っているのはどれか。',
