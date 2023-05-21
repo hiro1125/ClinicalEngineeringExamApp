@@ -18,6 +18,7 @@ const AppScreen: FC<ScreenProps & Props> = ({
   title,
   buttonData,
 }) => {
+  const dispatch = useRootDispatch();
   const renderItem: ListRenderItem<RouteButton> = ({ item, index }) => {
     const dispatch = useRootDispatch();
     return (
