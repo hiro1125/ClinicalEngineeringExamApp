@@ -3,7 +3,6 @@ import { Props, RootStackParamList } from '../../types/type';
 import {
   byFieldButton,
   examMenuButton,
-  introductionToMedicineTestButton,
   questionTestButton,
   startButton,
 } from '../contents';
@@ -88,7 +87,7 @@ export const RootNavigator = () => {
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
-        name='IntroductionToMedicineTest'
+        name='QuestionTest'
         component={QuestionTestScreen}
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
@@ -157,7 +156,7 @@ export const IntroductionToMedicineScreen = ({ navigation }: Props) => {
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
         title='医学概論'
-        buttonData={introductionToMedicineTestButton}
+        buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
       />

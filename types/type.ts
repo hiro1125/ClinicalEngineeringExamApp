@@ -45,6 +45,7 @@ export type RouteButton = {
     | 'IntroductionToMedicineTest'
     | 'Result';
   quizData?: QuizData[];
+  isStartQuizScreen?: boolean;
 };
 
 export type ScreenProps = {
