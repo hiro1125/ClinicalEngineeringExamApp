@@ -4,7 +4,8 @@ import { TOTAL_QUESTIONS, examMenuButton } from '../contents';
 import { shuffle } from 'lodash';
 import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
-import { useRootSelector } from '../redux/store/store';
+import { useRootDispatch, useRootSelector } from '../redux/store/store';
+import { setQuizDate } from '../redux/slices/quizSlice';
 
 type GameRestartScreenProps = {
   score: number;
@@ -23,6 +24,7 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
   setScore,
   setShuffledQuestions,
 }) => {
+  const dispatch = useRootDispatch();
   const quizData = useRootSelector((state) => state.quiz.quizData);
   const handleResumeButtonPress = () => {
     setTimer(10);
@@ -65,7 +67,10 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
         <TouchableOpacity
           key={index}
           style={styles.byFieldButton}
-          onPress={() => handleNavigation(button.navigationName)}
+          onPress={() => {
+            handleNavigation(button.navigationName);
+            dispatch(setQuizDate([]));
+          }}
         >
           <Text style={styles.playButtonText}>{button.title}に戻る</Text>
         </TouchableOpacity>
