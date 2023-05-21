@@ -20,7 +20,6 @@ const AppScreen: FC<ScreenProps & Props> = ({
 }) => {
   const dispatch = useRootDispatch();
   const renderItem: ListRenderItem<RouteButton> = ({ item, index }) => {
-    const dispatch = useRootDispatch();
     return (
       <Button
         key={index}
@@ -28,8 +27,9 @@ const AppScreen: FC<ScreenProps & Props> = ({
         onPress={() => {
           if (item.title === RETURN_BUTTON_TEXT) {
             navigation.goBack();
-          } else if (item.navigationName === 'IntroductionToMedicineTest') {
+          } else if (item?.isStartQuizScreen) {
             dispatch(setQuizDate(item.quizData));
+            navigation.navigate(item.navigationName);
           } else {
             navigation.navigate(item.navigationName);
           }
