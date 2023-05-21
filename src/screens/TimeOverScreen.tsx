@@ -4,7 +4,7 @@ import { TOTAL_QUESTIONS, examMenuButton } from '../contents';
 import { shuffle } from 'lodash';
 import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
-import { introductionToMedicineData } from '../quiz/introductionToMedicine';
+import { useRootSelector } from '../redux/store/store';
 
 type GameRestartScreenProps = {
   score: number;
@@ -23,6 +23,7 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
   setScore,
   setShuffledQuestions,
 }) => {
+  const quizData = useRootSelector((state) => state.quiz.quizData);
   const handleResumeButtonPress = () => {
     setTimer(10);
     setIndex(index);
@@ -32,9 +33,7 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
     setIndex(0);
     setScore(0);
     setTimer(10);
-    setShuffledQuestions(
-      shuffle(introductionToMedicineData).slice(0, TOTAL_QUESTIONS)
-    );
+    setShuffledQuestions(shuffle(quizData).slice(0, TOTAL_QUESTIONS));
   };
 
   const navigation = useNavigation();

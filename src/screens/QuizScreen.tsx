@@ -8,15 +8,16 @@ import { showCorrectAnswerAlert, showIncorrectAnswerAlert } from '../function';
 import { TimeOverScreen } from './TimeOverScreen';
 import QuizQuestionCard from './QuizQuestionCard';
 import { useTimer } from '../hooks/useTimer';
-import { introductionToMedicineData } from '../quiz/introductionToMedicine';
+import { useRootSelector } from '../redux/store/store';
 
 export const QuizScreen: FC<Props> = () => {
   const [index, setIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
+  const quizData = useRootSelector((state) => state.quiz.quizData);
 
   const [shuffledQuestions, setShuffledQuestions] = useState(
-    shuffle(introductionToMedicineData).slice(0, TOTAL_QUESTIONS)
+    shuffle(quizData).slice(0, TOTAL_QUESTIONS)
   );
 
   const { timer, setTimer } = useTimer();
