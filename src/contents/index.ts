@@ -1,6 +1,6 @@
 import { RouteButton } from '../../types/type';
 import { clinicalMedicineOverview } from '../quiz/clinicalMedicineOverview';
-import { introductionToMedicine } from '../quiz/introductionToMedicine';
+import { introductionToMedicineData } from '../quiz/introductionToMedicine';
 
 export const RETURN_BUTTON_TEXT = '戻る';
 export const START_BUTTON_TEXT = 'スタート';
@@ -49,7 +49,7 @@ export const byFieldButton: RouteButton[] = [
   {
     title: '医学概論',
     navigationName: 'IntroductionToMedicine',
-    quizData: introductionToMedicine,
+    quizData: introductionToMedicineData,
     isStartQuizScreen: true,
   },
   {
