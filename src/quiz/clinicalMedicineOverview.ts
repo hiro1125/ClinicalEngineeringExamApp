@@ -1,6 +1,6 @@
 import { QuizData } from '../../types/type';
 
-export const clinicalMedicineOverview: QuizData[] = [
+export const clinicalMedicineOverviewData: QuizData[] = [
   /** 28回(AM) */
   {
     question:
