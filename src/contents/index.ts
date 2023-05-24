@@ -1,4 +1,5 @@
 import { RouteButton } from '../../types/type';
+import { biomedicalMeasurementInstrumentationData } from '../quiz/biomedicalMeasurementInstrumentation';
 import { clinicalMedicineOverviewData } from '../quiz/clinicalMedicineOverview';
 import { introductionToMedicineData } from '../quiz/introductionToMedicine';
 
@@ -61,7 +62,7 @@ export const byFieldButton: RouteButton[] = [
   {
     title: '生体計測装置学',
     navigationName: 'BiomedicalMeasurementInstrumentation',
-    quizData: [],
+    quizData: biomedicalMeasurementInstrumentationData,
     isStartQuizScreen: true,
   },
   {
