@@ -870,13 +870,6 @@ export const clinicalMedicineOverviewData: QuizData[] = [
   },
   {
     question:
-      '揮発性吸入麻酔薬を使用時の悪性高熱症について正しいのはどれか。 \na.ミオグロビン尿を合併しやすい \nb.横紋筋融解症を合併しやすい \nc.脱分極性筋弛緩薬でも誘発されやすい \nd.麻酔器の回路交換は不要である \ne.劇症型の死亡率は90%に及ぶ',
-    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
-    answerIndex: 0,
-    tags: ['臨床医学総論'],
-  },
-  {
-    question:
       '集中治療における臓器機能代替療法で用いられるのはどれか。 \na.人工呼吸器 \nb.血液浄化装置 \nc.スワンガンツカテーテル \nd.人工知能 \ne.体外式膜型人工肺',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 1,
@@ -909,12 +902,6 @@ export const clinicalMedicineOverviewData: QuizData[] = [
       '日和見感染症はどれか。 \na.マイコプラズマ肺炎 \nb.サイトメガロウイルス肺炎 \nc.ニューモシスチス肺炎 \nd.肺炎球菌肺炎 \ne.インフルエンザ菌肺炎',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 2,
-    tags: ['臨床医学総論'],
-  },
-  {
-    question: '上部縦隔に好発する腫瘍はどれか。',
-    options: ['甲状腺腫', '気管支嚢胞', '神経性腫瘍', 'リンパ腫', '奇形腫'],
-    answerIndex: 0,
     tags: ['臨床医学総論'],
   },
   {
@@ -1845,13 +1832,6 @@ export const clinicalMedicineOverviewData: QuizData[] = [
     tags: ['臨床医学総論'],
   },
   {
-    question:
-      'ICU 入室患者の重要臓器機能を評価する SOFA スコアにおいてより重症を示すのはどれか。 \na.昇圧薬の使用 \nb.血清ビリルビン値の低下 \nc.PaO2/FIO2 の上昇 \nd.血小板数の増加 \ne.1日尿量の減少',
-    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 1,
-    tags: ['臨床医学総論'],
-  },
-  {
     question: '医療安全について正しいのはどれか。',
     options: [
       '医療行為により患者に重篤な損害を与えた事例をインシデントという',
@@ -2249,18 +2229,6 @@ export const clinicalMedicineOverviewData: QuizData[] = [
       '閉塞性動脈硬化症 ',
     ],
     answerIndex: 2,
-    tags: ['臨床医学総論'],
-  },
-  {
-    question: '外科的侵襲に対する反応で亢進しないのはどれか。 ',
-    options: [
-      'グリコーゲン合成',
-      '抗利尿ホルモン分泌 ',
-      'ノルアドレナリン分泌 ',
-      'サイトカイン分泌 ',
-      'アルドステロン分泌 ',
-    ],
-    answerIndex: 0,
     tags: ['臨床医学総論'],
   },
   {
