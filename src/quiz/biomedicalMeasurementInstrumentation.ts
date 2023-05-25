@@ -146,4 +146,161 @@ export const biomedicalMeasurementInstrumentationData: QuizData[] = [
     answerIndex: 2,
     tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
   },
+  /** 29回(AM) */
+  {
+    question: '物理量と単位との組合せで誤っているのはどれか。',
+    options: [
+      '応 力 -------- N/m2',
+      '静電容量 -------- C/V',
+      'コンダクタンス -------- V/A',
+      'インダクタンス -------- Wb/A',
+      '吸収線量 -------- J/kg',
+    ],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: '雑音対策について誤っているのはどれか。',
+    options: [
+      '電源線から混入する雑音の除去にラインフィルタが使われる',
+      '商用交流雑音を除去するためにハムフィルタが使われる',
+      '周波数の低い雑音の除去には移動平均が使われる',
+      '信号の入力導線にはシールド線が使われる',
+      '不規則雑音の除去には加算平均が使われる',
+    ],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: '心電図用テレメータの送信機について誤っているのはどれか。',
+    options: [
+      '2GHz帯の周波数が用いられる',
+      'A型のチャネル(中心周波数)の間隔は12.5kHzである',
+      'B型はA型よりも占有周波数帯域幅が広い',
+      'チャネル番号は4桁の数字で区別される',
+      'A〜D型の空中線電力は1mW以下である',
+    ],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: '観血式血圧測定について正しいのはどれか。',
+    options: [
+      'チューブ内に気泡が混入すると平均血圧が下がる',
+      '血管内に留置したカテーテル内を蒸留水で満たす',
+      '加圧バッグの内圧は収縮期血圧に等しくする',
+      'ゼロ校正の基準は中心静脈圧が使われる',
+      'フラッシュデバイスは抗凝固薬の持続注入機能をもつ',
+    ],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: 'カプノメータについて誤っているのはどれか。',
+    options: [
+      '二酸化炭素濃度をモニタする装置である',
+      '赤外線の吸収量からガス濃度を求める',
+      'メインストリーム方式は呼吸回路内が閉塞しやすい',
+      'サイドストリーム方式は測定値に時間遅れが生じる',
+      '亜酸化窒素を併用する際には補正が必要である',
+    ],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '超音波ドプラ血流計について正しいのはどれか。\na. 血流がプローブに向かっているとき、受信周波数は送信周波数よりも低くなる \nb. 超音波ビームの照射方向が血流方向に対して垂直なとき、ドプラシフトは観測されない \nc. 周波数折り返し現象は血流速度が速いほど起こりやすい \nd. パルス繰り返し周波数は超音波の振動周波数の2倍以上とする \ne. 最大計測深度はパルス繰り返し周波数が高いほど大きい ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: 'MRI検査について誤っているのはどれか。',
+    options: [
+      '水素原子の空間分布を画像化する',
+      '軟部組織の画像化に適している',
+      '血流の測定が可能である',
+      '臓器の3次元構造を画像化できる',
+      '動きのある臓器の撮影に適している',
+    ],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  /** 29回(AM) */
+  {
+    question:
+      '物理量が起電力に変換されるトランスデューサはどれか。\na. サーモパイル \nb. ホール素子 \nc. 差動トランス \nd. CdSセル \ne. ストレインゲージ ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '心電図誘導電極の右手と左手を逆に装着した。誤っているのはどれか。\na. aVRとaVLの波形が入れ替わる \nb. 第II誘導と第III誘導の波形が入れ替わる \nc. 第I誘導の波形が反転する \nd. aVFの波形が反転する \ne. 胸部誘導の波形が変化する ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '脳波計について正しいのはどれか。\na. 必要な周波数帯域は5.0〜60Hzである \nb. 低域遮断周波数を規定する時定数は0.03秒である \nc. 雑音レベルは3.0μVp-p以下である \nd. A/D変換時のサンプリング周波数は200 Hz以上である \ne. 最大感度は10μV/mmである ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: '心拍出量測定法について正しいのはどれか。',
+    options: [
+      '熱希釈法では約0°Cの注入液を用いる',
+      '色素希釈法ではオキシヘモグロビンの量を計測する',
+      'フィック法では二酸化炭素産生量から計算する',
+      '超音波断層法では心房の容積から計算する',
+      '血圧波形解析法ではスワンガンツカテーテルを用いる',
+    ],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: '心拍出量測定法について正しいのはどれか。',
+    options: [
+      'pH -------- ガラス電極',
+      '酸素分圧 -------- クラーク電極',
+      '二酸化炭素分圧 -------- セバリングハウス電極',
+      '酸素飽和度 -------- 赤色光および赤外線の吸光度',
+      '経皮的二酸化炭素分圧 -------- 赤外線の吸光度',
+    ],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '超音波診断装置について正しいのはどれか。\na. 被曝に伴う侵襲性がある \nb. 全身撮影が可能である \nc. 心室の壁厚を測定できる \nd. 血管内の画像が得られる \ne. 実時間の撮影が可能である ',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: 'X線CTについて誤っているのはどれか。',
+    options: [
+      '臓器の立体的な構造を画像化する',
+      '複数のX線検出器を使用する',
+      '動画を撮影することが可能である',
+      '空間分解能は1mm程度である',
+      '組織のX線吸収係数を画像化する',
+    ],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: 'PETについて誤っているのはどれか。',
+    options: [
+      '加速器を用いて作った核種を生体に投与する',
+      'β線を検出して画像化する',
+      'FDG-PETによって糖代謝の高い組織が可視化される',
+      '陽電子は電子と同じ質量をもつ',
+      '陽電子は電子と衝突して消滅する',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
 ];
