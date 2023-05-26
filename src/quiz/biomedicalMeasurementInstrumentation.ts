@@ -303,4 +303,130 @@ export const biomedicalMeasurementInstrumentationData: QuizData[] = [
     answerIndex: 1,
     tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
   },
+  /** 30回(AM) */
+  {
+    question: '誤差について正しいのはどれか。',
+    options: [
+      '計測器の目盛りの読み間違いによって偶然誤差が生じる',
+      '計測器の校正を怠ると系統誤差が生じる',
+      '量子力学的現象によって量子化誤差が生じる',
+      '過失誤差は測定者によらず一定である',
+      'n回の測定値を平均すると理論的誤差は1/nとなる',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '信号処理について正しい組合せはどれか。\na.周波数解析 -------- フーリエ変換 \nb.SN比改善 -------- 加算平均 \nc.信号平滑化 -------- 微分演算 \nd.輪郭強調 -------- 積分演算 \ne.面積計算 -------- 移動平均',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '心電図誘導で右手、左手、左足の電位が、それぞれ -6mV、1mV、5mV であるとき、aVLの電位[mV]はどれか。',
+    options: ['-9', '-5', '1.5', '5', '7.5'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '心電図テレメータについて誤っているのはどれか。 \na.送信機のアンテナが長いほど送信効率がよい \nb.使用する専用周波数帯は各メーカ共通である \nc.混信対策としてゾーン配置が用いられる \nd.受信感度不足にはブースタが用いられる \ne.空中線電力は15mW以下である',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      'トランジットタイム型超音波血流計について正しいのはどれか。 \na.ドプラ効果を利用する \nb.ゼロ点補正が不要である \nc.体表面からの計測ができない \nd.順・逆方向の伝播時間差を利用している \ne.赤血球からの散乱波を利用する',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: 'スパイロメータで計測できないのはどれか。',
+    options: ['最大吸気量', '予備吸気量', '1回換気量', '肺活量', '残気量'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      'X線CT検査と比較して超音波検査の利点で正しいのはどれか。 \na.画質がよい \nb.視野が広い \nc.肺内病変の評価に向いている \nd.実時間画像が得られる \ne.携帯性に優れている',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '臨床用MRIについて正しいのはどれか。 \na.軟部組織の画像化に適している \nb.炭素原子の空間分布を画像化する \nc.水分の少ない組織の撮影に適している \nd.撮像法としてT1強調がある \ne.血管造影が可能である',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  /** 30回(PM) */
+  {
+    question: 'ディジタル式カラーモニタについて誤っているのはどれか。',
+    options: [
+      '波形を時間軸上で静止して見ることができる',
+      '波形と文字を同時に表示できる',
+      '複数の入力信号はシュミット回路で切り替える',
+      '赤、緑、青の3 色分のメモリが必要である',
+      '水平・垂直それぞれに同期信号発生器が必要である',
+    ],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '同相入力雑音電圧が100mVの環境下で1mVの心電図を入力したとき、同相雑音出力は1mV、心電図信号出力は100mVになった。同相除去比(CMRR)[dB]はどれか。',
+    options: ['20', '40', '60', '80', '100'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '観血式血圧計測において測定ラインヘの血液の逆流が発生した。可能性のある原因はどれか。 \na.カテーテルの先当たり \nb.血栓形成 \nc.血圧測定ライン接続部分の緩み \nd.三方活栓の操作ミス \ne.加圧バッグの圧力不足',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: '心拍出量計測法で用いないのはどれか。',
+    options: [
+      'フィック法',
+      '色素希釈法',
+      '熱希釈法',
+      'オシロメトリック法',
+      '血圧波形解析法',
+    ],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question: '体温計測について正しいのはどれか。',
+    options: [
+      '電子体温計ではサーモパイルが使われる',
+      '耳用赤外線体温計は鼓膜からの熱伝導を利用している',
+      '耳用赤外線体温計には量子型検出器が使われる',
+      '深部体温計は熱流補償法を利用している',
+      '深部体温計の温度プローブにはCdSが使われる',
+    ],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      'X 線CT 画像について正しいのはどれか。 \na.臓器の3次元構造が得られる \nb.画像再構成法として逆投影法がある \nc.血管の撮像が可能である \nd.X線を双方向に照射する \ne.空間分解能は1程度である',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
+  {
+    question:
+      '内視鏡について正しいのはどれか。 \na.血管内視鏡にはファイバスコープが使用される \nb.電子スコープの受光素子にはCdSeが使用される \nc.高速撮影のためにフォトトランジスタが使用される \nd.深部血管の撮影には赤色狭帯域光が使用される \ne.キセノンランプが光源に使用される',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.biomedicalMeasurementInstrumentation],
+  },
 ];
