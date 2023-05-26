@@ -1,5 +1,5 @@
+import { TAGS_TEXT } from './index';
 import { QuizData } from '../../types/type';
-import { TAGS_TEXT } from '../contents';
 
 export const biomedicalMeasurementInstrumentationData: QuizData[] = [
   /** 28回(AM) */

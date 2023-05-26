@@ -8,10 +8,6 @@ export const START_BUTTON_TEXT = 'スタート';
 export const DECISION_BUTTON_TEXT = 'OK';
 export const TOTAL_QUESTIONS = 10;
 
-export const TAGS_TEXT = {
-  biomedicalMeasurementInstrumentation: '生体計測装置学',
-};
-
 // /** Home画面 */
 export const startButton: RouteButton[] = [
   {
