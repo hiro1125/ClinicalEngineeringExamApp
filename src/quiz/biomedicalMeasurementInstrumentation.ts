@@ -546,14 +546,14 @@ export const biomedicalMeasurementInstrumentationData: QuizData[] = [
       '運動神経伝導速度の計測について誤っているのはどれか。 \na.計測には複合筋活動電位(CMAP)波を用いる \nb.神経部位の2ヵ所の電気刺激が必要である \nc.電気刺激はアイソレータを介して行う \nd.刺激電流のパルス幅は5~10msを用いる \ne.加算平均装置が必要である ',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 4,
-    tags: ['臨床医学総論'],
+    tags: [TAGS_TEXT.bmi],
   },
   {
     question:
       '超音波パルスドプラ血流計について正しいのはどれか。 \na.血流がプローブに向うとき受信周波数は送信周波数よりも低くなる \nb.超音波ビームが血流方向に対して垂直なときは測定できない \nc.周波数祈り返し現象は血流速度が速いほど起こりやすい \nd.パルス繰り返し周波数は超音波の振動周波数の2倍以上とする \ne.最大計測深度はパルス繰り返し周波数が高いほど大きい ',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 2,
-    tags: ['臨床医学総論'],
+    tags: [TAGS_TEXT.bmi],
   },
   {
     question: '体温計測について誤っているのはどれか。',
@@ -572,6 +572,20 @@ export const biomedicalMeasurementInstrumentationData: QuizData[] = [
       'X線を使用した医用画像について正しいのはどれか。 \na.X線に対する臓器の反射率を画像化する \nb.X線CTの空間分解能は0.5~1mm程度である \nc.X線CTは臓器の立体構造を画像化できる \nd.造影剤はX線画像のコントラストを増強する \ne.体表面に近い臓器の画像化に適している',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 3,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '内視鏡画像計測の構成要素でないのはどれか。 \na.光ファイバ \nb.CCD \nc.レンズ \nd.光電子増倍管 \ne.検出コイル ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      'マイクロ波手術装置で正しいのはどれか。 \na.ISM周波数を使用する \nb.同軸ケープルを使用する \nc.渦電流損で発熱する \nd.対極板を使用する \ne.組織を凝固する',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 1,
     tags: [TAGS_TEXT.bmi],
   },
 ];
