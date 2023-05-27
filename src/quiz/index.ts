@@ -1,3 +1,3 @@
 export const TAGS_TEXT = {
-  biomedicalMeasurementInstrumentation: '生体計測装置学',
+  bmi: '生体計測装置学',
 };
