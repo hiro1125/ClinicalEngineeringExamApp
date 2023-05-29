@@ -7,9 +7,9 @@ import {
   SafeAreaView,
   Alert,
 } from 'react-native';
-import { QuizData, RouteButton } from '../../types/type';
+import { QuizData } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
-import { RETURN_BUTTON_TEXT, examMenuButton } from '../contents';
+import { RETURN_BUTTON_TEXT } from '../contents';
 import { StackActions } from '@react-navigation/native';
 import { useTimer } from '../hooks/useTimer';
 
