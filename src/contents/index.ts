@@ -37,6 +37,7 @@ export const examMenuButton: RouteButton[] = [
   {
     title: '90問試験',
     navigationName: 'NinetyQuestionTest',
+    quizData: [],
     isStartQuizScreen: true,
   },
   {

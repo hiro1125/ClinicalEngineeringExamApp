@@ -4,6 +4,7 @@ import {
   Platform,
   FlatList,
   ListRenderItem,
+  Alert,
 } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { Props, RouteButton, ScreenProps } from '../../types/type';
@@ -19,21 +20,30 @@ const AppScreen: FC<ScreenProps & Props> = ({
   buttonData,
 }) => {
   const dispatch = useRootDispatch();
+
+  const onButtonPress = (item: RouteButton) => {
+    if (item.title === RETURN_BUTTON_TEXT) {
+      navigation.goBack();
+    } else if (item.quizData && item.quizData.length) {
+      dispatch(setQuizDate(item.quizData));
+      navigation.navigate(item.navigationName);
+    } else if (item.quizData && item.quizData.length === 0) {
+      Alert.alert('確認', '近日公開予定です', [
+        {
+          text: 'OK',
+        },
+      ]);
+    } else {
+      navigation.navigate(item.navigationName);
+    }
+  };
+
   const renderItem: ListRenderItem<RouteButton> = ({ item, index }) => {
     return (
       <Button
         key={index}
         title={item.title}
-        onPress={() => {
-          if (item.title === RETURN_BUTTON_TEXT) {
-            navigation.goBack();
-          } else if (item?.isStartQuizScreen) {
-            dispatch(setQuizDate(item.quizData));
-            navigation.navigate(item.navigationName);
-          } else {
-            navigation.navigate(item.navigationName);
-          }
-        }}
+        onPress={() => onButtonPress(item)}
         buttonStyle={styles.button}
         titleStyle={styles.buttonTitle}
       />
