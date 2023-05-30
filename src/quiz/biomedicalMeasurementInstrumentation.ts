@@ -588,4 +588,130 @@ export const biomedicalMeasurementInstrumentationData: QuizData[] = [
     answerIndex: 1,
     tags: [TAGS_TEXT.bmi],
   },
+  /** 32回(AM) */
+  {
+    question:
+      '相対誤差1%の電流計と相対誤差2%の電圧計を用いて電力を測定する場合、電力の相対誤差は何%となるか。',
+    options: ['1', '2', '√5', '3', '5'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '生体用金属電極について正しいのはどれか。 \na.電極と生体間の接触面積を大きくすると電極接触インピーダンスは増加する \nb.周波数が高くなると電極接触インピーダンスは増加する \nc.電極用ペーストは電極接触インピーダンスを下げる効果がある \nd.新しい金属電極はエージング後の電極と比べて基線の変動が大きい \ne.電極電位は使用する金属の種類によって異なる',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '心電図計測の誘導について誤っているのはどれか。',
+    options: [
+      '胸部誘導ではWilsonの結合点を基準電極として用いる',
+      '左足から右手の電位を差し引いた誘導を第III誘導という',
+      '差動増幅器のニュートラル端子には右足電極を接続する',
+      'aVR誘導は左手と左足を結合した点を基準電極として用いる',
+      '双極誘導の間にはII=I+IIIの関係がある',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      'トランジットタイム型超音波血流計について正しいのはどれか。 \na.複数チャネルの同時計側か可能である \nb.電気的干渉を受けやすい \nc.測定開始前にゼロ点補正が必要である \nd.体外循環用のチューブで使用可能である \ne.内胸動脈グラフトで使用可能である',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      'パルスオキシメータについて正しいのはどれか。 \na.測定時の校正が不要である \nb.指先以外では測定できない \nc.心原性ショック時でも測定できる \nd.赤外線2波長を用いる \ne.ヘモグロビンの吸光度を用いる ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '血中二酸化炭素分圧の測定に用いられるのはどれか。',
+    options: [
+      'セバリングハウス電極',
+      'サーモパイル',
+      'クラーク電極',
+      'ストレンゲージ',
+      '熱線型白金電極',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '超音波を用いた医用画像計測で描出の最も困難な臓器はどれか。',
+    options: ['心 臓', '乳 腺', '小 腸', '肝 臓', '腎 臓'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '磁気共鳴画像(MRI)について正しいのはどれか。 \na.撮影には被曝を伴う \nb.骨の撮像はできない \nc.軟部組織の撮像に適している \nd.動きのある臓器も撮像できる \ne.血管の撮像が可能である',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '誤っている組合せはどれか。\na.超短波治療器 -------- 高周波 \nb.筋刺激装置 -------- 光 \nc.X線装置 -------- 粒子線 \nd.ネブライザ -------- 超音波 \ne.除細動器 -------- パルス波',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmi],
+  },
+  /** 32回(PM) */
+  {
+    question: '最も高い周波数成分まで記録する必要があるのはどれか。',
+    options: ['筋電図', '心電図', '脳 波', '心音図', '容積脈波'],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '標準紙送り速さで記録した心電図のR-R間隔が20mmであった。心拍数[回/分]はどれか。',
+    options: ['40', '48', '65', '75', '90'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '脳波計測で電位変化の最も小さいのはどれか。',
+    options: [
+      '睡眠脳波電位',
+      '覚醒時脳波電位',
+      '聴性脳幹誘発電位',
+      '体性感覚誘発電位',
+      '視覚誘発電位',
+    ],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '観血式血圧計の波形ダンピングの原因となるのはどれか。 \na.回路内への気泡混入 \nb.カテーテル先端での血栓形成 \nc.カテーテルの先当り \nd.ゼロ点調整不良 \ne.血圧トランスデューサの設置高さの変更',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '体表面サーモグラフで測定する光の主な波長はどれか。',
+    options: ['10nm', '100nm', '1μm', '10μm', '100μm'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '超音波診断装置について正しいのはどれか。 \na.狭窄部位の高血流速度の測定にはパルス波を用いる \nb.心臓弁運動の定量にはMモードを用いる \nc.組織性状の画像化には高調波が有用である \nd.腹部の画像描出にはセクタ走査が適している \ne.Bモード画像描出には連続波を用いる ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      'ラジオアイソトープ(RI)を用いた医用画像について正しいのはどれか。 \na.α線を測定する \nb.空間分解能は1mm程度である \nc.PETでは腫瘍の存在を検出できる \nd.PETでは糖代謝の画像が得られる \ne.SPECTでは組織繊維化の画像が得られる ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmi],
+  },
 ];
