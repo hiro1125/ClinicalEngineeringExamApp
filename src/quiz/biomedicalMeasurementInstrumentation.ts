@@ -714,4 +714,136 @@ export const biomedicalMeasurementInstrumentationData: QuizData[] = [
     answerIndex: 3,
     tags: [TAGS_TEXT.bmi],
   },
+  /** 33回(AM) */
+  {
+    question: '標準12誘導心電図について正しいのはどれか。',
+    options: [
+      '第Ⅱ誘導は右足と右手間の電位差を記録する誘導である',
+      'aVR誘導はWilsonの結合電極を基準とした誘導である',
+      'V1～V6の誘導は双極誘導である',
+      '標準肢誘導の間にはⅢ=Ⅰ+Ⅱの関係がある',
+      '単極肢誘導の間にはaVR+aVL+aVF=0の関係がある',
+    ],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      'トランジットタイム型超音波血流計の特徴で正しいのはどれか \na.伝搬時間を利用する \nb.複数チャネルの同時計測が可能である \nc.ゼロ点補正が必要である \nd.体表面からの測定が可能である \ne.一つの超音波振動子で計測できる ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '差圧式呼吸流量計に用いられているのはどれか。 \na.タービン型 \nb.ベネディクト・ロス型 \nc.フライシュ型 \nd.リリー型 \ne.ローリングシール型 ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '血液ガス測定におけるpH電極に用いられる測定法はどれか。',
+    options: [
+      'ポテンショメトリック法',
+      'アンペロメトリック法',
+      'ボルタンメトリック法',
+      'インピーダンス法',
+      'ポーラログラフィ法',
+    ],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '耳式赤外線体温計について正しいのはどれか。 \na.鼓膜から放射される赤外線を検出している \nb.核心温に近い体温が計測できる \nc.量子型赤外線検出器が用いられている \nd.体温の連続測定に適している \ne.外耳道に炎症があると測定値に影響を与える',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      'X線CTについて誤っているのはどれか。 \na.空間分解能は超音波診断装置より高い \nb.臓器のX線に対する吸収係数を画像化している \nc.血管や胃などの管腔臓器の撮影が可能である \nd.深部臓器よりも表在性の臓器の撮影に適している \ne.X 線を単一方向から照射している ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '内視鏡システムについて正しいのはどれか。 \na.挿入部の消毒は不要である \nb.導光用ファイバは炭素繊維製である \nc.観察と同時に治療が可能である \nd.管腔臓器の表在性病変の診断に使用される \ne.撮像にCCDが使用される',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '正しい組合せはどれか。\na.ESWL -------- 音 波 \nb.除細動器 -------- パルス波 \nc.電気メス -------- 高周波 \nd.電気焼灼器 -------- 極超短波 \ne.IABP -------- 超音波',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.bmi],
+  },
+  /** 33回(PM) */
+  {
+    question: '物理量と組立単位との組合せで誤っているのはどれか。',
+    options: [
+      '応 力 -------- N/m2',
+      '仕事率 -------- J/s',
+      '電 荷 -------- A/s',
+      '磁 束 -------- V・s',
+      '吸収線量 -------- J/kg',
+    ],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '生体電気信号増幅器に求められる条件はどれか。 \na.入力インピーダンスが小さい \nb.入力換算雑音が大きい \nc.入力オフセット電圧が小さい \nd.信号対雑音比が大きい \ne.同相除去比が小さい',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '小電力医用テレメータについて誤っているのはどれか。',
+    options: [
+      '割り当て周波数帯域は420~450MHzである',
+      'A型のチャネル間隔は25kHzである',
+      '同時に送信する信号の数によって5つの型の送信機がある',
+      '割り当て周波数帯域は6バンドで構成されている',
+      '混信対策として色ラベルによるゾーン配置が有用である',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '脳磁図計測について正しいのはどれか。 \na.脳磁場検出にはホール素子を用いる \nb.計測には静電シールドルームが必要である \nc.センサの冷却には液体へリウムが必要である \nd.脳磁図の空間分解能は脳波より高い \ne.頭皮に垂直な電流双極子による磁場を検出している',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '非観血式血圧測定法について正しいのはどれか。',
+    options: [
+      'カフ幅が狭すぎると最高血圧値は下がる',
+      'カフの巻き方が緩いと最高血圧値は上がる',
+      '脱気速度が速すぎると最高血圧値は上がる',
+      '測定場所が心臓より低いと最低血圧値は下がる',
+      'カフ幅が広いと平均血圧値は上がる',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '核磁気共鳴画像法について正しいのはどれか。 \na.放射線被曝はない \nb.磁力線の透過性を画像化している \nc.臓器の画像再構成は一断面に限られる \nd.空間分解能は5mm程度である \ne.撮影手法としてT2強調がある',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '核医学検査について正しいのはどれか。 \na.PETで糖代謝に関する情報が画像化できる \nb.体外から放射線を照射することで画像化する \nc.β線を測定して画像化している \nd.SPECTで脳血流に関する情報が画像化できる \ne.PETで3次元画像が得られる',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
 ];
