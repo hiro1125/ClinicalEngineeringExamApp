@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { RouteButton } from '../../types/type';
+import { FONTSIZE, SIZE } from '../styles';
 
 type Props = {
   score: number;
@@ -29,7 +30,7 @@ export const ResultScreen: FC<Props> = ({ score }) => {
       <View style={styles.container}>
         <Text style={styles.title}>クイズ結果</Text>
         <Text style={styles.score}>
-          あなたのスコアは {score}/{TOTAL_QUESTIONS} です。
+          あなたのスコアは{TOTAL_QUESTIONS}問中{score}問です。
         </Text>
         {byFieldMenuButtons.map((button, index) => (
           <Button
