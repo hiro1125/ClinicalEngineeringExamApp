@@ -6,6 +6,7 @@ import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
 import { useRootDispatch, useRootSelector } from '../redux/store/store';
 import { setQuizDate } from '../redux/slices/quizSlice';
+import { FONTSIZE } from '../styles';
 
 type GameRestartScreenProps = {
   score: number;
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   resultText: {
-    fontSize: 24,
+    fontSize: FONTSIZE.SIZE24PX,
     fontWeight: 'bold',
     marginBottom: 20,
   },

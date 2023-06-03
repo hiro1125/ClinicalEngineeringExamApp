@@ -12,6 +12,7 @@ import { useNavigation } from '@react-navigation/native';
 import { RETURN_BUTTON_TEXT } from '../contents';
 import { StackActions } from '@react-navigation/native';
 import { useTimer } from '../hooks/useTimer';
+import { FONTSIZE, SIZE } from '../styles';
 
 type QuizQuestionCardProps = {
   shuffledQuestions: QuizData[];
@@ -111,11 +112,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
-    width: 360,
-    height: 205,
+    width: SIZE.BASIC_WIDTH * 90,
+    height: SIZE.BASIC_HIGHT * 30,
     borderRadius: 15,
     backgroundColor: 'white',
-    fontSize: 15,
+    fontSize: FONTSIZE.SIZE15PX,
     textAlign: 'center',
     textTransform: 'capitalize',
     shadowColor: '#aaa',
@@ -126,17 +127,15 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   questionText: {
-    fontSize: 15,
+    fontSize: FONTSIZE.SIZE15PX,
     textAlign: 'center',
     padding: 5,
   },
   timeRestart: {
-    marginLeft: 10,
-    marginRight: 10,
     shadowRadius: 6,
     backgroundColor: '#2e44bc',
     color: '#ffffff',
-    fontSize: 20,
+    fontSize: FONTSIZE.SIZE20PX,
     textAlign: 'center',
   },
   answerButton: {
@@ -154,7 +153,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'black',
     fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: FONTSIZE.SIZE15PX,
     textAlign: 'center',
     textTransform: 'lowercase',
   },

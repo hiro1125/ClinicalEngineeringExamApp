@@ -1,7 +1,6 @@
 import {
   View,
   StyleSheet,
-  Platform,
   FlatList,
   ListRenderItem,
   Alert,
@@ -12,6 +11,7 @@ import { RETURN_BUTTON_TEXT } from '../contents';
 import { FC } from 'react';
 import { useRootDispatch } from '../redux/store/store';
 import { setQuizDate } from '../redux/slices/quizSlice';
+import { FONTSIZE, SIZE } from '../styles';
 
 const AppScreen: FC<ScreenProps & Props> = ({
   navigation,
@@ -24,10 +24,10 @@ const AppScreen: FC<ScreenProps & Props> = ({
   const onButtonPress = (item: RouteButton) => {
     if (item.title === RETURN_BUTTON_TEXT) {
       navigation.goBack();
-    } else if (item.quizData && item.quizData.length) {
+    } else if (item.quizData?.length) {
       dispatch(setQuizDate(item.quizData));
       navigation.navigate(item.navigationName);
-    } else if (item.quizData && item.quizData.length === 0) {
+    } else if (Array.isArray(item.quizData)) {
       Alert.alert('確認', '近日公開予定です', [
         {
           text: 'OK',
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   button: {
-    width: Platform.OS === 'ios' ? '100%' : '95%',
+    width: SIZE.BASIC_WIDTH * 90,
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 30,
@@ -93,10 +93,10 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
   },
   buttonTitle: {
-    width: Platform.OS === 'ios' ? '70%' : '100%',
+    width: SIZE.BASIC_WIDTH * 70,
     color: 'black',
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: FONTSIZE.SIZE18PX,
     textAlign: 'center',
     textTransform: 'uppercase',
   },

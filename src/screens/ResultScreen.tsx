@@ -54,13 +54,14 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    fontSize: 32,
+    fontSize: FONTSIZE.SIZE32PX,
     fontWeight: 'bold',
     marginBottom: 20,
     color: '#333333',
   },
   score: {
-    fontSize: 20,
+    fontSize: FONTSIZE.SIZE19PX,
+    fontWeight: 'bold',
     marginBottom: 20,
     color: '#333333',
   },
