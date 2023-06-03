@@ -1214,4 +1214,69 @@ export const biomedicalMeasurementInstrumentationData: QuizData[] = [
     answerIndex: 0,
     tags: [TAGS_TEXT.bmi],
   },
+  /** 36回(PM) */
+  {
+    question:
+      '心電図の計測で商用交流雑音対策に用いられるのはどれか。 \na. 移動平均処理 \nb.加算平均処理 \nc.差動増幅器 \nd.ハムフィルタ \ne.ACラインフィルタ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '誘発脳波計測について誤っているのはどれか。',
+    options: [
+      '脳手術時のモニタリングに利用される',
+      '刺激から潜時をもって誘発電位が現れる',
+      '刺激に同期して誘発電位の加算平均処理を行う',
+      '聴性誘発電位計測にはクリック音が用いられる',
+      '安静時脳波よりも誘発脳波の電位変動は大きい',
+    ],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '熱希釈式肺動脈カテーテルで計測できないのはどれか。',
+    options: [
+      '混合静脈血酸素飽和度',
+      '左室収縮期圧',
+      '中心静脈圧',
+      '心拍出量',
+      '肺動脈圧',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question: '耳用赤外線体温計による体温計測について誤っているのはどれか。',
+    options: [
+      '鼓膜に赤外線を照射する',
+      '検出器にサーモパイルが使用されている',
+      '1秒程度で計測できる',
+      '挿入する角度により測定値がばらつく',
+      '鼓膜温は腋窩温よりも高い',
+    ],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      'ランベルト・ベールの法則が成立する吸光度測定で正しいのはどれか。 \na. 吸光度は透過率に比例する \nb.吸光度は光路長に反比例する \nc.吸光度は-1～1の範囲の値で表す \nd.モル吸光係数は物質によって異なる \ne.透過光の強度は光路長に対して指数関数的に減少する',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '内視鏡画像計測について正しいのはどれか。 \na. ファイバスコープは先端に光源が装着されている \nb.狭帯域光を用いて毛細血管を強調表示できる \nc.カプセル内視鏡は小腸病変の診断に使われる \nd.ファイバスコープは画像が記録できない \ne.電子内視鏡は光源装置が不要である',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmi],
+  },
+  {
+    question:
+      '装置から生体に物理的エネルギーを加えて計測するのはどれか。 \na.超音波診断装置 \nb.X線CT装置 \nc.PET装置 \nd.SPECT装置 \ne.光トポグラフィ装置',
+    options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmi],
+  },
 ];
