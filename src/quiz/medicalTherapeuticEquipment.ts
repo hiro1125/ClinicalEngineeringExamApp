@@ -196,13 +196,121 @@ export const medicalTherapeuticEquipment: QuizData[] = [
   {
     question: '超音波吸引手術装置で正しいのはどれか。',
     options: [
-      '先端は1?3mmの振幅で振動する',
+      '先端は1〜3mmの振幅で振動する',
       '対極板が必要である',
       '生理食塩液で洗浄しながら使用する',
       '電気メスよりも強い凝固能力を有する',
       '骨切開に有効である',
     ],
     answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  /** 30回(AM) */
+  {
+    question:
+      '臨床用MRIについて正しいのはどれか。\na. 軟部組織の画像化に適している \nb. 炭素原子の空間分布を画像化する \nc. 水分の少ない組織の撮影に適している \nd. 撮像法としてT1強調がある \ne. 血管造影が可能である',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '植込み型心臓ペースメーカについて正しいのはどれか。\na. 胸腔内にジェネレータ(本体)を留置する \nb. 心内膜電極は左室に留置する \nc. ICHD(NBG)コードの3文字目のIは抑制を意味する \nd. 電極留置直後は刺激閾値が上昇する \ne. 500ms前後の刺激パルスが効率的である',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: 'ESWLについて正しいのはどれか。',
+    options: [
+      '平面コイル型電磁誘導方式ではパラボラ型反射体を用いる',
+      '電極放電方式では結石の位置を第一焦点に合わせる',
+      '超音波による照準は常時観察が可能である',
+      '尿道結石治療の第一選択である',
+      '腸管組織にも安全である',
+    ],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '正しい組合せはどれか。\na.Ho:YAGレーザ -------- 液体レーザ \nb.Arレーザ -------- 気体レーザ \nc.Ga-Al-As -------- 半導体レーザ \nd.Nd:YAG レーザ -------- 気体レーザ \ne.ArFエキシマレーザ -------- 固体レーザ',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '超音波凝固切開手術装置について正しいのはどれか。\na. 先端は1〜3mmの振幅で振動する \nb. 50kHz前後の周波数を用いる \nc. 凝固温度は電気メスよりも低温である \nd. 内視鏡外科手術で頻用される \ne. 骨切開に有効である',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      'ハイパーサーミアについて正しいのはどれか。\na. 容量結合型加温には数kHz-数十kHzの周波数を使用する \nb. 超音波加温は空気層を通して組織を加温する \nc. 皮膚表面の冷却にボーラス(水バッグ)を用いる \nd. マイクロ波加温では周波数の増加に対して加温できる深さが減少する \ne. 組織内加温では針電極を刺入する',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.mte],
+  },
+  /** 30回(PM) */
+  {
+    question:
+      '内視鏡について正しいのはどれか。\na. 血管内視鏡にはファイバスコープが使用される \nb. 電子スコープの受光素子にはCdSeが使用される \nc. 高速撮影のためにフォトトランジスタが使用される \nd. 深部血管の撮影には赤色狭帯域光が使用される \ne. キセノンランプが光源に使用される',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: '治療機器について正しい組合せはどれか。',
+    options: [
+      '心臓ペースメーカ -------- マイクロ波',
+      '電気メス -------- 高周波電流',
+      'レーザメス -------- 電子線',
+      'ESWL -------- 赤外線',
+      'IABP -------- 音波',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '除細動器について正しいのはどれか。\na. 通電時間は2~5秒である \nb. 交流除細動方式が一般的である \nc. 5000J前後で体外通電する \nd. 成人の体外通電では50cm2程度の電極を使用する \ne. 体内通電時は体外通電よりも低い出力に設定する',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '電気メスのデイスポーザブル対極板の装着について正しいのはどれか。\na. 対極板の一点に荷重がかからないようにする \nb. 対極板の装着部には絶縁性のある消毒液を使用する \nc. 対極板コードをコイル状に巻く \nd. 身体が小さい場合は対極板を切って小さくする \ne. 対極板と皮膚との間に空気が入らないようにする',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '冠状動脈のカテーテルインターベンション治療(PCI) について正しいのはどれか。\na. 開胸して実施する \nb. X 線透視下に実施する \nc. 狭窄部拡張中は冠血流が減少する \nd. バルーン拡張圧は50気圧前後である \ne. ステント留置後の再狭窄はない',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '正しい組合せはどれか。\na.Arレーザ -------- 網膜光凝固 \nb.ArFエキシマレーザ -------- 近視手術 \nc.CO2レーザ -------- 鎮痛治療 \nd.He-Neレーザ -------- 凝固止血 \ne.Nd:YAGレーザ -------- 内視鏡的がん治療',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: '内視鏡的外科手術において正しいのはどれか。',
+    options: [
+      '気腹に亜酸化窒素を用いる',
+      '気腹により静脈還流は増加する',
+      '肺血栓塞栓症の合併症はない',
+      '電気メスは使用できない',
+      '自然気胸は適応である',
+    ],
+    answerIndex: 4,
     tags: [TAGS_TEXT.mte],
   },
 ];
