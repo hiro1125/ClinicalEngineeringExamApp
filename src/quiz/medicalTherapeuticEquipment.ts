@@ -313,4 +313,115 @@ export const medicalTherapeuticEquipment: QuizData[] = [
     answerIndex: 4,
     tags: [TAGS_TEXT.mte],
   },
+  /** 31回(AM) */
+  {
+    question:
+      '治療機器とエネルギーとの組合せで正しいのはどれか。\na.ガンマナイフ -------- 粒子線 \nb.温熱治療器 -------- 紫外線 \nc.マイクロ波治療器 -------- 電磁波 \nd.サイクロトロン -------- 電子線 \ne.高気圧酸素治療装置 -------- 陽 圧',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: '電気メスで正しいのはどれか。',
+    options: [
+      '300~500kHz帯の電流を用いる',
+      '切開モードでは断続波を用いる',
+      '導電接触形対極板は静電接触形対極板より接触インピーダンスが大きい',
+      '高周波漏れ電流の許容値は500mA以内である',
+      '負荷抵抗10Ωでキャリブレーションする',
+    ],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '現在用いられているESWLの衝撃波発生方式でないのはどれか。\na. 電磁板方式 \nb. 電極放電方式 \nc. 圧電素子方式 \nd. レーザ方式 \ne. 圧縮空気方式',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: '冠動脈インターベンション治療(PCI)について正しいのはどれか。',
+    options: [
+      '上腕静脈からカテーテルを挿入する',
+      '患部まで超音波診断装置でカテーテルを誘導する',
+      '狭窄部ではバルーンを0.2MPa程度で加圧する',
+      'ロ一夕ブレーク使用時に冠動脈血流は減少する',
+      'ステント留置直後から抗血小板療法は不要である',
+    ],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '治療用レーザ装置と適用との組合せで正しいのはどれか。\na.ArFエキシマレーザ(193nm) -------- 粒子線 \nb.CO2レーザ(10.6μm) -------- 尿管結石破砕 \nc.Nd:YAGレーザ(1.064μm) -------- 疼痛治療 \nd.半導体レーザ(630~680nm) -------- 光線力学療法 \ne.Dyeレーザ(585~630nm) -------- あざ治療',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: '超音波凝固切開装置で誤っているのはどれか。',
+    options: [
+      'アクティブブレードは45~55kHzの周波数で振動する',
+      '70~100°Cで組織中のタンパク質を凝固させる',
+      '細い血管からの出血を止めることができる',
+      '電気メスに比べて短時間で凝固切開が可能である',
+      '内視鏡外科手術に用いられる',
+    ],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.mte],
+  },
+  /** 31回(PM) */
+  {
+    question:
+      '内視鏡画像計測の構成要素でないのはどれか。\na. 光ファイバ \nb. CCD \nc. レンズ \nd. 光電子増倍管 \ne. 検出コイル',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      'マイクロ波手術装置で正しいのはどれか。\na. ISM周波数を使用する \nb. 同軸ケープルを使用する \nc. 渦電流損で発熱する \nd. 対極板を使用する \ne. 組織を凝固する',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: '植込み型除細動器(ICD)について正しいのはどれか。',
+    options: [
+      'Brugada症候群には禁忌である',
+      '頻脈停止機能を有する',
+      '刺激電極は左室に留置する',
+      '開胸手術で留置する',
+      '360Jで刺激する',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '正しいのはどれか。\na. シリンジポンプは大量急速注入に適する \nb. シリンジポンプには気泡アラームがついている \nc. 輸液ポンプの滴下センサは赤外線を用いている \nd. 流量制御型輸液ポンプでは専用の輸液セットを用いる \ne. 携帯型ポンプには与圧注入方式がある',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '超音波吸引手術器で正しいのはどれか。\na. 振動子は5MHzで振動する \nb. 対極板が必要である \nc. 電気メスより止血機能に優れる \nd. 生理食塩液で洗浄しながら使用する \ne. 白内障手術に用いる',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: '腹腔鏡手術で誤っているのはどれか。',
+    options: [
+      '気腹に二酸化炭素を使用する',
+      '気腹圧は100mmHg程度に設定する',
+      '気腹による血圧低下が起こる',
+      'トロッカ(トロカール)を使用する',
+      '自動吻合器が使用できる',
+    ],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.mte],
+  },
 ];
