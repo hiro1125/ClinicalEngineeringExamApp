@@ -424,4 +424,86 @@ export const medicalTherapeuticEquipment: QuizData[] = [
     answerIndex: 1,
     tags: [TAGS_TEXT.mte],
   },
+  /** 32回(AM) */
+  {
+    question:
+      '誤っている組合せはどれか。\na.超短波治療器 -------- 高周波 \nb.筋刺激装置 -------- 光 \nc.X線装置 -------- 粒子線 \nd.ネブライザ -------- 超音波 \ne.除細動器 -------- パルス波',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: '電気メスについて正しいのはどれか。',
+    options: [
+      '500MHzの高周波が用いられる',
+      '出力電力と必要な対極板面積は反比例する',
+      '純切開にはバースト波が用いられる',
+      '出力回路にはコンデンサが直列に挿入される',
+      '高周波接地は対極板側回路を抵抗により接地する',
+    ],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '植込み型ペースメーカについて正しいのはどれか。\na. 慢性心房細動の徐脈はDDDの適応である \nb. VVIの電極リードは2本である \nc. パルス振幅は3mVである \nd. リチウム・ヨウ素電池を使用する \ne. 単極電極ではカテーテル先端部はマイナス極である',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '胸腔ドレナージで持続吸引する場合、設定値は通常-5～-20の陰圧とするが、このときの単位はどれか。',
+    options: ['kgf/cm2', 'atm', 'cmH20', 'kPa', 'psi'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '内視鏡外科手術で正しいのはどれか。\na. 気腹に二酸化炭素を用いる \nb. 気腹で静脈還流は増加する \nc. 硬性鏡は使用できない \nd. 胸腔内手術は適応外である \ne. 肺血栓塞栓症のリスクがある',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.mte],
+  },
+  /** 32回(PM) */
+  {
+    question:
+      '体外式除細動器で正しいのはどれか。\na. 二相生波形は半導体スイッチにより極性を反転する \nb. 出力パルス幅は2~5μsである \nc. 出力端子の一方は接地されている \nd. 通電テストには50Ωの無誘導抵抗を用いる \ne. 心房細動除去にはR波同期を用いる',
+    options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '冠動脈インターベンション治療(PCI)について正しいのはどれか。\na. ガイドワイヤはX線透視下で誘導する \nb. バルーン拡張時に冠動脈血流量は減少する \nc. 治療後の再狭窄はない \nd. ロータブレータは衝撃波を利用する \ne. 術後の抗血小板療法は不要である',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 0,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question: '輸液ポンプで誤っているのはどれか。',
+    options: [
+      'シリンジポンプは微量注入に適する',
+      '滴下センサには赤外線が用いられる',
+      '純切開にはバースト波が用いられる',
+      '流量制御型では汎用輸液セットが使える',
+      '与圧注入方式は小型軽量である',
+    ],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      '正しい組合せはどれか。\na.Arレーザ -------- 近視治療 \nb.ArFエキシマレーザ -------- 網膜光凝固 \nc.CO2レーザ -------- 切開 \nd.Nd:YAGレーザ -------- 凝固止血 \ne.Dyeレーザ -------- 疼痛治療',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.mte],
+  },
+  {
+    question:
+      'RF容量結合型加温法で正しいのはどれか。\na. 100MHz以上の周波数の電波を用いる \nb. 誘電損により発熱する \nc. 電気抵抗の低い組織ほど加温されやすい \nd. 表面冷却のためにボーラス(水バッグ)を使用する \ne. 電極サイズが小さいほど電極近傍の加温強くなる',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 4,
+    tags: [TAGS_TEXT.mte],
+  },
 ];
