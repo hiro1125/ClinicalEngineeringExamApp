@@ -19,6 +19,7 @@ export type RootStackParamList = {
   NinetyQuestionTest: undefined;
   IntroductionToMedicineTest: undefined;
   Result: undefined;
+  Gear: undefined;
 };
 
 export type Props = {

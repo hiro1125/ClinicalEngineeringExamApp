@@ -11,6 +11,7 @@ import { StyleSheet } from 'react-native';
 import { QuizScreen } from '../screens/QuizScreen';
 import { LinearGradient } from 'expo-linear-gradient';
 import { color } from '../styles';
+import { SettingScreen } from '../screens/SettingScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -89,6 +90,11 @@ export const RootNavigator = () => {
       <Stack.Screen
         name='QuestionTest'
         component={QuestionTestScreen}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+      />
+      <Stack.Screen
+        name='Gear'
+        component={SettingScreen}
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
     </Stack.Navigator>

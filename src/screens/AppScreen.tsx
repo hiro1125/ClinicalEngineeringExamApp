@@ -4,6 +4,7 @@ import {
   FlatList,
   ListRenderItem,
   Alert,
+  TouchableOpacity,
 } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { Props, RouteButton, ScreenProps } from '../../types/type';
@@ -12,6 +13,7 @@ import { FC } from 'react';
 import { useRootDispatch } from '../redux/store/store';
 import { setQuizDate } from '../redux/slices/quizSlice';
 import { FONTSIZE, SIZE } from '../styles';
+import { FontAwesome } from '@expo/vector-icons';
 
 const AppScreen: FC<ScreenProps & Props> = ({
   navigation,
@@ -20,6 +22,10 @@ const AppScreen: FC<ScreenProps & Props> = ({
   buttonData,
 }) => {
   const dispatch = useRootDispatch();
+
+  const handleGearIconPress = () => {
+    navigation.navigate('Gear');
+  };
 
   const onButtonPress = (item: RouteButton) => {
     if (item.title === RETURN_BUTTON_TEXT) {
@@ -62,6 +68,9 @@ const AppScreen: FC<ScreenProps & Props> = ({
         showsVerticalScrollIndicator={false}
         scrollEnabled={buttonData.length > 3}
       />
+      <TouchableOpacity style={styles.gearButton} onPress={handleGearIconPress}>
+        <FontAwesome name='gear' size={30} />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -99,5 +108,10 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.SIZE18PX,
     textAlign: 'center',
     textTransform: 'uppercase',
+  },
+  gearButton: {
+    position: 'absolute',
+    bottom: SIZE.BASIC_HIGHT * 6,
+    right: SIZE.BASIC_WIDTH * 15,
   },
 });
