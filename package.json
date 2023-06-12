@@ -9,12 +9,14 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-community/checkbox": "^0.5.15",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/lodash": "^4.14.194",
     "expo": "~48.0.10",
     "expo-av": "^13.2.1",
+    "expo-checkbox": "~2.3.1",
     "expo-linear-gradient": "~12.1.2",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
