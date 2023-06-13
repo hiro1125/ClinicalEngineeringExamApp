@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { TOTAL_QUESTIONS, examMenuButton } from '../contents';
+import { examMenuButton } from '../contents';
 import { useNavigation } from '@react-navigation/native';
 import { Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { RouteButton } from '../../types/type';
-import { FONTSIZE, SIZE } from '../styles';
+import { FONTSIZE } from '../styles';
+import { useRootSelector } from '../redux/store/store';
 
 type Props = {
   score: number;
@@ -20,6 +21,10 @@ export const ResultScreen: FC<Props> = ({ score }) => {
 
   const byFieldMenuButtons = examMenuButton.filter(
     (button: RouteButton) => button.navigationName === 'ByField'
+  );
+
+  const TOTAL_QUESTIONS = useRootSelector(
+    (state) => state.totalQuestion.totalQuestion
   );
 
   return (
