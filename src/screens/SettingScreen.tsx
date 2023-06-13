@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Text } from 'react-native-elements';
 import Checkbox from 'expo-checkbox';
 import { checkboxData } from '../contents';
 import { SIZE } from '../styles';
+import { Props } from '../../types/type';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-export const SettingScreen = () => {
+export const SettingScreen = ({ navigation }: Props) => {
   const [checkboxes, setCheckboxes] = useState(checkboxData);
 
   const handleCheckboxChange = (id: number) => {
@@ -19,6 +21,10 @@ export const SettingScreen = () => {
 
       return updatedCheckboxes;
     });
+  };
+
+  const handleGoBack = () => {
+    navigation.pop();
   };
 
   return (
@@ -45,6 +51,9 @@ export const SettingScreen = () => {
           </View>
         ))}
       </View>
+      <TouchableOpacity style={styles.timesCircle} onPress={handleGoBack}>
+        <Icon name='times-circle' size={40} />
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -62,8 +71,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   subTitle: {
-    marginTop: SIZE.BASIC_HIGHT * 2,
-    marginBottom: SIZE.BASIC_HIGHT * 1,
+    marginTop: SIZE.BASIC_HIGHT * 3,
+    marginBottom: SIZE.BASIC_HIGHT * 4,
   },
   subTitleText: {
     fontSize: 18,
@@ -75,12 +84,16 @@ const styles = StyleSheet.create({
   section: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: SIZE.BASIC_HIGHT,
+    marginBottom: SIZE.BASIC_HIGHT * 3,
   },
   checkbox: {
-    marginRight: SIZE.BASIC_WIDTH,
+    marginRight: SIZE.BASIC_WIDTH * 4,
   },
   optionText: {
     fontSize: 16,
+  },
+  timesCircle: {
+    bottom: 0,
+    alignSelf: 'center',
   },
 });
