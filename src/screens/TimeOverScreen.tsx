@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { TOTAL_QUESTIONS, examMenuButton } from '../contents';
+import { examMenuButton } from '../contents';
 import { shuffle } from 'lodash';
 import { QuizData, RouteButton } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
@@ -27,6 +27,10 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
 }) => {
   const dispatch = useRootDispatch();
   const quizData = useRootSelector((state) => state.quiz.quizData);
+  const TOTAL_QUESTIONS = useRootSelector(
+    (state) => state.totalQuestion.totalQuestion
+  );
+
   const handleResumeButtonPress = () => {
     setTimer(10);
     setIndex(index);

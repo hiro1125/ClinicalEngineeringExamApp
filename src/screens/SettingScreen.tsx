@@ -6,14 +6,18 @@ import { checkboxData } from '../contents';
 import { SIZE } from '../styles';
 import { Props } from '../../types/type';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { setTotalQuestion } from '../redux/slices/totalQuestionSlice';
+import { useRootDispatch } from '../redux/store/store';
 
 export const SettingScreen = ({ navigation }: Props) => {
+  const dispatch = useRootDispatch();
   const [checkboxes, setCheckboxes] = useState(checkboxData);
 
   const handleCheckboxChange = (id: number) => {
     setCheckboxes((prevData) => {
       const updatedCheckboxes = prevData.map((item) => {
         if (item.id === id) {
+          dispatch(setTotalQuestion(item.value));
           return { ...item, isSelected: !item.isSelected };
         }
         return { ...item, isSelected: false };

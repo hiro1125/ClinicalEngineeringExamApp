@@ -2,7 +2,6 @@ import React, { FC, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Props } from '../../types/type';
 import { shuffle } from 'lodash';
-import { TOTAL_QUESTIONS } from '../contents';
 import { ResultScreen } from './ResultScreen';
 import { showCorrectAnswerAlert, showIncorrectAnswerAlert } from '../function';
 import { TimeOverScreen } from './TimeOverScreen';
@@ -10,11 +9,14 @@ import QuizQuestionCard from './QuizQuestionCard';
 import { useTimer } from '../hooks/useTimer';
 import { useRootSelector } from '../redux/store/store';
 
-export const QuizScreen: FC<Props> = () => {
+export const QuizScreen: FC<Props> = ({ navigation }) => {
   const [index, setIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
   const quizData = useRootSelector((state) => state.quiz.quizData);
+  const TOTAL_QUESTIONS = useRootSelector(
+    (state) => state.totalQuestion.totalQuestion
+  );
 
   const [shuffledQuestions, setShuffledQuestions] = useState(
     shuffle(quizData).slice(0, TOTAL_QUESTIONS)
@@ -53,6 +55,7 @@ export const QuizScreen: FC<Props> = () => {
           index={index}
           timer={timer}
           answerButton={answerButton}
+          navigation={navigation}
         />
       ) : (
         <TimeOverScreen
