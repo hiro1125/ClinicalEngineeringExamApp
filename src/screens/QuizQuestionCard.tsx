@@ -7,7 +7,7 @@ import {
   SafeAreaView,
   Alert,
 } from 'react-native';
-import { QuizData } from '../../types/type';
+import { Props, QuizData } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
 import { RETURN_BUTTON_TEXT } from '../contents';
 import { StackActions } from '@react-navigation/native';
@@ -21,13 +21,12 @@ type QuizQuestionCardProps = {
   answerButton: (index: number) => void;
 };
 
-export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
+export const QuizQuestionCard: FC<QuizQuestionCardProps & Props> = ({
   shuffledQuestions,
   index,
   answerButton,
+  navigation,
 }) => {
-  const navigation = useNavigation();
-
   const handleNavigation = () => {
     Alert.alert('確認', '本当に戻りますか？', [
       {
@@ -36,7 +35,7 @@ export const QuizQuestionCard: FC<QuizQuestionCardProps> = ({
       {
         text: RETURN_BUTTON_TEXT,
         onPress: () => {
-          navigation.dispatch(StackActions.pop(2));
+          navigation.pop(2);
         },
       },
     ]);
