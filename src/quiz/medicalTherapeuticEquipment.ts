@@ -506,7 +506,7 @@ export const medicalTherapeuticEquipment: QuizData[] = [
     answerIndex: 4,
     tags: [TAGS_TEXT.mte],
   },
-  /** 32回(AM) */
+  /** 33回(AM) */
   {
     question:
       '植込み型心臓ペースメーカについて正しいのはどれか。\na. 心房内にジェネレータを留置する \nb. 左房に心内膜電極を留置する \nc. ICHD（NBG）コードのTはトリガを意味する \nd. 刺激パルス幅は0.5ms前後である \ne. 電極装着後の刺激閾値は不変である',
@@ -569,7 +569,7 @@ export const medicalTherapeuticEquipment: QuizData[] = [
     answerIndex: 1,
     tags: [TAGS_TEXT.mte],
   },
-  /** 32回(PM) */
+  /** 33回(PM) */
   {
     question:
       '正しい組合せはどれか。\na. 切開には連続正弦波が用いられる \nb. 対極板接触面積の増加は熱傷の原因である \nc. 出力回路には抵抗が挿入されている \nd. スプリット型対極板は接触インピーダンスを測定する \ne. バイポーラ電極は挟まれた部位を凝固する',
