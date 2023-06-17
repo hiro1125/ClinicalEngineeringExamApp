@@ -27,7 +27,7 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
 }) => {
   const dispatch = useRootDispatch();
   const quizData = useRootSelector((state) => state.quiz.quizData);
-  const TOTAL_QUESTIONS = useRootSelector(
+  const totalQuestionValue = useRootSelector(
     (state) => state.totalQuestion.totalQuestion
   );
 
@@ -40,7 +40,7 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
     setIndex(0);
     setScore(0);
     setTimer(10);
-    setShuffledQuestions(shuffle(quizData).slice(0, TOTAL_QUESTIONS));
+    setShuffledQuestions(shuffle(quizData).slice(0, totalQuestionValue));
   };
 
   const navigation = useNavigation();
@@ -54,7 +54,7 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
   return (
     <View style={styles.resultContainer}>
       <Text style={styles.resultText}>
-        正解数: {score}/{TOTAL_QUESTIONS}
+        正解数: {score}/{totalQuestionValue}
       </Text>
       <TouchableOpacity
         onPress={handleResumeButtonPress}

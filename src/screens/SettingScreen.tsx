@@ -1,30 +1,41 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SafeAreaView, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Text } from 'react-native-elements';
 import Checkbox from 'expo-checkbox';
-import { checkboxData } from '../contents';
+import { CHECKBOX_DATA } from '../contents';
 import { SIZE } from '../styles';
 import { Props } from '../../types/type';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { setTotalQuestion } from '../redux/slices/totalQuestionSlice';
-import { useRootDispatch } from '../redux/store/store';
+import { useRootDispatch, useRootSelector } from '../redux/store/store';
 
 export const SettingScreen = ({ navigation }: Props) => {
   const dispatch = useRootDispatch();
-  const [checkboxes, setCheckboxes] = useState(checkboxData);
+  const [checkboxes, setCheckboxes] = useState(CHECKBOX_DATA);
+  const [checked, setChecked] = useState<number | null>();
+  const totalQuestionValue = useRootSelector(
+    (state) => state.totalQuestion.totalQuestion
+  );
 
-  const handleCheckboxChange = (id: number) => {
-    setCheckboxes((prevData) => {
-      const updatedCheckboxes = prevData.map((item) => {
-        if (item.id === id) {
-          dispatch(setTotalQuestion(item.value));
-          return { ...item, isSelected: !item.isSelected };
+  useEffect(() => {
+    if (totalQuestionValue) {
+      const newData = CHECKBOX_DATA.map((item) => {
+        if (item.value === totalQuestionValue) {
+          setChecked(item.id);
+          return { id: item.id, value: item.value, isSelected: true };
+        } else {
+          return item;
         }
-        return { ...item, isSelected: false };
       });
+      setCheckboxes(newData);
+    } else {
+      useState(CHECKBOX_DATA);
+    }
+  }, []);
 
-      return updatedCheckboxes;
-    });
+  const onPress = (value: number, id: number) => {
+    dispatch(setTotalQuestion(value));
+    setChecked(id);
   };
 
   const handleGoBack = () => {
@@ -48,12 +59,12 @@ export const SettingScreen = ({ navigation }: Props) => {
           <TouchableOpacity
             style={styles.section}
             key={index}
-            onPress={() => handleCheckboxChange(option.id)}
+            onPress={() => onPress(option.value, option.id)}
           >
             <Checkbox
               style={styles.checkbox}
-              value={option.isSelected}
-              onValueChange={() => handleCheckboxChange(option.id)}
+              value={option.id === checked}
+              onValueChange={() => onPress(option.value, option.id)}
             />
             <Text style={styles.optionText}>{option.value}問</Text>
           </TouchableOpacity>

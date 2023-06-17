@@ -23,7 +23,7 @@ export const ResultScreen: FC<Props> = ({ score }) => {
     (button: RouteButton) => button.navigationName === 'ByField'
   );
 
-  const TOTAL_QUESTIONS = useRootSelector(
+  const totalQuestionValue = useRootSelector(
     (state) => state.totalQuestion.totalQuestion
   );
 
@@ -35,7 +35,7 @@ export const ResultScreen: FC<Props> = ({ score }) => {
       <View style={styles.container}>
         <Text style={styles.title}>クイズ結果</Text>
         <Text style={styles.score}>
-          あなたのスコアは{TOTAL_QUESTIONS}問中{score}問です。
+          あなたのスコアは{totalQuestionValue}問中{score}問です。
         </Text>
         {byFieldMenuButtons.map((button, index) => (
           <Button

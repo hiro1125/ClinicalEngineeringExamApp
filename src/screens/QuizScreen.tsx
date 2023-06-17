@@ -14,12 +14,12 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
   const [score, setScore] = useState<number>(0);
   const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
   const quizData = useRootSelector((state) => state.quiz.quizData);
-  const TOTAL_QUESTIONS = useRootSelector(
+  const totalQuestionValue = useRootSelector(
     (state) => state.totalQuestion.totalQuestion
   );
 
   const [shuffledQuestions, setShuffledQuestions] = useState(
-    shuffle(quizData).slice(0, TOTAL_QUESTIONS)
+    shuffle(quizData).slice(0, totalQuestionValue)
   );
 
   const { timer, setTimer } = useTimer();

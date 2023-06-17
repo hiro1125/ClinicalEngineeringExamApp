@@ -6,9 +6,8 @@ import { introductionToMedicineData } from '../quiz/introductionToMedicine';
 export const RETURN_BUTTON_TEXT = '戻る';
 export const START_BUTTON_TEXT = 'スタート';
 export const DECISION_BUTTON_TEXT = 'OK';
-
 /** 問題数のリスト */
-export const checkboxData = [
+export const CHECKBOX_DATA = [
   { id: 1, value: 5, isSelected: false },
   { id: 2, value: 10, isSelected: false },
   { id: 3, value: 20, isSelected: false },
