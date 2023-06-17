@@ -6,7 +6,7 @@ import { CHECKBOX_DATA } from '../contents';
 import { SIZE } from '../styles';
 import { Props } from '../../types/type';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { setTotalQuestion } from '../redux/slices/totalQuestionSlice';
+import { setTotalQuestion } from '../redux/slices/settingsSlice';
 import { useRootDispatch, useRootSelector } from '../redux/store/store';
 
 export const SettingScreen = ({ navigation }: Props) => {
