@@ -18,19 +18,15 @@ export const SettingScreen = ({ navigation }: Props) => {
   );
 
   useEffect(() => {
-    if (totalQuestionValue) {
-      const newData = CHECKBOX_DATA.map((item) => {
-        if (item.value === totalQuestionValue) {
-          setChecked(item.id);
-          return { id: item.id, value: item.value, isSelected: true };
-        } else {
-          return item;
-        }
-      });
-      setCheckboxes(newData);
-    } else {
-      useState(CHECKBOX_DATA);
-    }
+    const newData = CHECKBOX_DATA.map((item) => {
+      if (item.value === totalQuestionValue) {
+        setChecked(item.id);
+        return { id: item.id, value: item.value, isSelected: true };
+      } else {
+        return item;
+      }
+    });
+    setCheckboxes(newData);
   }, []);
 
   const onPress = (value: number, id: number) => {
