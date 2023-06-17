@@ -8,9 +8,7 @@ import {
   Alert,
 } from 'react-native';
 import { Props, QuizData } from '../../types/type';
-import { useNavigation } from '@react-navigation/native';
 import { RETURN_BUTTON_TEXT } from '../contents';
-import { StackActions } from '@react-navigation/native';
 import { useTimer } from '../hooks/useTimer';
 import { FONTSIZE, SIZE } from '../styles';
 
