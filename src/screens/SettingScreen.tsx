@@ -45,14 +45,18 @@ export const SettingScreen = ({ navigation }: Props) => {
       </View>
       <View style={styles.checkboxContainer}>
         {checkboxes.map((option, index) => (
-          <View style={styles.section} key={index}>
+          <TouchableOpacity
+            style={styles.section}
+            key={index}
+            onPress={() => handleCheckboxChange(option.id)}
+          >
             <Checkbox
               style={styles.checkbox}
               value={option.isSelected}
               onValueChange={() => handleCheckboxChange(option.id)}
             />
             <Text style={styles.optionText}>{option.value}問</Text>
-          </View>
+          </TouchableOpacity>
         ))}
       </View>
       <TouchableOpacity style={styles.timesCircle} onPress={handleGoBack}>
