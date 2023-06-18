@@ -14,9 +14,7 @@ const playSound = async (sound: AVPlaybackSource) => {
     const soundObject = new Audio.Sound();
     await soundObject.loadAsync(sound);
     await soundObject.playAsync();
-  } catch (error) {
-    console.log(error);
-  }
+  } catch (error) {}
 };
 
 export const showCorrectAnswerAlert = async ({

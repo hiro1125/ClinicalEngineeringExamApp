@@ -24,16 +24,13 @@ export const SettingScreen = ({ navigation }: Props) => {
     (async () => {
       try {
         const allKey = await AsyncStorage.getAllKeys();
-        console.log(allKey);
         const isTotalQuestionKey = allKey.find(
           (item) => item === 'totalQuestionValue'
         );
-        console.log(isTotalQuestionKey);
         if (isTotalQuestionKey) {
           const questionValue = await questionValueStorage.load({
             key: 'totalQuestionValue',
           });
-          console.log(questionValue);
           const newData = CHECKBOX_DATA.map((item) => {
             if (questionValue.id === item.id) {
               setChecked(item.id);
@@ -46,7 +43,6 @@ export const SettingScreen = ({ navigation }: Props) => {
           const checkedValue = CHECKBOX_DATA.find(
             (item) => item.id === questionValue.id
           )?.value;
-          console.log(checkedValue);
           dispatch(setTotalQuestion(checkedValue));
         } else {
           const newData = CHECKBOX_DATA.map((item) => {
@@ -59,9 +55,7 @@ export const SettingScreen = ({ navigation }: Props) => {
           });
           setCheckboxes(newData);
         }
-      } catch (error) {
-        console.log(error);
-      }
+      } catch (error) {}
     })();
   }, []);
 
