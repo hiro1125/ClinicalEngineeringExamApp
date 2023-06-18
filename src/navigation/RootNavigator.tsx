@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Props, RootStackParamList } from '../../types/type';
 import {
+  CHECKBOX_DATA,
   byFieldButton,
   examMenuButton,
   questionTestButton,
@@ -12,6 +13,11 @@ import { QuizScreen } from '../screens/QuizScreen';
 import { LinearGradient } from 'expo-linear-gradient';
 import { color } from '../styles';
 import { SettingScreen } from '../screens/SettingScreen';
+import { useEffect } from 'react';
+import { questionValueStorage } from '../storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useRootDispatch } from '../redux/store/store';
+import { setTotalQuestion } from '../redux/slices/settingsSlice';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -103,6 +109,37 @@ export const RootNavigator = () => {
 
 /** Home画面 */
 export const HomeScreen = ({ navigation }: Props) => {
+  const dispatch = useRootDispatch();
+  useEffect(() => {
+    (async () => {
+      try {
+        const allKey = await AsyncStorage.getAllKeys();
+        console.log(allKey);
+        const isTotalQuestionKey = allKey.find(
+          (item) => item === 'totalQuestionValue'
+        );
+        console.log(isTotalQuestionKey);
+        if (isTotalQuestionKey) {
+          const questionValue = await questionValueStorage.load({
+            key: 'totalQuestionValue',
+          });
+          console.log(questionValue);
+          const newData = CHECKBOX_DATA.map((item) => {
+            if (questionValue.id === item.id) {
+              return { id: item.id, value: item.value, isSelected: true };
+            } else {
+              return item;
+            }
+          });
+          const checkedValue = CHECKBOX_DATA.find(
+            (item) => item.id === questionValue.id
+          )?.value;
+          console.log(checkedValue);
+          dispatch(setTotalQuestion(checkedValue));
+        }
+      } catch (error) {}
+    })();
+  }, []);
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen

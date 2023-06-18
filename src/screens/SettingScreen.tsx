@@ -8,6 +8,8 @@ import { Props } from '../../types/type';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { setTotalQuestion } from '../redux/slices/settingsSlice';
 import { useRootDispatch, useRootSelector } from '../redux/store/store';
+import { questionValueStorage } from '../storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const SettingScreen = ({ navigation }: Props) => {
   const dispatch = useRootDispatch();
@@ -17,21 +19,62 @@ export const SettingScreen = ({ navigation }: Props) => {
     (state) => state.totalQuestion.totalQuestion
   );
 
+  /** チェックが画面を開いた時にチェックが保持されるロジック */
   useEffect(() => {
-    const newData = CHECKBOX_DATA.map((item) => {
-      if (item.value === totalQuestionValue) {
-        setChecked(item.id);
-        return { id: item.id, value: item.value, isSelected: true };
-      } else {
-        return item;
+    (async () => {
+      try {
+        const allKey = await AsyncStorage.getAllKeys();
+        console.log(allKey);
+        const isTotalQuestionKey = allKey.find(
+          (item) => item === 'totalQuestionValue'
+        );
+        console.log(isTotalQuestionKey);
+        if (isTotalQuestionKey) {
+          const questionValue = await questionValueStorage.load({
+            key: 'totalQuestionValue',
+          });
+          console.log(questionValue);
+          const newData = CHECKBOX_DATA.map((item) => {
+            if (questionValue.id === item.id) {
+              setChecked(item.id);
+              return { id: item.id, value: item.value, isSelected: true };
+            } else {
+              return item;
+            }
+          });
+          setCheckboxes(newData);
+          const checkedValue = CHECKBOX_DATA.find(
+            (item) => item.id === questionValue.id
+          )?.value;
+          console.log(checkedValue);
+          dispatch(setTotalQuestion(checkedValue));
+        } else {
+          const newData = CHECKBOX_DATA.map((item) => {
+            if (item.value === totalQuestionValue) {
+              setChecked(item.id);
+              return { id: item.id, value: item.value, isSelected: true };
+            } else {
+              return item;
+            }
+          });
+          setCheckboxes(newData);
+        }
+      } catch (error) {
+        console.log(error);
       }
-    });
-    setCheckboxes(newData);
+    })();
   }, []);
 
-  const onPress = (value: number, id: number) => {
+  const onPress = async (value: number, id: number) => {
     dispatch(setTotalQuestion(value));
     setChecked(id);
+    // ストレージに保存
+    await questionValueStorage.save({
+      key: 'totalQuestionValue',
+      data: {
+        id: id,
+      },
+    });
   };
 
   const handleGoBack = () => {
