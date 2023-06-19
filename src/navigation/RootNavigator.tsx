@@ -133,7 +133,9 @@ export const HomeScreen = ({ navigation }: Props) => {
           )?.value;
           dispatch(setTotalQuestion(checkedValue));
         }
-      } catch (error) {}
+      } catch (error) {
+        throw error;
+      }
     })();
   }, []);
   return (

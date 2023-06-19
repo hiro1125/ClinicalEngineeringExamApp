@@ -55,7 +55,9 @@ export const SettingScreen = ({ navigation }: Props) => {
           });
           setCheckboxes(newData);
         }
-      } catch (error) {}
+      } catch (error) {
+        throw error;
+      }
     })();
   }, []);
 
