@@ -19,7 +19,7 @@ export type RootStackParamList = {
   NinetyQuestionTest: undefined;
   IntroductionToMedicineTest: undefined;
   Result: undefined;
-  Gear: undefined;
+  settingScreen: undefined;
 };
 
 export type Props = {

@@ -1,153 +1,98 @@
-import React, { useEffect, useState } from 'react';
-import { SafeAreaView, StyleSheet, TouchableOpacity, View } from 'react-native';
+import React, { FC } from 'react';
+import {
+  FlatList,
+  ListRenderItem,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
+import { SettingData } from '../../types/type';
+import { settingData } from '../contents';
+import { FONTSIZE, SIZE, color } from '../styles';
+import { LinearGradient } from 'expo-linear-gradient';
 import { Text } from 'react-native-elements';
-import Checkbox from 'expo-checkbox';
-import { CHECKBOX_DATA } from '../contents';
-import { SIZE } from '../styles';
-import { Props } from '../../types/type';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { setTotalQuestion } from '../redux/slices/settingsSlice';
-import { useRootDispatch, useRootSelector } from '../redux/store/store';
-import { questionValueStorage } from '../storage';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export const SettingScreen = ({ navigation }: Props) => {
-  const dispatch = useRootDispatch();
-  const [checkboxes, setCheckboxes] = useState(CHECKBOX_DATA);
-  const [checked, setChecked] = useState<number | null>();
-  const totalQuestionValue = useRootSelector(
-    (state) => state.totalQuestion.totalQuestion
-  );
+type Props = {
+  navigation: any;
+};
 
-  /** チェックが画面を開いた時にチェックが保持されるロジック */
-  useEffect(() => {
-    (async () => {
-      try {
-        const allKey = await AsyncStorage.getAllKeys();
-        const isTotalQuestionKey = allKey.find(
-          (item) => item === 'totalQuestionValue'
-        );
-        if (isTotalQuestionKey) {
-          const questionValue = await questionValueStorage.load({
-            key: 'totalQuestionValue',
-          });
-          const newData = CHECKBOX_DATA.map((item) => {
-            if (questionValue.id === item.id) {
-              setChecked(item.id);
-              return { id: item.id, value: item.value, isSelected: true };
-            } else {
-              return item;
-            }
-          });
-          setCheckboxes(newData);
-          const checkedValue = CHECKBOX_DATA.find(
-            (item) => item.id === questionValue.id
-          )?.value;
-          dispatch(setTotalQuestion(checkedValue));
-        } else {
-          const newData = CHECKBOX_DATA.map((item) => {
-            if (item.value === totalQuestionValue) {
-              setChecked(item.id);
-              return { id: item.id, value: item.value, isSelected: true };
-            } else {
-              return item;
-            }
-          });
-          setCheckboxes(newData);
-        }
-      } catch (error) {
-        throw error;
-      }
-    })();
-  }, []);
-
-  const onPress = async (value: number, id: number) => {
-    dispatch(setTotalQuestion(value));
-    setChecked(id);
-    // ストレージに保存
-    await questionValueStorage.save({
-      key: 'totalQuestionValue',
-      data: {
-        id: id,
-      },
-    });
-  };
-
-  const handleGoBack = () => {
-    navigation.pop();
-  };
-
-  return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.title}>
-        <Text h1 style={styles.titleText}>
-          設定画面
-        </Text>
-      </View>
-      <View style={styles.subTitle}>
-        <Text h4 style={styles.subTitleText}>
-          問題数の設定
-        </Text>
-      </View>
-      <View style={styles.checkboxContainer}>
-        {checkboxes.map((option, index) => (
+const SettingScreen: FC<Props> = ({ navigation }) => {
+  const renderItem: ListRenderItem<SettingData> = ({ item, index }) => {
+    const labels = item.item.map((i) => i.label);
+    return (
+      <View key={index}>
+        {labels.map((data, index) => (
           <TouchableOpacity
-            style={styles.section}
             key={index}
-            onPress={() => onPress(option.value, option.id)}
+            style={styles.itemContainer}
+            onPress={() => navigation.navigate('settingDetailScreen', { data })}
           >
-            <Checkbox
-              style={styles.checkbox}
-              value={option.id === checked}
-              onValueChange={() => onPress(option.value, option.id)}
-            />
-            <Text style={styles.optionText}>{option.value}問</Text>
+            <Text h4 style={styles.subTitleText}>
+              {data}
+            </Text>
+            <MaterialIcons name='navigate-next' size={26} />
           </TouchableOpacity>
         ))}
       </View>
-      <TouchableOpacity style={styles.timesCircle} onPress={handleGoBack}>
-        <Icon name='times-circle' size={40} />
-      </TouchableOpacity>
-    </SafeAreaView>
+    );
+  };
+
+  return (
+    <LinearGradient colors={color} style={styles.linearGradient}>
+      <View style={{ flex: 1 }}>
+        <View style={styles.header}>
+          <TouchableOpacity
+            style={{ width: '10%' }}
+            onPress={() => navigation.goBack()}
+          >
+            <Ionicons name='chevron-back' size={30} color='black' />
+          </TouchableOpacity>
+          <View style={{ width: '80%' }}>
+            <Text h3 style={styles.headerText}>
+              設定
+            </Text>
+          </View>
+        </View>
+
+        <FlatList
+          data={settingData}
+          renderItem={renderItem}
+          keyExtractor={(_, index) => index.toString()}
+        />
+      </View>
+    </LinearGradient>
   );
 };
 
+export default SettingScreen;
+
 const styles = StyleSheet.create({
-  container: {
+  linearGradient: {
+    flex: 1,
+  },
+  header: {
+    height: SIZE.BASIC_HIGHT * 12,
+    paddingHorizontal: SIZE.BASIC_WIDTH * 5,
+    borderBottomWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
   },
-  title: {
-    marginTop: SIZE.BASIC_HIGHT * 5,
-  },
-  titleText: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  subTitle: {
-    marginTop: SIZE.BASIC_HIGHT * 3,
-    marginBottom: SIZE.BASIC_HIGHT * 4,
+  itemContainer: {
+    width: '100%',
+    height: SIZE.BASIC_HIGHT * 6.5,
+    borderBottomWidth: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
   },
   subTitleText: {
-    fontSize: 18,
+    fontSize: FONTSIZE.SIZE18PX,
+  },
+  headerText: {
+    textAlign: 'center',
+    fontSize: FONTSIZE.SIZE20PX,
     fontWeight: 'bold',
-  },
-  checkboxContainer: {
-    width: SIZE.BASIC_WIDTH * 20,
-  },
-  section: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: SIZE.BASIC_HIGHT * 3,
-  },
-  checkbox: {
-    marginRight: SIZE.BASIC_WIDTH * 4,
-  },
-  optionText: {
-    fontSize: 16,
-  },
-  timesCircle: {
-    bottom: 0,
-    alignSelf: 'center',
   },
 });

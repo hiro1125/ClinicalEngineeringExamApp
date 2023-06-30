@@ -24,7 +24,7 @@ const AppScreen: FC<ScreenProps & Props> = ({
   const dispatch = useRootDispatch();
 
   const handleGearIconPress = () => {
-    navigation.navigate('Gear');
+    navigation.navigate('settingScreen');
   };
 
   const onButtonPress = (item: RouteButton) => {

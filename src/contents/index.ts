@@ -1,4 +1,4 @@
-import { RouteButton } from '../../types/type';
+import { RouteButton, SettingData } from '../../types/type';
 import { biomedicalMeasurementInstrumentationData } from '../quiz/biomedicalMeasurementInstrumentation';
 import { clinicalMedicineOverviewData } from '../quiz/clinicalMedicineOverview';
 import { introductionToMedicineData } from '../quiz/introductionToMedicine';
@@ -20,6 +20,44 @@ export const CHECKBOX_DATA = [
   { id: 9, value: 80, isSelected: false },
   { id: 10, value: 90, isSelected: false },
   { id: 11, value: 100, isSelected: false },
+];
+
+export const settingData: SettingData[] = [
+  {
+    item: [
+      {
+        label: '問題数の設定',
+        data: [
+          { text: '5' },
+          { text: '10' },
+          { text: '20' },
+          { text: '30' },
+          { text: '40' },
+          { text: '50' },
+          { text: '60' },
+          { text: '70' },
+          { text: '80' },
+          { text: '90' },
+          { text: '100' },
+        ],
+      },
+      {
+        label: '問題時間の設定',
+        data: [
+          { text: '150' },
+          { text: '300' },
+          { text: '600' },
+          { text: '900' },
+          { text: '1200' },
+          { text: '1500' },
+          { text: '1800' },
+          { text: '2100' },
+          { text: '2700' },
+          { text: '3000' },
+        ],
+      },
+    ],
+  },
 ];
 
 // /** Home画面 */

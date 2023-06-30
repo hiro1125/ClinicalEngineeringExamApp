@@ -12,12 +12,13 @@ import { StyleSheet } from 'react-native';
 import { QuizScreen } from '../screens/QuizScreen';
 import { LinearGradient } from 'expo-linear-gradient';
 import { color } from '../styles';
-import { SettingScreen } from '../screens/SettingScreen';
+import { TotalQuestionValueScreen } from '../screens/TotalQuestionValueScreen';
 import { useEffect } from 'react';
 import { questionValueStorage } from '../storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRootDispatch } from '../redux/store/store';
 import { setTotalQuestion } from '../redux/slices/settingsSlice';
+import SettingScreen from '../screens/SettingScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -99,7 +100,7 @@ export const RootNavigator = () => {
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
-        name='Gear'
+        name='settingScreen'
         component={SettingScreen}
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
