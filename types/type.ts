@@ -20,6 +20,7 @@ export type RootStackParamList = {
   IntroductionToMedicineTest: undefined;
   Result: undefined;
   settingScreen: undefined;
+  settingDetailScreen: undefined;
 };
 
 export type Props = {
@@ -76,4 +77,13 @@ export type QuizAlertIncorrectProps = {
   shuffledQuestions: QuizData[];
   index: number;
   setIndex: (index: number) => void;
+};
+
+export type SettingData = {
+  item: {
+    label: string;
+    data: {
+      text: string;
+    }[];
+  }[];
 };

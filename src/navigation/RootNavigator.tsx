@@ -19,6 +19,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRootDispatch } from '../redux/store/store';
 import { setTotalQuestion } from '../redux/slices/settingsSlice';
 import SettingScreen from '../screens/SettingScreen';
+import SettingDetailScreen from '../screens/SettingDetailScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -102,6 +103,11 @@ export const RootNavigator = () => {
       <Stack.Screen
         name='settingScreen'
         component={SettingScreen}
+        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+      />
+      <Stack.Screen
+        name='settingDetailScreen'
+        component={SettingDetailScreen}
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
     </Stack.Navigator>
