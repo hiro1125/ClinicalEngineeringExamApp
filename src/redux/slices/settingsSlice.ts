@@ -18,7 +18,11 @@ export const settingsSlice = createSlice({
     setTotalQuestion: (state, { payload }) => {
       state.totalQuestion = payload;
     },
+    /** クイズを答えるための時間 */
+    setTimeLimit: (state, { payload }) => {
+      state.timeLimit = payload;
+    },
   },
 });
 
-export const { setTotalQuestion } = settingsSlice.actions;
+export const { setTotalQuestion, setTimeLimit } = settingsSlice.actions;

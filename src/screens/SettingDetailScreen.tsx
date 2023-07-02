@@ -6,12 +6,14 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
 } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { FONTSIZE, SIZE, color } from '../styles';
 import { LinearGradient } from 'expo-linear-gradient';
 import Header from '../components/Header';
+import { useRootDispatch } from '../redux/store/store';
+import { onSettingPress } from '../function';
+import { settingAdaptor } from '../adaptor/settingAdaptor';
 
 type Props = {
   navigation: any;
@@ -19,17 +21,26 @@ type Props = {
 };
 
 const SettingDetailScreen: FC<Props> = ({ navigation, route }) => {
+  const dispatch = useRootDispatch();
   const { data } = route.params;
+  const conversionData = settingAdaptor(data);
+  const checkListData = conversionData.data;
+
   const renderItem: ListRenderItem<any> = ({ item, index }) => {
     return (
       <TouchableOpacity
         key={index}
         style={styles.itemContainer}
         onPress={() => {
+          onSettingPress({ dispatch, label: conversionData.label, item });
           navigation.goBack();
         }}
       >
-        <Feather name='check' size={24} style={styles.check} />
+        <Feather
+          name='check'
+          size={24}
+          style={[styles.check, { opacity: item.check ? 1 : 0 }]}
+        />
         <Text style={styles.text}>{item.text}</Text>
       </TouchableOpacity>
     );
@@ -40,7 +51,7 @@ const SettingDetailScreen: FC<Props> = ({ navigation, route }) => {
       <SafeAreaView style={{ flex: 1 }}>
         <Header navigation={navigation} title={data.label} />
         <FlatList
-          data={data.data}
+          data={checkListData}
           renderItem={renderItem}
           keyExtractor={(_, index) => index.toString()}
         />

@@ -5,6 +5,7 @@ import {
 import { Alert } from 'react-native';
 import { AVPlaybackSource, Audio } from 'expo-av';
 import { DECISION_BUTTON_TEXT } from '../contents';
+import { setTimeLimit, setTotalQuestion } from '../redux/slices/settingsSlice';
 
 const correctSound = require('../../assets/sounds/correct.mp3');
 const inCorrectSound = require('../../assets/sounds/incorrect.mp3');
@@ -65,4 +66,12 @@ export const showIncorrectAnswerAlert = async ({
       },
     },
   ]);
+};
+
+export const onSettingPress = ({ dispatch, label, item }: any) => {
+  if (label === '問題数の設定') {
+    dispatch(setTotalQuestion(item.id));
+  } else if (label === '問題時間の設定') {
+    dispatch(setTimeLimit(item.id));
+  }
 };
