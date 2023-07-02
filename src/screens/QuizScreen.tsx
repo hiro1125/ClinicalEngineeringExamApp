@@ -15,7 +15,7 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
   const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
   const quizData = useRootSelector((state) => state.quiz.quizData);
   const totalQuestionValue = useRootSelector(
-    (state) => state.totalQuestion.totalQuestion
+    (state) => state.settings.totalQuestion
   );
 
   const [shuffledQuestions, setShuffledQuestions] = useState(

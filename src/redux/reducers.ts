@@ -6,5 +6,5 @@ export const rootReducer = combineReducers({
   /** クイズ系のデータ */
   quiz: quizSlice.reducer,
   /** ユーザのデータ */
-  totalQuestion: settingsSlice.reducer,
+  settings: settingsSlice.reducer,
 });
