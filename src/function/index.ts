@@ -29,6 +29,7 @@ export const showCorrectAnswerAlert = async ({
   setIndex,
 }: QuizAlertCorrectProps) => {
   await playSound(correctSound);
+
   Alert.alert('正解', 'おめでとうございます！', [
     {
       text: DECISION_BUTTON_TEXT,

@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { useRootSelector } from '../redux/store/store';
 
 export const useTimer = () => {
-  const [timer, setTimer] = useState<number>(10);
+  const timeLimitValue = useRootSelector((state) => state.settings.timeLimit);
+  const [timer, setTimer] = useState<number>(timeLimitValue);
 
   useEffect(() => {
     if (timer > 0) {

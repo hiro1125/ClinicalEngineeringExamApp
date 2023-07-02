@@ -30,16 +30,17 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
   const totalQuestionValue = useRootSelector(
     (state) => state.settings.totalQuestion
   );
+  const timeLimitValue = useRootSelector((state) => state.settings.timeLimit);
 
   const handleResumeButtonPress = () => {
-    setTimer(10);
+    setTimer(timeLimitValue);
     setIndex(index);
   };
 
   const handleRestartButtonPress = () => {
     setIndex(0);
     setScore(0);
-    setTimer(10);
+    setTimer(timeLimitValue);
     setShuffledQuestions(shuffle(quizData).slice(0, totalQuestionValue));
   };
 
