@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { Ionicons, MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 import { SettingData } from '../../types/type';
 import { settingData } from '../contents';
 import { FONTSIZE, SIZE, color } from '../styles';
@@ -17,7 +17,6 @@ import Header from '../components/Header';
 
 type Props = {
   navigation: any;
-  title: string;
 };
 
 const SettingScreen: FC<Props> = ({ navigation }) => {
