@@ -28,7 +28,7 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
   const dispatch = useRootDispatch();
   const quizData = useRootSelector((state) => state.quiz.quizData);
   const totalQuestionValue = useRootSelector(
-    (state) => state.totalQuestion.totalQuestion
+    (state) => state.settings.totalQuestion
   );
 
   const handleResumeButtonPress = () => {

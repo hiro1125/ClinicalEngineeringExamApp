@@ -24,7 +24,7 @@ export const ResultScreen: FC<Props> = ({ score }) => {
   );
 
   const totalQuestionValue = useRootSelector(
-    (state) => state.totalQuestion.totalQuestion
+    (state) => state.settings.totalQuestion
   );
 
   return (
