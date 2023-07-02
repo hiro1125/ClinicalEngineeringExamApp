@@ -1,7 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Props, RootStackParamList } from '../../types/type';
 import {
-  CHECKBOX_DATA,
   byFieldButton,
   examMenuButton,
   questionTestButton,
@@ -13,10 +12,10 @@ import { QuizScreen } from '../screens/QuizScreen';
 import { LinearGradient } from 'expo-linear-gradient';
 import { color } from '../styles';
 import { useEffect } from 'react';
-import { questionValueStorage } from '../storage';
+import { questionValueStorage, timerValueStorage } from '../storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRootDispatch } from '../redux/store/store';
-import { setTotalQuestion } from '../redux/slices/settingsSlice';
+import { setTimeLimit, setTotalQuestion } from '../redux/slices/settingsSlice';
 import SettingScreen from '../screens/SettingScreen';
 import SettingDetailScreen from '../screens/SettingDetailScreen';
 
@@ -120,24 +119,22 @@ export const HomeScreen = ({ navigation }: Props) => {
     (async () => {
       try {
         const allKey = await AsyncStorage.getAllKeys();
-        const isTotalQuestionKey = allKey.find(
+        // 非同期通信の関数の作成 125~140 allKeyとdispatchを引数
+        const totalQuestionStorageKey = allKey.find(
           (item) => item === 'totalQuestionValue'
         );
-        if (isTotalQuestionKey) {
+        const timerStorageKey = allKey.find((item) => item === 'timerValue');
+        if (totalQuestionStorageKey) {
           const questionValue = await questionValueStorage.load({
             key: 'totalQuestionValue',
           });
-          const newData = CHECKBOX_DATA.map((item) => {
-            if (questionValue.id === item.id) {
-              return { id: item.id, value: item.value, isSelected: true };
-            } else {
-              return item;
-            }
+          dispatch(setTotalQuestion(questionValue.id));
+        }
+        if (timerStorageKey) {
+          const timerValue = await timerValueStorage.load({
+            key: 'timerValue',
           });
-          const checkedValue = CHECKBOX_DATA.find(
-            (item) => item.id === questionValue.id
-          )?.value;
-          dispatch(setTotalQuestion(checkedValue));
+          dispatch(setTimeLimit(timerValue.id));
         }
       } catch (error) {
         throw error;
