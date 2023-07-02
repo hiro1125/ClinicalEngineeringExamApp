@@ -12,7 +12,6 @@ import { StyleSheet } from 'react-native';
 import { QuizScreen } from '../screens/QuizScreen';
 import { LinearGradient } from 'expo-linear-gradient';
 import { color } from '../styles';
-import { TotalQuestionValueScreen } from '../screens/TotalQuestionValueScreen';
 import { useEffect } from 'react';
 import { questionValueStorage } from '../storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -101,12 +100,12 @@ export const RootNavigator = () => {
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
-        name='settingScreen'
+        name='SettingScreen'
         component={SettingScreen}
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
-        name='settingDetailScreen'
+        name='SettingDetailScreen'
         component={SettingDetailScreen}
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />

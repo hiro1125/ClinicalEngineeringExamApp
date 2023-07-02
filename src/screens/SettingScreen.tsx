@@ -28,7 +28,7 @@ const SettingScreen: FC<Props> = ({ navigation }) => {
           <TouchableOpacity
             key={index}
             style={styles.itemContainer}
-            onPress={() => navigation.navigate('settingDetailScreen', { data })}
+            onPress={() => navigation.navigate('SettingDetailScreen', { data })}
           >
             <Text h4 style={styles.subTitleText}>
               {data.label}
