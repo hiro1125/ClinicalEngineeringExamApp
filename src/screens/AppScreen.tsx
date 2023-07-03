@@ -5,6 +5,7 @@ import {
   ListRenderItem,
   Alert,
   TouchableOpacity,
+  SafeAreaView,
 } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { Props, RouteButton, ScreenProps } from '../../types/type';
@@ -57,7 +58,7 @@ const AppScreen: FC<ScreenProps & Props> = ({
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text h3 style={[styles.text, textStyle]}>
         {title}
       </Text>
@@ -71,7 +72,7 @@ const AppScreen: FC<ScreenProps & Props> = ({
       <TouchableOpacity style={styles.gearButton} onPress={handleGearIconPress}>
         <FontAwesome name='gear' size={30} />
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
   },
   gearButton: {
     position: 'absolute',
-    bottom: SIZE.BASIC_HIGHT * 6,
-    right: SIZE.BASIC_WIDTH * 15,
+    top: SIZE.BASIC_HIGHT * 6,
+    right: SIZE.BASIC_WIDTH * 10,
   },
 });
