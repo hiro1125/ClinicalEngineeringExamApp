@@ -78,13 +78,14 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.SIZE18PX,
   },
   itemContainer: {
-    height: SIZE.BASIC_HIGHT * 6.5,
+    width: '100%',
+    height: SIZE.BASIC_HIGHT * 5.5,
     borderBottomWidth: 1,
-    justifyContent: 'space-between',
     alignItems: 'center',
+    paddingHorizontal: SIZE.BASIC_WIDTH * 2,
     flexDirection: 'row',
   },
   check: {
-    marginRight: SIZE.BASIC_WIDTH * 2,
+    marginRight: SIZE.BASIC_WIDTH * 5,
   },
 });
