@@ -12,10 +12,14 @@ export const SIZE = {
 };
 
 export const FONTSIZE = {
-  SIZE15PX: RFPercentage(1.9),
-  SIZE18PX: RFPercentage(2.1),
-  SIZE19PX: RFPercentage(2.3),
+  SIZE14PX: RFPercentage(1.9),
+  SIZE15PX: RFPercentage(2.0),
+  SIZE16PX: RFPercentage(2.2),
+  SIZE17PX: RFPercentage(2.3),
+  SIZE18PX: RFPercentage(2.4),
+  SIZE19PX: RFPercentage(2.5),
   SIZE20PX: RFPercentage(2.6),
   SIZE24PX: RFPercentage(3.0),
-  SIZE32PX: RFPercentage(4.0),
+  SIZE25PX: RFPercentage(3.5),
+  SIZE32PX: RFPercentage(4.2),
 };
