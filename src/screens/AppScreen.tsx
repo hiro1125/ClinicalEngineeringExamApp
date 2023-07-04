@@ -70,7 +70,7 @@ const AppScreen: FC<ScreenProps & Props> = ({
         scrollEnabled={buttonData.length > 3}
       />
       <TouchableOpacity style={styles.gearButton} onPress={handleGearIconPress}>
-        <FontAwesome name='gear' size={30} />
+        <FontAwesome name='gear' size={40} />
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -113,6 +113,6 @@ const styles = StyleSheet.create({
   gearButton: {
     position: 'absolute',
     top: SIZE.BASIC_HIGHT * 6,
-    right: SIZE.BASIC_WIDTH * 10,
+    right: SIZE.BASIC_WIDTH * 2,
   },
 });
