@@ -3,13 +3,13 @@ import React, { FC } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Text } from 'react-native-elements';
 import { FONTSIZE, SIZE } from '../styles';
+import { Props } from '../../types/type';
 
-type Props = {
-  navigation: any;
+type HeaderProps = {
   title: string;
 };
 
-const Header: FC<Props> = ({ navigation, title }) => {
+const Header: FC<Props & HeaderProps> = ({ navigation, title }) => {
   return (
     <View style={styles.header}>
       <TouchableOpacity

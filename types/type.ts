@@ -79,12 +79,16 @@ export type QuizAlertIncorrectProps = {
   setIndex: (index: number) => void;
 };
 
+export type SettingItemProps = {
+  id: number;
+  text: string;
+};
+
+export type SettingItem = {
+  label: string;
+  data: SettingItemProps[];
+};
+
 export type SettingData = {
-  item: {
-    label: string;
-    data: {
-      id: number;
-      text: string;
-    }[];
-  }[];
+  item: SettingItem[];
 };

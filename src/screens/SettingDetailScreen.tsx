@@ -14,13 +14,13 @@ import Header from '../components/Header';
 import { useRootDispatch } from '../redux/store/store';
 import { onSettingPress } from '../function';
 import { settingAdaptor } from '../adaptor/settingAdaptor';
+import { Props } from '../../types/type';
 
-type Props = {
-  navigation: any;
+type RouteProps = {
   route: any;
 };
 
-const SettingDetailScreen: FC<Props> = ({ navigation, route }) => {
+const SettingDetailScreen: FC<Props & RouteProps> = ({ navigation, route }) => {
   const dispatch = useRootDispatch();
   const { data } = route.params;
   const conversionData = settingAdaptor(data);

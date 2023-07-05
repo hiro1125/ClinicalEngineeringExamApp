@@ -8,16 +8,12 @@ import {
   View,
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { SettingData } from '../../types/type';
+import { Props, SettingData } from '../../types/type';
 import { settingData } from '../contents';
 import { FONTSIZE, SIZE, color } from '../styles';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Text } from 'react-native-elements';
 import Header from '../components/Header';
-
-type Props = {
-  navigation: any;
-};
 
 const SettingScreen: FC<Props> = ({ navigation }) => {
   const renderItem: ListRenderItem<SettingData> = ({ item, index }) => {
