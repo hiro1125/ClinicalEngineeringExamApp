@@ -41,7 +41,7 @@ export const medicalTherapeuticEquipment: QuizData[] = [
       '正しい組合せはどれか。\na.Ar レーザ -------- 網膜凝固 \nb.NYAG レーザ -------- 光線力学療法 \nc.CO2 レーザ -------- 疹痛治療 \nd.Dye レーザ -------- 凝固止血 \ne.ArF エキシマレーザ -------- 角膜切除',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.itm],
+    tags: [TAGS_TEXT.mte],
   },
   {
     question: '内視鏡外科手術で正しいのはどれか。',
