@@ -2,6 +2,7 @@ import { RouteButton, SettingData } from '../../types/type';
 import { biomedicalMeasurementInstrumentationData } from '../quiz/biomedicalMeasurementInstrumentation';
 import { clinicalMedicineOverviewData } from '../quiz/clinicalMedicineOverview';
 import { introductionToMedicineData } from '../quiz/introductionToMedicine';
+import { medDevSafety } from '../quiz/medDevSafety';
 import { medicalTherapeuticEquipment } from '../quiz/medicalTherapeuticEquipment';
 
 export const RETURN_BUTTON_TEXT = '戻る';
@@ -108,7 +109,7 @@ export const byFieldButton: RouteButton[] = [
   {
     title: '医用機器安全管理学',
     navigationName: 'MedDevSafety',
-    quizData: [],
+    quizData: medDevSafety,
   },
   {
     title: '医用電気電子工学',
