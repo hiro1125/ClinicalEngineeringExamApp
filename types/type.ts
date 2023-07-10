@@ -92,3 +92,9 @@ export type SettingItem = {
 export type SettingData = {
   item: SettingItem[];
 };
+
+export type OnSettingPress = {
+  dispatch: Dispatch;
+  label: string;
+  item: ListData;
+};

@@ -14,10 +14,11 @@ import Header from '../components/Header';
 import { useRootDispatch } from '../redux/store/store';
 import { onSettingPress } from '../function';
 import { settingAdaptor } from '../adaptor/settingAdaptor';
-import { Props } from '../../types/type';
+import { Props, RootStackParamList } from '../../types/type';
+import { RouteProp } from '@react-navigation/native';
 
 type RouteProps = {
-  route: any;
+  route: RouteProp<RootStackParamList, 'SettingDetailScreen'>;
 };
 
 const SettingDetailScreen: FC<Props & RouteProps> = ({ navigation, route }) => {

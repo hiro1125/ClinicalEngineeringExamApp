@@ -1,4 +1,5 @@
 import {
+  OnSettingPress,
   QuizAlertCorrectProps,
   QuizAlertIncorrectProps,
 } from '../../types/type';
@@ -70,7 +71,11 @@ export const showIncorrectAnswerAlert = async ({
   ]);
 };
 
-export const onSettingPress = async ({ dispatch, label, item }: any) => {
+export const onSettingPress = async ({
+  dispatch,
+  label,
+  item,
+}: OnSettingPress) => {
   if (label === '問題数の設定') {
     await questionValueStorage.save({
       key: 'totalQuestionValue',
