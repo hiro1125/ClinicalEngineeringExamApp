@@ -4,4 +4,5 @@ export const TAGS_TEXT = {
   bmi: '生体計測装置学',
   mte: '医用治療機器学',
   mds: '医用機器安全管理学',
+  meee: '医用電気電子工学',
 };

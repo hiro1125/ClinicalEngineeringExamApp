@@ -3,6 +3,7 @@ import { biomedicalMeasurementInstrumentationData } from '../quiz/biomedicalMeas
 import { clinicalMedicineOverviewData } from '../quiz/clinicalMedicineOverview';
 import { introductionToMedicineData } from '../quiz/introductionToMedicine';
 import { medDevSafety } from '../quiz/medDevSafety';
+import { medicalElectricalAndElectronicEngineering } from '../quiz/medicalElectricalAndElectronicEngineering';
 import { medicalTherapeuticEquipment } from '../quiz/medicalTherapeuticEquipment';
 
 export const RETURN_BUTTON_TEXT = '戻る';
@@ -114,7 +115,7 @@ export const byFieldButton: RouteButton[] = [
   {
     title: '医用電気電子工学',
     navigationName: 'MedicalElectricalAndElectronicEngineering',
-    quizData: [],
+    quizData: medicalElectricalAndElectronicEngineering,
   },
   {
     title: '生体機能代行装置学',
