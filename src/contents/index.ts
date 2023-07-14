@@ -1,4 +1,5 @@
 import { RouteButton, SettingData } from '../../types/type';
+import { biologicalFunctionSubstitutionEquipment } from '../quiz/biologicalFunctionSubstitutionEquipment';
 import { biomedicalMeasurementInstrumentationData } from '../quiz/biomedicalMeasurementInstrumentation';
 import { clinicalMedicineOverviewData } from '../quiz/clinicalMedicineOverview';
 import { introductionToMedicineData } from '../quiz/introductionToMedicine';
@@ -120,7 +121,7 @@ export const byFieldButton: RouteButton[] = [
   {
     title: '生体機能代行装置学',
     navigationName: 'BiologicalFunctionSubstitutionEquipment',
-    quizData: [],
+    quizData: biologicalFunctionSubstitutionEquipment,
   },
   {
     title: '医用機械工学',
