@@ -5,6 +5,7 @@ import { clinicalMedicineOverviewData } from '../quiz/clinicalMedicineOverview';
 import { introductionToMedicineData } from '../quiz/introductionToMedicine';
 import { medDevSafety } from '../quiz/medDevSafety';
 import { medicalElectricalAndElectronicEngineering } from '../quiz/medicalElectricalAndElectronicEngineering';
+import { medicalMechanicalEngineering } from '../quiz/medicalMechanicalEngineering';
 import { medicalTherapeuticEquipment } from '../quiz/medicalTherapeuticEquipment';
 
 export const RETURN_BUTTON_TEXT = '戻る';
@@ -126,7 +127,7 @@ export const byFieldButton: RouteButton[] = [
   {
     title: '医用機械工学',
     navigationName: 'MedicalMechanicalEngineering',
-    quizData: [],
+    quizData: medicalMechanicalEngineering,
   },
   {
     title: '生体物性材料工学',
