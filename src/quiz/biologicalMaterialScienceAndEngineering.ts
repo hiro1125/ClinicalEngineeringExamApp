@@ -935,4 +935,71 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
     answerIndex: 2,
     tags: [TAGS_TEXT.bmse],
   },
+  /** 問題数が足りなかっため追加 */
+  {
+    question:
+      '放射線に対して同じ被曝線量における発がんや遺伝的影響の少ない(組織加重係数の小さい)組織はどれか。',
+    options: ['肺', '脳', '結 腸', '生殖腺', '赤色骨髄'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmse],
+  },
+  {
+    question:
+      '周波数が1MHz程度の超音波を照射したとき、吸収係数が最も大きい組織はどれか。',
+    options: ['脂 肪', '筋 肉', '脳', '骨', '血 液'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmse],
+  },
+  {
+    question: '生体組織の光学特性について誤っているのはどれか。',
+    options: [
+      '可視光は皮膚での散乱が大きい',
+      '血液の光散乱は大きい',
+      'UVAは真皮まで到達する',
+      '水の赤外光の吸収は小さい',
+      '眼球内の可視光の吸収は小さい',
+    ],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmse],
+  },
+  {
+    question: '正しい組合せはどれか。',
+    options: [
+      '人工弁葉 -------- ステンレス鋼',
+      '膜型人工肺 -------- ポリスルホン',
+      'ステント -------- ニッケル・チタン合金',
+      '人工歯根 -------- 高密度ポリエチレン',
+      '血液透析膜 -------- ポリジメチルシロキサン',
+    ],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmse],
+  },
+  {
+    question:
+      '生体へ埋植後、材料に生じうる反応はどれか。\na 腐 食 \nb アナフィラキシー \nc 溶 血 \nd 壊 死 \ne 加水分解',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 1,
+    tags: [TAGS_TEXT.bmse],
+  },
+  {
+    question:
+      '共有結合結晶について正しいのはどれか。\na 反応性に富む \nb 電子を共有する \nc 沸点が高い \nd 融点が低い \ne 軟らかい',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmse],
+  },
+  {
+    question:
+      '医療機器の安全性試験(生物学的試験)の第一次評価に含まれない試験項目はどれか。',
+    options: ['血液適合性', '埋 植', '生分解性', '感 作', '細胞毒性'],
+    answerIndex: 2,
+    tags: [TAGS_TEXT.bmse],
+  },
+  {
+    question:
+      '体外循環時に起こりうる生体反応はどれか。\na 癌 化 \nb カプセル化 \nc 血液凝固 \nd 補体活性化 \ne 石灰化',
+    options: ['a b', 'a e', 'b c', 'c d', 'd e'],
+    answerIndex: 3,
+    tags: [TAGS_TEXT.bmse],
+  },
 ];
