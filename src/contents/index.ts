@@ -1,5 +1,6 @@
 import { RouteButton, SettingData } from '../../types/type';
 import { biologicalFunctionSubstitutionEquipment } from '../quiz/biologicalFunctionSubstitutionEquipment';
+import { biologicalMaterialScienceAndEngineering } from '../quiz/biologicalMaterialScienceAndEngineering';
 import { biomedicalMeasurementInstrumentationData } from '../quiz/biomedicalMeasurementInstrumentation';
 import { clinicalMedicineOverviewData } from '../quiz/clinicalMedicineOverview';
 import { introductionToMedicineData } from '../quiz/introductionToMedicine';
@@ -132,7 +133,7 @@ export const byFieldButton: RouteButton[] = [
   {
     title: '生体物性材料工学',
     navigationName: 'BiologicalMaterialScienceAndEngineering',
-    quizData: [],
+    quizData: biologicalMaterialScienceAndEngineering,
   },
   {
     title: RETURN_BUTTON_TEXT,
