@@ -1,4 +1,5 @@
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { Dispatch } from '@reduxjs/toolkit';
 import { TextStyle, ViewStyle } from 'react-native';
 
 /** アプリケーションのルーティング */
@@ -91,4 +92,16 @@ export type SettingItem = {
 
 export type SettingData = {
   item: SettingItem[];
+};
+
+export type ListData = {
+  text: string;
+  check: boolean | undefined;
+  id: number;
+};
+
+export type OnSettingPress = {
+  dispatch: Dispatch;
+  label: string;
+  item: ListData;
 };
