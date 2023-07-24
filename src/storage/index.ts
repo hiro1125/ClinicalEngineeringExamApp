@@ -24,3 +24,15 @@ export const timerValueStorage = new Storage({
   // メモリにキャッシュするかどうか
   enableCache: true,
 });
+
+/** 効果音のストレージ  */
+export const soundValueStorage = new Storage({
+  // 最大容量
+  size: 1000,
+  // バックエンドにAsyncStorageを使う
+  storageBackend: AsyncStorage,
+  // キャッシュ期限(null=期限なし)
+  defaultExpires: null,
+  // メモリにキャッシュするかどうか
+  enableCache: true,
+});

@@ -12,10 +12,18 @@ import { QuizScreen } from '../screens/QuizScreen';
 import { LinearGradient } from 'expo-linear-gradient';
 import { color } from '../styles';
 import { useEffect } from 'react';
-import { questionValueStorage, timerValueStorage } from '../storage';
+import {
+  questionValueStorage,
+  soundValueStorage,
+  timerValueStorage,
+} from '../storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRootDispatch } from '../redux/store/store';
-import { setTimeLimit, setTotalQuestion } from '../redux/slices/settingsSlice';
+import {
+  setSoundEffect,
+  setTimeLimit,
+  setTotalQuestion,
+} from '../redux/slices/settingsSlice';
 import SettingScreen from '../screens/SettingScreen';
 import SettingDetailScreen from '../screens/SettingDetailScreen';
 
@@ -124,6 +132,7 @@ export const HomeScreen = ({ navigation }: Props) => {
           (item) => item === 'totalQuestionValue'
         );
         const timerStorageKey = allKey.find((item) => item === 'timerValue');
+        const soundStorageKey = allKey.find((item) => item === 'soundValue');
         if (totalQuestionStorageKey) {
           const questionValue = await questionValueStorage.load({
             key: 'totalQuestionValue',
@@ -135,6 +144,12 @@ export const HomeScreen = ({ navigation }: Props) => {
             key: 'timerValue',
           });
           dispatch(setTimeLimit(timerValue.id));
+        }
+        if (soundStorageKey) {
+          const soundValue = await soundValueStorage.load({
+            key: 'soundValue',
+          });
+          dispatch(setSoundEffect(soundValue.id));
         }
       } catch (error) {
         throw error;

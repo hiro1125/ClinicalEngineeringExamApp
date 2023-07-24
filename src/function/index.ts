@@ -13,9 +13,8 @@ import {
 } from '../redux/slices/settingsSlice';
 import {
   questionValueStorage,
-import { setTimeLimit, setTotalQuestion } from '../redux/slices/settingsSlice';
-import { questionValueStorage, timerValueStorage } from '../storage';
   timerValueStorage,
+  soundValueStorage,
 } from '../storage';
 
 const correctSound = require('../../assets/sounds/correct.mp3');
