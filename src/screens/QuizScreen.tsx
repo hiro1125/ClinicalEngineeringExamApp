@@ -17,6 +17,9 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
   const totalQuestionValue = useRootSelector(
     (state) => state.settings.totalQuestion
   );
+  const soundEffectValue = useRootSelector(
+    (state) => state.settings.soundEffect
+  );
 
   const [shuffledQuestions, setShuffledQuestions] = useState(
     shuffle(quizData).slice(0, totalQuestionValue)
@@ -34,6 +37,7 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
         shuffledQuestions,
         index,
         setIndex,
+        soundEffectValue,
       });
     } else {
       showIncorrectAnswerAlert({
@@ -41,6 +45,7 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
         index,
         setIndex,
         setShowResultScreen,
+        soundEffectValue,
       });
     }
   };

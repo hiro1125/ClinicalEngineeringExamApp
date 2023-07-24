@@ -7,6 +7,10 @@ export const settingAdaptor = (data: SettingItem) => {
   );
   const timeLimitValue = useRootSelector((state) => state.settings.timeLimit);
 
+  const soundEffectValue = useRootSelector(
+    (state) => state.settings.soundEffect
+  );
+
   const compilationData = data.data.map((item: SettingItemProps) => {
     if (data.label === '問題数の設定') {
       return {
@@ -19,6 +23,12 @@ export const settingAdaptor = (data: SettingItem) => {
         id: item.id,
         text: item.text,
         check: item.id === timeLimitValue,
+      };
+    } else if (data.label === '効果音の設定') {
+      return {
+        id: item.id,
+        text: item.text,
+        check: item.id === soundEffectValue,
       };
     }
   });

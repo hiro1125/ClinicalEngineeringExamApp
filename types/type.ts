@@ -71,6 +71,7 @@ export type QuizAlertCorrectProps = {
   shuffledQuestions: QuizData[];
   index: number;
   setIndex: (index: number) => void;
+  soundEffectValue: number;
 };
 
 export type QuizAlertIncorrectProps = {
@@ -78,6 +79,7 @@ export type QuizAlertIncorrectProps = {
   shuffledQuestions: QuizData[];
   index: number;
   setIndex: (index: number) => void;
+  soundEffectValue: number;
 };
 
 export type SettingItemProps = {

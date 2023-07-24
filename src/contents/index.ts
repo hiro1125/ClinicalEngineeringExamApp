@@ -47,6 +47,15 @@ export const settingData: SettingData[] = [
           { id: 3000, text: '3000秒 (50分00秒)' },
         ],
       },
+      {
+        label: '効果音の設定',
+        data: [
+          { id: 1, text: '正解の効果音のみ' },
+          { id: 2, text: '不正解の効果音のみ' },
+          { id: 3, text: '両方効果音を出す' },
+          { id: 4, text: '両方効果音なし' },
+        ],
+      },
     ],
   },
 ];

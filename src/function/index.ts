@@ -6,8 +6,17 @@ import {
 import { Alert } from 'react-native';
 import { AVPlaybackSource, Audio } from 'expo-av';
 import { DECISION_BUTTON_TEXT } from '../contents';
+import {
+  setSoundEffect,
+  setTimeLimit,
+  setTotalQuestion,
+} from '../redux/slices/settingsSlice';
+import {
+  questionValueStorage,
 import { setTimeLimit, setTotalQuestion } from '../redux/slices/settingsSlice';
 import { questionValueStorage, timerValueStorage } from '../storage';
+  timerValueStorage,
+} from '../storage';
 
 const correctSound = require('../../assets/sounds/correct.mp3');
 const inCorrectSound = require('../../assets/sounds/incorrect.mp3');
@@ -29,9 +38,11 @@ export const showCorrectAnswerAlert = async ({
   shuffledQuestions,
   index,
   setIndex,
+  soundEffectValue,
 }: QuizAlertCorrectProps) => {
-  await playSound(correctSound);
-
+  if (soundEffectValue === 1 || soundEffectValue === 3) {
+    await playSound(correctSound);
+  }
   Alert.alert('正解', 'おめでとうございます！', [
     {
       text: DECISION_BUTTON_TEXT,
@@ -52,11 +63,14 @@ export const showIncorrectAnswerAlert = async ({
   index,
   setIndex,
   setShowResultScreen,
+  soundEffectValue,
 }: QuizAlertIncorrectProps) => {
   const currentQuestion = shuffledQuestions[index];
   const correctAnswer = currentQuestion.options[currentQuestion.answerIndex];
   const message = `残念！正解は${correctAnswer}でした。`;
-  await playSound(inCorrectSound);
+  if (soundEffectValue === 2 || soundEffectValue === 3) {
+    await playSound(inCorrectSound);
+  }
   Alert.alert('不正解', message, [
     {
       text: DECISION_BUTTON_TEXT,
@@ -92,5 +106,13 @@ export const onSettingPress = async ({
       },
     });
     dispatch(setTimeLimit(item.id));
+  } else if (label === '効果音の設定') {
+    await soundValueStorage.save({
+      key: 'soundValue',
+      data: {
+        id: item.id,
+      },
+    });
+    dispatch(setSoundEffect(item.id));
   }
 };
