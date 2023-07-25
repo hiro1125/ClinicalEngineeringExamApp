@@ -5,7 +5,7 @@ import {
 } from '../../types/type';
 import { Alert } from 'react-native';
 import { AVPlaybackSource, Audio } from 'expo-av';
-import { DECISION_BUTTON_TEXT } from '../contents';
+import { DECISION_BUTTON_TEXT, LABEL } from '../contents';
 import {
   setSoundEffect,
   setTimeLimit,
@@ -89,7 +89,7 @@ export const onSettingPress = async ({
   label,
   item,
 }: OnSettingPress) => {
-  if (label === '問題数の設定') {
+  if (label === LABEL.NUMBER_OF_QUESTIONS) {
     await questionValueStorage.save({
       key: 'totalQuestionValue',
       data: {
@@ -97,7 +97,7 @@ export const onSettingPress = async ({
       },
     });
     dispatch(setTotalQuestion(item.id));
-  } else if (label === '問題時間の設定') {
+  } else if (label === LABEL.QUESTION_TIME_LIMIT) {
     await timerValueStorage.save({
       key: 'timerValue',
       data: {
@@ -105,7 +105,7 @@ export const onSettingPress = async ({
       },
     });
     dispatch(setTimeLimit(item.id));
-  } else if (label === '効果音の設定') {
+  } else if (label === LABEL.SOUND_EFFECTS) {
     await soundValueStorage.save({
       key: 'soundValue',
       data: {

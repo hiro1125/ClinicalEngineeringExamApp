@@ -13,11 +13,18 @@ export const RETURN_BUTTON_TEXT = '戻る';
 export const START_BUTTON_TEXT = 'スタート';
 export const DECISION_BUTTON_TEXT = 'OK';
 
+/** 画像表示 */
+export const LABEL = {
+  NUMBER_OF_QUESTIONS: '問題数の設定',
+  QUESTION_TIME_LIMIT: '問題時間の設定',
+  SOUND_EFFECTS: '効果音の設定',
+};
+
 export const settingData: SettingData[] = [
   {
     item: [
       {
-        label: '問題数の設定',
+        label: LABEL.NUMBER_OF_QUESTIONS,
         data: [
           { id: 5, text: '5問' },
           { id: 10, text: '10問' },
@@ -33,7 +40,7 @@ export const settingData: SettingData[] = [
         ],
       },
       {
-        label: '問題時間の設定',
+        label: LABEL.QUESTION_TIME_LIMIT,
         data: [
           { id: 150, text: '150秒 (2分30秒)' },
           { id: 300, text: '300秒 (5分00秒)' },
@@ -48,7 +55,7 @@ export const settingData: SettingData[] = [
         ],
       },
       {
-        label: '効果音の設定',
+        label: LABEL.SOUND_EFFECTS,
         data: [
           { id: 1, text: '正解の効果音のみ' },
           { id: 2, text: '不正解の効果音のみ' },
