@@ -13,7 +13,7 @@ export const RETURN_BUTTON_TEXT = '戻る';
 export const START_BUTTON_TEXT = 'スタート';
 export const DECISION_BUTTON_TEXT = 'OK';
 
-/** 画像表示 */
+/** 設定項目 */
 export const LABEL = {
   NUMBER_OF_QUESTIONS: '問題数の設定',
   QUESTION_TIME_LIMIT: '問題時間の設定',
