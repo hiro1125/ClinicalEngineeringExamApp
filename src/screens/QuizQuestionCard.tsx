@@ -124,8 +124,8 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     marginTop: SIZE.BASIC_HIGHT * 0.5,
     marginBottom: SIZE.BASIC_HIGHT * 1,
-    marginRight: SIZE.BASIC_WIDTH * 1.5,
-    marginLeft: SIZE.BASIC_WIDTH * 1.5,
+    marginRight: SIZE.BASIC_WIDTH * 2,
+    marginLeft: SIZE.BASIC_WIDTH * 2,
   },
   questionText: {
     fontSize: FONTSIZE.SIZE16PX,
