@@ -19,7 +19,7 @@ type QuizQuestionCardProps = {
   answerButton: (index: number) => void;
 };
 
-export const QuizQuestionCard: FC<QuizQuestionCardProps & Props> = ({
+const QuizQuestionCard: FC<QuizQuestionCardProps & Props> = ({
   shuffledQuestions,
   index,
   answerButton,

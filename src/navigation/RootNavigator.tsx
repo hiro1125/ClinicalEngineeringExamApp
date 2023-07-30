@@ -8,7 +8,7 @@ import {
 } from '../contents';
 import AppScreen from '../screens/AppScreen';
 import { StyleSheet } from 'react-native';
-import { QuizScreen } from '../screens/QuizScreen';
+
 import { LinearGradient } from 'expo-linear-gradient';
 import { color } from '../styles';
 import { useEffect } from 'react';
@@ -26,6 +26,7 @@ import {
 } from '../redux/slices/settingsSlice';
 import SettingScreen from '../screens/SettingScreen';
 import SettingDetailScreen from '../screens/SettingDetailScreen';
+import QuizScreen from '../screens/QuizScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 

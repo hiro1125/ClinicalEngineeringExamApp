@@ -2,14 +2,14 @@ import React, { FC, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Props } from '../../types/type';
 import { shuffle } from 'lodash';
-import { ResultScreen } from './ResultScreen';
 import { showCorrectAnswerAlert, showIncorrectAnswerAlert } from '../function';
-import { TimeOverScreen } from './TimeOverScreen';
-import QuizQuestionCard from './QuizQuestionCard';
 import { useTimer } from '../hooks/useTimer';
 import { useRootSelector } from '../redux/store/store';
+import ResultScreen from './ResultScreen';
+import QuizQuestionCard from './QuizQuestionCard';
+import TimeOverScreen from './TimeOverScreen';
 
-export const QuizScreen: FC<Props> = ({ navigation }) => {
+const QuizScreen: FC<Props> = ({ navigation }) => {
   const [index, setIndex] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
   const [showResultScreen, setShowResultScreen] = useState<boolean>(false);
@@ -75,6 +75,8 @@ export const QuizScreen: FC<Props> = ({ navigation }) => {
     </View>
   );
 };
+
+export default QuizScreen;
 
 const styles = StyleSheet.create({
   container: {

@@ -12,7 +12,7 @@ type Props = {
   score: number;
 };
 
-export const ResultScreen: FC<Props> = ({ score }) => {
+const ResultScreen: FC<Props> = ({ score }) => {
   const navigation = useNavigation();
 
   const handleNavigation = (navigationName: string) => {
@@ -48,6 +48,8 @@ export const ResultScreen: FC<Props> = ({ score }) => {
     </LinearGradient>
   );
 };
+
+export default ResultScreen;
 
 const styles = StyleSheet.create({
   linearGradient: {

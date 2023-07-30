@@ -17,7 +17,7 @@ type GameRestartScreenProps = {
   setShuffledQuestions: (questions: QuizData[]) => void;
 };
 
-export const TimeOverScreen: FC<GameRestartScreenProps> = ({
+const TimeOverScreen: FC<GameRestartScreenProps> = ({
   score,
   setTimer,
   index,
@@ -84,6 +84,8 @@ export const TimeOverScreen: FC<GameRestartScreenProps> = ({
     </View>
   );
 };
+
+export default TimeOverScreen;
 
 const styles = StyleSheet.create({
   resultContainer: {
