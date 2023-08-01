@@ -719,7 +719,7 @@ export const clinicalMedicineOverviewData: QuizData[] = [
       '肝硬変の非代償期にみられる所見はどれか。 \na.黄 疸 \nb.腹 水 \nc.血圧上昇 \nd.血 尿 \ne.女性化乳房',
     options: ['a b c', 'a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 1,
-    tags: ['医学概論'],
+    tags: [TAGS_TEXT.cmo],
   },
   {
     question:
