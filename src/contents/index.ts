@@ -8,6 +8,7 @@ import { medDevSafety } from '../quiz/medDevSafety';
 import { medicalElectricalAndElectronicEngineering } from '../quiz/medicalElectricalAndElectronicEngineering';
 import { medicalMechanicalEngineering } from '../quiz/medicalMechanicalEngineering';
 import { medicalTherapeuticEquipment } from '../quiz/medicalTherapeuticEquipment';
+import { randomTest } from '../quiz/randomTest';
 
 export const RETURN_BUTTON_TEXT = '戻る';
 export const START_BUTTON_TEXT = 'スタート';
@@ -96,7 +97,7 @@ export const examMenuButton: RouteButton[] = [
   {
     title: '90問試験',
     navigationName: 'NinetyQuestionTest',
-    quizData: [],
+    quizData: randomTest,
   },
   {
     title: RETURN_BUTTON_TEXT,
