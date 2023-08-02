@@ -1299,7 +1299,7 @@ export const introductionToMedicineData: QuizData[] = [
       '細菌性赤痢',
     ],
     answerIndex: 0,
-    tags: ['臨床医学総論'],
+    tags: [TAGS_TEXT.itm],
   },
   {
     question: 'アミノ酸をリボソームに運搬するのはどれか。',
