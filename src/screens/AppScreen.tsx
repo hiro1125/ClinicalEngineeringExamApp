@@ -2,7 +2,6 @@ import {
   StyleSheet,
   FlatList,
   ListRenderItem,
-  Alert,
   TouchableOpacity,
   SafeAreaView,
 } from 'react-native';
@@ -33,12 +32,6 @@ const AppScreen: FC<ScreenProps & Props> = ({
     } else if (item.quizData?.length) {
       dispatch(setQuizDate(item.quizData));
       navigation.navigate(item.navigationName);
-    } else if (Array.isArray(item.quizData)) {
-      Alert.alert('確認', '近日公開予定です', [
-        {
-          text: 'OK',
-        },
-      ]);
     } else {
       navigation.navigate(item.navigationName);
     }
