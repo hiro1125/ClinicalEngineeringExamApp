@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { Props, RouteButton, ScreenProps } from '../../types/type';
-import { RETURN_BUTTON_TEXT } from '../contents';
+import { BUTTON_TEXT } from '../contents';
 import { FC } from 'react';
 import { useRootDispatch } from '../redux/store/store';
 import { setQuizDate } from '../redux/slices/quizSlice';
@@ -27,7 +27,7 @@ const AppScreen: FC<ScreenProps & Props> = ({
   };
 
   const onButtonPress = (item: RouteButton) => {
-    if (item.title === RETURN_BUTTON_TEXT) {
+    if (item.title === BUTTON_TEXT.RETURN) {
       navigation.goBack();
     } else if (item.quizData?.length) {
       dispatch(setQuizDate(item.quizData));

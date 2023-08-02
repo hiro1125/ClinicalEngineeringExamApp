@@ -10,9 +10,12 @@ import { medicalMechanicalEngineering } from '../quiz/medicalMechanicalEngineeri
 import { medicalTherapeuticEquipment } from '../quiz/medicalTherapeuticEquipment';
 import { randomTest } from '../quiz/randomTest';
 
-export const RETURN_BUTTON_TEXT = '戻る';
-export const START_BUTTON_TEXT = 'スタート';
-export const DECISION_BUTTON_TEXT = 'OK';
+/** 各ボタンで使用するテキスト */
+export const BUTTON_TEXT = {
+  RETURN: '戻る',
+  START: 'スタート',
+  DECISION: 'OK',
+};
 
 /** 各ボタンと画面表示で使用するタイトル */
 export const BUTTON_TITLE = {
@@ -86,7 +89,7 @@ export const settingData: SettingData[] = [
 // /** Home画面 */
 export const startButton: RouteButton[] = [
   {
-    title: START_BUTTON_TEXT,
+    title: BUTTON_TEXT.START,
     navigationName: 'ExamMenu',
   },
 ];
@@ -94,11 +97,11 @@ export const startButton: RouteButton[] = [
 /** QuestionTest画面 */
 export const questionTestButton: RouteButton[] = [
   {
-    title: START_BUTTON_TEXT,
+    title: BUTTON_TEXT.START,
     navigationName: 'QuestionTest',
   },
   {
-    title: RETURN_BUTTON_TEXT,
+    title: BUTTON_TEXT.RETURN,
     navigationName: 'ExamMenu',
   },
 ];
@@ -115,7 +118,7 @@ export const examMenuButton: RouteButton[] = [
     quizData: randomTest,
   },
   {
-    title: RETURN_BUTTON_TEXT,
+    title: BUTTON_TEXT.RETURN,
     navigationName: 'Home',
   },
 ];
@@ -168,7 +171,7 @@ export const byFieldButton: RouteButton[] = [
     quizData: biologicalMaterialScienceAndEngineering,
   },
   {
-    title: RETURN_BUTTON_TEXT,
+    title: BUTTON_TEXT.RETURN,
     navigationName: 'ExamMenu',
   },
 ];

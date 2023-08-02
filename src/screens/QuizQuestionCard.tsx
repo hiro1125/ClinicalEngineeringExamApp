@@ -8,7 +8,7 @@ import {
   Alert,
 } from 'react-native';
 import { Props, QuizData } from '../../types/type';
-import { RETURN_BUTTON_TEXT } from '../contents';
+import { BUTTON_TEXT } from '../contents';
 import { useTimer } from '../hooks/useTimer';
 import { FONTSIZE, SIZE } from '../styles';
 
@@ -31,7 +31,7 @@ const QuizQuestionCard: FC<QuizQuestionCardProps & Props> = ({
         text: 'キャンセル',
       },
       {
-        text: RETURN_BUTTON_TEXT,
+        text: BUTTON_TEXT.RETURN,
         onPress: () => {
           navigation.pop(2);
         },
@@ -52,7 +52,7 @@ const QuizQuestionCard: FC<QuizQuestionCardProps & Props> = ({
           style={styles.byFieldButton}
           onPress={handleNavigation}
         >
-          <Text style={styles.playButtonText}>戻る</Text>
+          <Text style={styles.playButtonText}>{BUTTON_TEXT.RETURN}</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.titleQuestion}>
