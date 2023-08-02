@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Props, RootStackParamList } from '../../types/type';
 import {
+  BUTTON_TITLE,
   byFieldButton,
   examMenuButton,
   questionTestButton,
@@ -128,7 +129,6 @@ export const HomeScreen = ({ navigation }: Props) => {
     (async () => {
       try {
         const allKey = await AsyncStorage.getAllKeys();
-        // 非同期通信の関数の作成 125~140 allKeyとdispatchを引数
         const totalQuestionStorageKey = allKey.find(
           (item) => item === 'totalQuestionValue'
         );
@@ -188,7 +188,7 @@ export const ByFieldScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='分野別'
+        title={BUTTON_TITLE.BY_FIELD}
         buttonData={byFieldButton}
         navigation={navigation}
       />
@@ -201,7 +201,7 @@ export const NinetyQuestionTestScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='90問試験'
+        title={BUTTON_TITLE.RANDOM_TEST}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
@@ -215,7 +215,7 @@ export const IntroductionToMedicineScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='医学概論'
+        title={BUTTON_TITLE.INTRODUCTION_TO_MEDICINE}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
@@ -229,7 +229,7 @@ export const ClinicalMedicineOverviewScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='臨床医学総論'
+        title={BUTTON_TITLE.CLINICAL_MEDICINE_OVERVIEW}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
@@ -245,7 +245,7 @@ export const BiomedicalMeasurementInstrumentationScreen = ({
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='生体計測装置学'
+        title={BUTTON_TITLE.BIOMEDICAL_MEASUREMENT_INSTRUMENTATION}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
@@ -259,7 +259,7 @@ export const MedicalTherapeuticEquipmentScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='医用治療機器学'
+        title={BUTTON_TITLE.MEDICAL_THERAPEUTIC_EQUIPMENT}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
@@ -273,7 +273,7 @@ export const MedDevSafetyScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='医用機器安全管理学'
+        title={BUTTON_TITLE.MED_DEV_SAFETY}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
@@ -289,7 +289,7 @@ export const MedicalElectricalAndElectronicEngineeringScreen = ({
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='医用電気電子工学'
+        title={BUTTON_TITLE.MEDICAL_ELECTRICAL_AND_ELECTRONIC_ENGINEERING}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
@@ -305,7 +305,7 @@ export const BiologicalFunctionSubstitutionEquipmentScreen = ({
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='生体機能代行装置学'
+        title={BUTTON_TITLE.BIOLOGICAL_FUNCTION_SUBSTITUTION_EQUIPMENT}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
@@ -319,7 +319,7 @@ export const MedicalMechanicalEngineeringScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='医用機械工学'
+        title={BUTTON_TITLE.MEDICAL_MECHANICAL_ENGINEERING}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}
@@ -335,7 +335,7 @@ export const BiologicalMaterialScienceAndEngineeringScreen = ({
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
-        title='生体物性材料工学'
+        title={BUTTON_TITLE.BIOLOGICAL_MATERIAL_SCIENCE_AND_ENGINEERING}
         buttonData={questionTestButton}
         navigation={navigation}
         textStyle={styles.examination}

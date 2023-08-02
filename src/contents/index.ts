@@ -14,6 +14,21 @@ export const RETURN_BUTTON_TEXT = '戻る';
 export const START_BUTTON_TEXT = 'スタート';
 export const DECISION_BUTTON_TEXT = 'OK';
 
+/** 各ボタンと画面表示で使用するタイトル */
+export const BUTTON_TITLE = {
+  BY_FIELD: '分野別',
+  RANDOM_TEST: 'ランダムテスト',
+  INTRODUCTION_TO_MEDICINE: '医学概論',
+  CLINICAL_MEDICINE_OVERVIEW: '臨床医学総論',
+  BIOMEDICAL_MEASUREMENT_INSTRUMENTATION: '生体計測装置学',
+  MEDICAL_THERAPEUTIC_EQUIPMENT: '医用治療機器学',
+  MED_DEV_SAFETY: '医用機器安全管理学',
+  MEDICAL_ELECTRICAL_AND_ELECTRONIC_ENGINEERING: '医用電気電子工学',
+  BIOLOGICAL_FUNCTION_SUBSTITUTION_EQUIPMENT: '生体機能代行装置学',
+  MEDICAL_MECHANICAL_ENGINEERING: '医用機械工学',
+  BIOLOGICAL_MATERIAL_SCIENCE_AND_ENGINEERING: '生体物性材料工学',
+};
+
 /** 設定項目 */
 export const LABEL = {
   NUMBER_OF_QUESTIONS: '問題数の設定',
@@ -91,11 +106,11 @@ export const questionTestButton: RouteButton[] = [
 // /** ExamMenu画面 */
 export const examMenuButton: RouteButton[] = [
   {
-    title: '分野別',
+    title: BUTTON_TITLE.BY_FIELD,
     navigationName: 'ByField',
   },
   {
-    title: '90問試験',
+    title: BUTTON_TITLE.RANDOM_TEST,
     navigationName: 'NinetyQuestionTest',
     quizData: randomTest,
   },
@@ -108,47 +123,47 @@ export const examMenuButton: RouteButton[] = [
 // /** ByField画面 */
 export const byFieldButton: RouteButton[] = [
   {
-    title: '医学概論',
+    title: BUTTON_TITLE.INTRODUCTION_TO_MEDICINE,
     navigationName: 'IntroductionToMedicine',
     quizData: introductionToMedicineData,
   },
   {
-    title: '臨床医学総論',
+    title: BUTTON_TITLE.CLINICAL_MEDICINE_OVERVIEW,
     navigationName: 'ClinicalMedicineOverview',
     quizData: clinicalMedicineOverviewData,
   },
   {
-    title: '生体計測装置学',
+    title: BUTTON_TITLE.BIOMEDICAL_MEASUREMENT_INSTRUMENTATION,
     navigationName: 'BiomedicalMeasurementInstrumentation',
     quizData: biomedicalMeasurementInstrumentationData,
   },
   {
-    title: '医用治療機器学',
+    title: BUTTON_TITLE.MEDICAL_THERAPEUTIC_EQUIPMENT,
     navigationName: 'MedicalTherapeuticEquipment',
     quizData: medicalTherapeuticEquipment,
   },
   {
-    title: '医用機器安全管理学',
+    title: BUTTON_TITLE.MED_DEV_SAFETY,
     navigationName: 'MedDevSafety',
     quizData: medDevSafety,
   },
   {
-    title: '医用電気電子工学',
+    title: BUTTON_TITLE.MEDICAL_ELECTRICAL_AND_ELECTRONIC_ENGINEERING,
     navigationName: 'MedicalElectricalAndElectronicEngineering',
     quizData: medicalElectricalAndElectronicEngineering,
   },
   {
-    title: '生体機能代行装置学',
+    title: BUTTON_TITLE.BIOLOGICAL_FUNCTION_SUBSTITUTION_EQUIPMENT,
     navigationName: 'BiologicalFunctionSubstitutionEquipment',
     quizData: biologicalFunctionSubstitutionEquipment,
   },
   {
-    title: '医用機械工学',
+    title: BUTTON_TITLE.MEDICAL_MECHANICAL_ENGINEERING,
     navigationName: 'MedicalMechanicalEngineering',
     quizData: medicalMechanicalEngineering,
   },
   {
-    title: '生体物性材料工学',
+    title: BUTTON_TITLE.BIOLOGICAL_MATERIAL_SCIENCE_AND_ENGINEERING,
     navigationName: 'BiologicalMaterialScienceAndEngineering',
     quizData: biologicalMaterialScienceAndEngineering,
   },
