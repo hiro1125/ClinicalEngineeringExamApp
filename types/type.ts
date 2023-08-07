@@ -61,7 +61,6 @@ export type QuizData = {
   question: string;
   options: string[];
   answerIndex: number;
-  tags: string[];
 };
 
 export type QuizAlertCorrectProps = {

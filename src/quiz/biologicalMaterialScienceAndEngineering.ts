@@ -1,4 +1,3 @@
-import { TAGS_TEXT } from './index';
 import { QuizData } from '../../types/type';
 
 export const biologicalMaterialScienceAndEngineering: QuizData[] = [
@@ -8,27 +7,23 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '生体の電気特性について正しいのはどれか。\na α分散は水分子の分極に起因する \nb β分散は組織の構造に起因する \nc 脂肪の導電率は筋肉よりも低い \nd 骨格筋の異方性は弱い \ne 有髄神経の髄鞘は高い導電性を示す',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '放射線が同じ線量で生体に吸収されたとき、影響が最も大きいのはどれか。',
     options: ['X線', 'α線', 'γ線', '電子線', '陽子線'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '比熱が最も小さいのはどれか。',
     options: ['脂肪', '肝臓', '筋肉', '血漿', '脳'],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '表面接触機器の生物学的安全性試験で正しいのはどれか。\na 血液適合性試験 \nb 埋植試験 \nc 細胞毒性試験 \nd 感作性試験 \ne 発がん性試験',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: 'カテーテル本体の材料でないのはどれか。',
@@ -40,7 +35,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'ポリジメチルシロキサン',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 28回(PM) */
   {
@@ -48,27 +42,23 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '生体の光学特性について誤っているのはどれか。\na 血液の光吸収はヘマトクリット値に依存する \nb 皮膚に照射されたUVcは真皮まで到達する \nc ヘモグロビンは青色光よりも近赤外光をよく吸収する \nd メラニンは可視光よりも紫外光をよく吸収する \ne 水は可視光よりも赤外光をよく吸収する',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '人工血管を埋植したとき急性期に起こる反応はどれか。',
     options: ['癒着', '肉芽形成', '石灰化', '異物排除', '血管増生'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体内で吸収される材料はどれか。\na β-リン酸三カルシウム \nb ポリ乳酸 \nc アルミナ \nd シルク \ne ニッケルチタン合金',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '無機材料を構成する主要な結合で正しいのはどれか。\na 共有結合 \nb ファンデルワールス結合 \nc 分子間結合 \nd 水素結合 \ne イオン結合',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 29回(AM) */
   {
@@ -76,7 +66,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '生体における放射線感受性を表す組織加重係数が最も大きいのはどれか。',
     options: ['脳', '甲状腺', '結 腸', '皮 膚', '骨皮質'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体の光特性について誤っているのはどれか。',
@@ -88,7 +77,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'ヘモグロビンは赤外線よりも可視光の吸収が大きい',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
@@ -101,7 +89,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '当該組織の血流量',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '人工多能性幹細胞（iPS 細胞）で正しいのはどれか。',
@@ -113,7 +100,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '体細胞に遺伝子を導入して作られる',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: 'ポリエチレンの骨格である炭素と炭素間の結合はどれか。',
@@ -125,7 +111,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'イオン結合',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 29回(PM) */
   {
@@ -138,7 +123,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'β分散は約20GHzで生じる',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体組織の力学的性質で誤っているのはどれか。',
@@ -150,21 +134,18 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '血液の粘性係数は生体軟組織に比べて小さい',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体と磁気について正しいのはどれか。\na 生体の比透磁率は約10である \nb 脳磁図は脳活動に伴うヘモグロビンの磁性の変化を示す \nc 心筋の活動で生じる磁界は都市の磁気雑音よりも大きい \nd MRIでは生体内の水素原子核を電磁波で共鳴させている \ne 交流磁界は生体内に渦電流を発生する',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体での熱の伝わり方について正しいのはどれか。\na 体表面での熱の放散には空気の対流が役立つ \nb 皮膚組織内では対流はほとんど存在しない \nc 体表面から熱放射する電磁波は近赤外光である \nd 生体内の組織における熱伝導は温度差の4乗に比例する \ne 生体内では血流による熱の移動の効果が大きい',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '正しいのはどれか。',
@@ -176,13 +157,11 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '還元とは酸素と結合することである',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '急性全身反応はどれか。',
     options: ['潰瘍形成', '肉芽形成', '石灰化', '補体活性化', '壊 死'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 30回(AM) */
   {
@@ -190,7 +169,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '生体組織の電気特性で正しい組合せはどれか。\na. α分散 -------- 数十kHz \nb. β分散 -------- 電解質イオン \nc. β分散 -------- 数MHz \nd. γ分散 -------- 水分子 \ne. γ分散 -------- 数十MHz',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '正しいのはどれか。',
@@ -202,7 +180,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '動脈血管の円周方向の最大変形は10%程度である',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体組織の熱に対する性質で誤っているのはどれか。',
@@ -214,7 +191,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '熱による組織の凝固は水分の沸騰に伴う細胞質の飛散で生じる',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
@@ -227,7 +203,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '細胞内から細胞外へのNa+の移動 -------- 能動輸送',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生物学的安全試験で誤っているのはどれか。',
@@ -239,14 +214,12 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '体内植込み機器 -------- 細胞毒性試験',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       'ポリ塩化ビニルが使われていないのはどれか。\na 血液回路 \nb カテーテル \nc 注射筒 \nd コンタクトレンズ \ne 輸液チュープ',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 30回(PM) */
   {
@@ -259,7 +232,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '肺は音響インピーダンスが大きな組織である',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体組織の光学特性について誤っているのはどれか。',
@@ -271,13 +243,11 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'メラニンは紫外線をよく吸収する',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '体内植込みによって起こる変化で材料側に起こるのはどれか。',
     options: ['肉芽形成', '血小板活性化', '補体活性化', 'がん化', '腐食'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体組織と強く結合して一体化する性質をもつ医用材料はどれか。',
@@ -289,7 +259,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'セルローストリアセテート',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '導電率の最も高い材料はどれか。',
@@ -301,7 +270,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'シリコーン',
     ],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 31回(AM) */
   {
@@ -314,27 +282,23 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '無髄神経 -------- 跳躍伝導',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生物への影響を考慮した放射線量を示す単位はどれか。',
     options: ['Bq', 'C/kg', 'eV', 'Gy', 'Sv'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体内で比熱の小さい物質あるいは組織はどれか。\na 血 液 \nb 筋 \nc 骨 \nd 脂肪 \ne 細胞内液',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '太陽光線の生体への作用で正しいのはどれか。\na UVAは真皮まで達する \nb DNAは紫外域での吸収が大きい \nc 血液の散乱はヘマトクリット値により変化する \nd 水での吸収は赤外光よりも可視光の方が大きい \ne ピリルビンは可視光領域での吸収が小さい',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '誤っているのはどれか。',
@@ -346,7 +310,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '生体吸収性材料は非吸収性材料に比べ耐久性が劣る',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
@@ -359,7 +322,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '炎 症 -------- ヒスタミン',
     ],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 31回(PM) */
   {
@@ -372,7 +334,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '周波数が高い電流ほど電気的感受性が低下する',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '正しいのはどれか。',
@@ -384,7 +345,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '軟組織は膠原線維の割合が大きいほど伸展性が大きい',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体における熱作用で正しいのはどれか。',
@@ -396,7 +356,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '身体内部での熱移動は主に組織間の熱伝導による',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '医療材料について誤っている組合せはどれか。',
@@ -408,14 +367,12 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '血液適合性試験 -------- 溶血反応',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '抗血栓性をもつのはどれか。\na リン脂質ポリマー \nb セルロース \nc ポリメチルメタクリレート \nd コラーゲン \ne セグメント化ポリウレタン',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '化学結合の強さの順番で正しいのはどれか。',
@@ -427,7 +384,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '共有結合 > 金属結合 > ファンデルワールス結合',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 32回(AM) */
   {
@@ -440,42 +396,36 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '静止電位 -------- 細胞内外のイオン濃度差',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '正しいのはどれか。\na 皮膚は骨髄より放射線感受性が高い \nb X線はα線より電離作用が強い \nc X線はα線より到達深度が大きい \nd 線量当量は組織の放射線感受性が考慮されている \ne 照射線量の単位はBq(ベクレル)である',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体の光学的特性について正しいのはどれか。\na メラニンは可視光よりも紫外光をよく吸収する \nb 紫外光は波長が長いほど皮膚深部に到達する \nc 水は可視光よりも赤外光をよく吸収する \nd 可視光は皮膚表面でほとんど反射する \ne ヘモグロビンによる可視光の吸収は赤外光に比べ小さい',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '医用材料の滅菌で正しいのはどれか。\na EOG滅菌は室温で行われる \nb 濾過滅菌は微生物を除去する \nc 乾熱滅菌はエンドトキシンを無毒化する \nd 電子線滅菌はα線滅菌より透過性が高い \ne 高圧蒸気滅菌は血清に使用できる',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体埋植材料に対する生体の慢性反応はどれか。\na 石灰化 \nb 血液凝固 \nc アナフィラキシー \nd 補体活性化 \ne カプセル化',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       'シリコーンが使われているのはどれか。\na 眼内レンズ \nb 人工肺用膜 \nc カテーテル \nd 透析膜 \ne 縫合糸',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 32回(PM) */
   {
@@ -483,14 +433,12 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '生体の熱特性について正しいのはどれか。\na 脂肪組織は筋組織に比べて比熱が大きい \nb 運動時に熱の産生が最も多い臓器は肝臓である \nc 体表からの放射エネルギーのピーク波長は赤外領域にある \nd 皮膚における末梢血管の拡張は体表からの熱の放散を促進させる \ne 生体内部での熱の移動に最も寄与しているのは組織の熱伝導である',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '能動輸送による物質の移動はどれか。\na 肺胞から血液への酸素の移動 \nb 血中酸素の血管外組織への移動 \nc 毛細血管から組織間質へのダルコースの移動 \nd 細胞内から細胞外へのナトリウムイオンの移動 \ne 尿細管におけるダルコースの移動(再吸収)',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '医用材料の安全性試験で誤っているのはどれか。',
@@ -502,7 +450,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '接触部位に応じて評価する',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '医用材料に対する血栓形成反応で誤っているのはどれか。',
@@ -514,13 +461,11 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'ナトリウムイオンの放出',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: 'ステンレスの表面に形成されるのはどれか。',
     options: ['酸化クロム', '酸化鉄', '酸化亜鉛', '酸化マグネシウム', '酸化銅'],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 33回(AM) */
   {
@@ -533,14 +478,12 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '静止電位は細胞内外のイオン濃度差による',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '人体の熱特性について正しいのはどれか。\na 熱の産生は1kW程度である \nb 人体の皮膚は黒体とみなせる \nc 体表からの放射エネルギーのピーク波長は赤外領域にある \nd 呼吸の増加は熱放出を増す \ne 末梢血管の拡張は熱放出を抑制する',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: 'レーザの生体作用について誤っているのはどれか。',
@@ -552,7 +495,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '光熱的作用 -------- タンパク質の凝固',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '浸透圧による物質移動はどれか。',
@@ -564,13 +506,11 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '尿細管におけるグルコースの再吸収',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: 'セルロースによる補体活性化の要因はどれか。',
     options: ['アセチル基', '水酸基', 'メチル基', '硫酸基', 'カルボニル基'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 33回(PM) */
   {
@@ -583,7 +523,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '血管のヤング率（周方向）',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '正しいのはどれか。',
@@ -595,21 +534,18 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '中性子線は陽子線より組織透過力が大きい',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '同じ大きさの熱エネルギーが加えられたとき、温度上昇が最も大きくなるのはどれか。',
     options: ['脂 肪', '肝 臓', '腎 臓', '骨格筋', '血 液'],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体反応で正しい組合せはどれか。\na. 石灰化 -------- リン酸カルシウムの沈着 \nb. 血栓形成 -------- トロンビンの活性阻害 \nc. アナフィラキシー -------- T 細胞の活性化 \nd. 血液凝固 -------- コラーゲンの分解 \ne. 炎 症 -------- マクロファージの浸潤',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 34回(AM) */
   {
@@ -617,7 +553,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '生体組織の受動的電気特性について正しいのはどれか。\na 導電率は周波数とともに増加する \nb α分散は水分子の緩和現象に起因する \nc 皮下脂肪の導電率は筋組織よりも高い \nd 骨格筋は異方性を示す \ne インピーダンスは非線形性を示す',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体軟組織について誤っているのはどれか。',
@@ -629,7 +564,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '外力を負荷すると時間とともにひずみが増加する',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体の磁気特性について誤っているのはどれか。',
@@ -641,7 +575,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '脱酸素化ヘモグロビンは常磁性体である',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体組織の光特性について正しいのはどれか。',
@@ -653,7 +586,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '眼底での可視光の吸収はない',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '医療機器の安全性試験について誤っているのはどれか。',
@@ -665,7 +597,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '物性試験が行われる',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 34回(PM) */
   {
@@ -678,14 +609,12 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '興奮持続時間 -------- 1秒程度',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '埋植した材料に対する慢性局所反応で正しいのはどれか。\na 血栓形成 \nb 肉芽形成 \nc 石灰化 \nd アナフィラキシー \ne 補体活性化',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '医用材料の滅菌で正しいのはどれか。',
@@ -697,14 +626,12 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '濾過滅菌はウイルスの除去に用いられる',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '埋植した材料に対する慢性局所反応で正しいのはどれか。\na 血栓形成 \nb 肉芽形成 \nc 石灰化 \nd アナフィラキシー \ne 補体活性化',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '形状記憶機能をもつのはどれか。',
@@ -716,7 +643,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'コバルト-クロム合金',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 35回(AM) */
   {
@@ -729,14 +655,12 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'β分散は約20GHzで生じる',
     ],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '正しいのはどれか。\na 2000Hzの音波は超音波である \nb 頭蓋骨を伝わる音速は約1500m/sである \nc 音響インピーダンスは密度と音速の積である \nd 音波は音響インピーダンスの異なる組織の境界面で反射する \ne 骨の音響インピーダンスは筋肉より大きい',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '放射線の単位で誤っているのはどれか。',
@@ -748,34 +672,29 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'X線のエネルギー eV',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '体表面からの熱放散でないのはどれか。',
     options: ['放射', '散乱', '伝導', '対流', '蒸散'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '材料と生体との相互作用において急性反応はどれか。 \na カプセル化 \nb 石灰化 \nc 肉芽形成 \nd 補体活性化 \ne ショック',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体活性材料はどれか。\na アルミナ \nb ジルコニア \nc リン酸三カルシウム \nd バイオガラス \ne パイロライトカーボン',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 35回(PM) */
   {
     question: '放射線感受性の最も高い組織はどれか。',
     options: ['骨髄', '神経', '血管', '心筋', '脂肪'],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体の光特性で正しいのはどれか。',
@@ -787,7 +706,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'デオキシヘモグロビンは可視光より近赤外線の吸収が大きい',
     ],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '医療機器の安全性試験として含まれていないのはどれか。',
@@ -799,7 +717,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '生物学的試験',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体内における材料の劣化に影響しないのはどれか。',
@@ -811,7 +728,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '酵素反応',
     ],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: 'シリコーン(silicone)について正しいのはどれか。',
@@ -823,7 +739,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '可塑性である',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 36回(AM) */
   {
@@ -836,14 +751,12 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '肝臓<血液<脂肪',
     ],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '組織を構成する主な線維について正しい組合せはどれか。\na 骨の基質アクチン \nb 関節軟骨ミオシン \nc 骨格筋ケラチン \nd 血管の外膜コラーゲン \ne 血管の中膜エラスチン',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '体表から非接触で体温を測定するときに用いるのはどれか。',
@@ -855,28 +768,24 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'スネルの法則',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体内における物質の移動に関わる現象で正しい組合せはどれか。\na 腎臓における水分の再吸収拡散 \nb 腎糸球体での物質移動濾過 \nc 肺胞から血液への酸素の移動拡散 \nd 毛細血管壁から血管外への水分移動対流 \ne 細胞内から細胞外へのNa+の移動浸透',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '不動態について正しいのはどれか。\na チタン合金に形成される \nb ステンレス鋼に形成される \nc 酸化被膜である \nd 形状記憶効果を示す \ne 熱硬化性をもつ',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '分子間力に関連するのはどれか。\na ファンデルワールス力 \nb 共有結合 \nc 金属結合 \nd イオン結合 \ne 水素結合',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 36回(PM) */
   {
@@ -884,20 +793,17 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '値が上昇すると血液の粘性率が低下するのはどれか。\na 温度 \nb 電解質濃度 \nc タンパク質濃度 \nd ヘマトクリット値 \ne 血流のせん断速度',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生物への影響を考慮した放射線量を示す単位はどれか。',
     options: ['Bq', 'C/kg', 'Sv', 'Gy', 'eV'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体の光特性について正しいのはどれか。\na メラニンは紫外光よりも可視光の吸収が大きい \nb 脂質はタンパク質に比べ紫外光の吸収が大きい \nc 水は可視光よりも赤外光の吸収が大きい \nd 核酸は可視光よりも紫外光の吸収が大きい \ne ヘモグロビンは赤外光よりも可視光の吸収が大きい',
     options: ['a b c', ' a b e', 'a d e', 'b c d', 'c d e'],
     answerIndex: 4,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '医療機器の生物学的安全性評価で誤っているのはどれか。',
@@ -909,7 +815,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '生体と接触する部位で分類される',
     ],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '血液と医用材料が接触したとき、最初に起こるのはどれか。',
@@ -921,7 +826,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '石灰化',
     ],
     answerIndex: 0,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '人工肺のハウジング（外筒）に使われる材料はどれか。',
@@ -933,7 +837,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       'ポリビニルアルコール',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   /** 問題数が足りなかっため追加 */
   {
@@ -941,14 +844,12 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '放射線に対して同じ被曝線量における発がんや遺伝的影響の少ない(組織加重係数の小さい)組織はどれか。',
     options: ['肺', '脳', '結 腸', '生殖腺', '赤色骨髄'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '周波数が1MHz程度の超音波を照射したとき、吸収係数が最も大きい組織はどれか。',
     options: ['脂 肪', '筋 肉', '脳', '骨', '血 液'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '生体組織の光学特性について誤っているのはどれか。',
@@ -960,7 +861,6 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '眼球内の可視光の吸収は小さい',
     ],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question: '正しい組合せはどれか。',
@@ -972,34 +872,29 @@ export const biologicalMaterialScienceAndEngineering: QuizData[] = [
       '血液透析膜 -------- ポリジメチルシロキサン',
     ],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '生体へ埋植後、材料に生じうる反応はどれか。\na 腐 食 \nb アナフィラキシー \nc 溶 血 \nd 壊 死 \ne 加水分解',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 1,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '共有結合結晶について正しいのはどれか。\na 反応性に富む \nb 電子を共有する \nc 沸点が高い \nd 融点が低い \ne 軟らかい',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '医療機器の安全性試験(生物学的試験)の第一次評価に含まれない試験項目はどれか。',
     options: ['血液適合性', '埋 植', '生分解性', '感 作', '細胞毒性'],
     answerIndex: 2,
-    tags: [TAGS_TEXT.bmse],
   },
   {
     question:
       '体外循環時に起こりうる生体反応はどれか。\na 癌 化 \nb カプセル化 \nc 血液凝固 \nd 補体活性化 \ne 石灰化',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
     answerIndex: 3,
-    tags: [TAGS_TEXT.bmse],
   },
 ];
