@@ -9,7 +9,7 @@ type userState = {
 const settingsInitialState: userState = {
   totalQuestion: 10,
   timeLimit: 300,
-  soundEffect: 4,
+  soundEffect: 3,
 };
 
 export const settingsSlice = createSlice({
