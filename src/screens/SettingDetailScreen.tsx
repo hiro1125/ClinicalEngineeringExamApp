@@ -21,13 +21,19 @@ type RouteProps = {
   route: RouteProp<RootStackParamList, 'SettingDetailScreen'>;
 };
 
+type ListItemProps = {
+  text: string;
+  id: number;
+  check: boolean;
+};
+
 const SettingDetailScreen: FC<Props & RouteProps> = ({ navigation, route }) => {
   const dispatch = useRootDispatch();
   const { data } = route.params;
   const conversionData = settingAdaptor(data);
   const checkListData = conversionData.data;
 
-  const renderItem: ListRenderItem<any> = ({ item, index }) => {
+  const renderItem: ListRenderItem<ListItemProps> = ({ item, index }) => {
     return (
       <TouchableOpacity
         key={index}

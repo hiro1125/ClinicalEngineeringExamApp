@@ -25,7 +25,7 @@ export const settingAdaptor = (data: SettingItem) => {
         text: item.text,
         check: item.id === timeLimitValue,
       };
-    } else if (data.label === LABEL.SOUND_EFFECTS) {
+    } else {
       return {
         id: item.id,
         text: item.text,

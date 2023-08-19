@@ -21,7 +21,7 @@ export type RootStackParamList = {
   IntroductionToMedicineTest: undefined;
   Result: undefined;
   SettingScreen: undefined;
-  SettingDetailScreen: { data: any };
+  SettingDetailScreen: { data: SettingItem };
 };
 
 export type Props = {
