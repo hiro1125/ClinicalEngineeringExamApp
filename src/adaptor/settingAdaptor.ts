@@ -13,25 +13,18 @@ export const settingAdaptor = (data: SettingItem) => {
   );
 
   const compilationData = data.data.map((item: SettingItemProps) => {
-    if (data.label === LABEL.NUMBER_OF_QUESTIONS) {
-      return {
-        id: item.id,
-        text: item.text,
-        check: item.id === totalQuestionValue,
-      };
-    } else if (data.label === LABEL.QUESTION_TIME_LIMIT) {
-      return {
-        id: item.id,
-        text: item.text,
-        check: item.id === timeLimitValue,
-      };
-    } else {
-      return {
-        id: item.id,
-        text: item.text,
-        check: item.id === soundEffectValue,
-      };
-    }
+    const getCheckValue =
+      (data.label === LABEL.NUMBER_OF_QUESTIONS &&
+        item.id === totalQuestionValue) ||
+      (data.label === LABEL.QUESTION_TIME_LIMIT &&
+        item.id === timeLimitValue) ||
+      item.id === soundEffectValue;
+
+    return {
+      id: item.id,
+      text: item.text,
+      check: getCheckValue,
+    };
   });
 
   const newCompilationData = {
