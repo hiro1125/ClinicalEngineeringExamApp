@@ -86,7 +86,7 @@ export const settingData: SettingData[] = [
   },
 ];
 
-// /** Home画面 */
+/** Home画面 */
 export const startButton: RouteButton[] = [
   {
     title: BUTTON_TEXT.START,
@@ -106,7 +106,7 @@ export const questionTestButton: RouteButton[] = [
   },
 ];
 
-// /** ExamMenu画面 */
+/** ExamMenu画面 */
 export const examMenuButton: RouteButton[] = [
   {
     title: BUTTON_TITLE.BY_FIELD,
@@ -123,7 +123,7 @@ export const examMenuButton: RouteButton[] = [
   },
 ];
 
-// /** ByField画面 */
+/** ByField画面 */
 export const byFieldButton: RouteButton[] = [
   {
     title: BUTTON_TITLE.INTRODUCTION_TO_MEDICINE,
