@@ -1,11 +1,10 @@
 import { FC } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { examMenuButton } from '../contents';
+import { BUTTON_TEXT } from '../contents';
 import { shuffle } from 'lodash';
-import { QuizData, RouteButton } from '../../types/type';
+import { QuizData } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
-import { useRootDispatch, useRootSelector } from '../redux/store/store';
-import { setQuizDate } from '../redux/slices/quizSlice';
+import { useRootSelector } from '../redux/store/store';
 import { FONTSIZE } from '../styles';
 
 type GameRestartScreenProps = {
@@ -25,11 +24,12 @@ const TimeOverScreen: FC<GameRestartScreenProps> = ({
   setScore,
   setShuffledQuestions,
 }) => {
-  const dispatch = useRootDispatch();
   const quizData = useRootSelector((state) => state.quiz.quizData);
+
   const totalQuestionValue = useRootSelector(
     (state) => state.settings.totalQuestion
   );
+
   const timeLimitValue = useRootSelector((state) => state.settings.timeLimit);
 
   const handleResumeButtonPress = () => {
@@ -45,12 +45,11 @@ const TimeOverScreen: FC<GameRestartScreenProps> = ({
   };
 
   const navigation = useNavigation();
-  const handleNavigation = (navigationName: string) => {
-    navigation.navigate(navigationName as never);
+
+  const handleNavigation = () => {
+    navigation.goBack();
+    setShuffledQuestions(shuffle(quizData).slice(0, totalQuestionValue));
   };
-  const byFieldMenuButtons = examMenuButton.filter(
-    (button: RouteButton) => button.navigationName === 'ByField'
-  );
 
   return (
     <View style={styles.resultContainer}>
@@ -69,18 +68,11 @@ const TimeOverScreen: FC<GameRestartScreenProps> = ({
       >
         <Text style={styles.playButtonText}>最初からプレイする</Text>
       </TouchableOpacity>
-      {byFieldMenuButtons.map((button, index) => (
-        <TouchableOpacity
-          key={index}
-          style={styles.byFieldButton}
-          onPress={() => {
-            handleNavigation(button.navigationName);
-            dispatch(setQuizDate([]));
-          }}
-        >
-          <Text style={styles.playButtonText}>{button.title}に戻る</Text>
-        </TouchableOpacity>
-      ))}
+      <TouchableOpacity style={styles.byFieldButton} onPress={handleNavigation}>
+        <Text style={styles.playButtonText}>
+          スタート画面に{BUTTON_TEXT.RETURN}
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
