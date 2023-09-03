@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -38,7 +38,14 @@ const ResultScreen: FC<Props> = ({ score, setShuffledQuestions }) => {
         <Text style={styles.score}>
           あなたのスコアは{totalQuestionValue}問中{score}問です。
         </Text>
-        <Button title={BUTTON_TEXT.RETURN} onPress={handleNavigation} />
+        <TouchableOpacity
+          style={styles.byFieldButton}
+          onPress={handleNavigation}
+        >
+          <Text style={styles.playButtonText}>
+            スタート画面に{BUTTON_TEXT.RETURN}
+          </Text>
+        </TouchableOpacity>
       </View>
     </LinearGradient>
   );
@@ -68,15 +75,16 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     color: '#333333',
   },
-  button: {
+  byFieldButton: {
     backgroundColor: '#2d82a8',
-    borderRadius: 8,
-    paddingHorizontal: 32,
-    paddingVertical: 12,
+    paddingVertical: 15,
+    paddingHorizontal: 35,
+    borderRadius: 10,
+    marginTop: 10,
   },
-  buttonText: {
-    fontSize: 16,
+  playButtonText: {
+    color: '#fff',
     fontWeight: 'bold',
-    color: '#FFFFFF',
+    textAlign: 'center',
   },
 });
