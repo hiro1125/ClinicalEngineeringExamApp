@@ -86,7 +86,8 @@ export default QuizQuestionCard;
 const styles = StyleSheet.create({
   returnContainer: {
     alignItems: 'flex-start',
-    marginLeft: 10,
+    marginTop: SIZE.BASIC_HIGHT * 2,
+    marginLeft: SIZE.BASIC_WIDTH * 2,
   },
   byFieldButton: {
     backgroundColor: '#2d82a8',
