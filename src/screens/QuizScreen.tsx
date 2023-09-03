@@ -53,7 +53,10 @@ const QuizScreen: FC<Props> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {showResultScreen ? (
-        <ResultScreen score={score} />
+        <ResultScreen
+          score={score}
+          setShuffledQuestions={setShuffledQuestions}
+        />
       ) : timer > 0 ? (
         <QuizQuestionCard
           shuffledQuestions={shuffledQuestions}

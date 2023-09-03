@@ -1,31 +1,32 @@
 import React, { FC } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { examMenuButton } from '../contents';
 import { useNavigation } from '@react-navigation/native';
 import { Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
-import { RouteButton } from '../../types/type';
 import { FONTSIZE } from '../styles';
+import { shuffle } from 'lodash';
 import { useRootSelector } from '../redux/store/store';
+import { QuizData } from '../../types/type';
+import { BUTTON_TEXT } from '../contents';
 
 type Props = {
   score: number;
+  setShuffledQuestions: (questions: QuizData[]) => void;
 };
 
-const ResultScreen: FC<Props> = ({ score }) => {
+const ResultScreen: FC<Props> = ({ score, setShuffledQuestions }) => {
   const navigation = useNavigation();
 
-  const handleNavigation = (navigationName: string) => {
-    navigation.navigate(navigationName as never);
-  };
-
-  const byFieldMenuButtons = examMenuButton.filter(
-    (button: RouteButton) => button.navigationName === 'ByField'
-  );
+  const quizData = useRootSelector((state) => state.quiz.quizData);
 
   const totalQuestionValue = useRootSelector(
     (state) => state.settings.totalQuestion
   );
+
+  const handleNavigation = () => {
+    navigation.goBack();
+    setShuffledQuestions(shuffle(quizData).slice(0, totalQuestionValue));
+  };
 
   return (
     <LinearGradient
@@ -37,13 +38,7 @@ const ResultScreen: FC<Props> = ({ score }) => {
         <Text style={styles.score}>
           あなたのスコアは{totalQuestionValue}問中{score}問です。
         </Text>
-        {byFieldMenuButtons.map((button, index) => (
-          <Button
-            key={index}
-            title={button.title}
-            onPress={() => handleNavigation(button.navigationName)}
-          />
-        ))}
+        <Button title={BUTTON_TEXT.RETURN} onPress={handleNavigation} />
       </View>
     </LinearGradient>
   );
