@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { FONTSIZE } from '../styles';
 import { shuffle } from 'lodash';
