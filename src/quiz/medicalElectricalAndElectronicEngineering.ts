@@ -260,7 +260,7 @@ export const medicalElectricalAndElectronicEngineering: QuizData[] = [
     question:
       '正しいのはどれか。\na. 理想ダイオードの順方向抵抗は無限大である \nb. バイポーラトランジスタは電圧制御素子である \nc. ピエゾ効果が大きい半導体は磁気センサに利用される \nd. FETのn形チャネルの多数キャリアは電子である \ne. CMOS回路はバイポーラトランジスタ回路よりも消費電力が少ない',
     options: ['a b', 'a e', 'b c', 'c d', 'd e'],
-    answerIndex: 5,
+    answerIndex: 4,
   },
   {
     question:

@@ -379,14 +379,14 @@ export const medDevSafety: QuizData[] = [
     question:
       '医用電気機器が外部から電磁波を受けた場合、本来の機能を維持できる能力(妨害排除能力)を意味するのはどれか。',
     options: ['EMC', 'EMI', 'ESD', 'emission', 'immunity'],
-    answerIndex: 5,
+    answerIndex: 4,
   },
   /** 32回(PM) */
   {
     question:
       'ME機器の表示光で「操作者による即時の対処が必要」を意味する色はどれか。',
     options: ['青', '黄', '緑', '橙', '赤'],
-    answerIndex: 5,
+    answerIndex: 4,
   },
   {
     question:
@@ -416,7 +416,7 @@ export const medDevSafety: QuizData[] = [
     question:
       '内容積10Lの酸素ボンベの圧力調整器が5MPaを示しているとき、酸素ガスのおよその残量[L]はどれか。',
     options: ['50', '150', '200', '500', '1500'],
-    answerIndex: 5,
+    answerIndex: 4,
   },
   {
     question:
