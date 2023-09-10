@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   },
   restartButton: {
     ...COMMON_BUTTON_STYLE,
-    backgroundColor: '##c0392b',
+    backgroundColor: '#c0392b',
   },
   byFieldButton: {
     ...COMMON_BUTTON_STYLE,
