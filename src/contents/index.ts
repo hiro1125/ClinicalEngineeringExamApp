@@ -37,6 +37,7 @@ export const LABEL = {
   NUMBER_OF_QUESTIONS: '問題数の設定',
   QUESTION_TIME_LIMIT: '問題時間の設定',
   SOUND_EFFECTS: '効果音の設定',
+  ENQUIRY: 'お問い合わせ',
 };
 
 export const settingData: SettingData[] = [
@@ -81,6 +82,10 @@ export const settingData: SettingData[] = [
           { id: 3, text: '両方効果音を出す' },
           { id: 4, text: '両方効果音なし' },
         ],
+      },
+      {
+        label: LABEL.ENQUIRY,
+        data: [{ id: 1, text: 'アプリに関するお問い合わせはこちら' }],
       },
     ],
   },

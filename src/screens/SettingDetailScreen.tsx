@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import {
   FlatList,
+  Linking,
   ListRenderItem,
   SafeAreaView,
   StyleSheet,
@@ -16,6 +17,7 @@ import { onSettingPress } from '../function';
 import { settingAdaptor } from '../adaptor/settingAdaptor';
 import { Props, RootStackParamList } from '../../types/type';
 import { RouteProp } from '@react-navigation/native';
+import { LABEL } from '../contents';
 
 type RouteProps = {
   route: RouteProp<RootStackParamList, 'SettingDetailScreen'>;
@@ -34,6 +36,13 @@ const SettingDetailScreen: FC<Props & RouteProps> = ({ navigation, route }) => {
   const conversionData = settingAdaptor(data);
   const checkListData = conversionData.data;
 
+  const handlePress = () => {
+    const contactFormURL =
+      'https://clinical-engineering-exam-app-hp.vercel.app/EnquiryForm';
+
+    Linking.openURL(contactFormURL);
+  };
+
   const renderItem: ListRenderItem<ListItemProps> = ({ item, index }) => {
     return (
       <TouchableOpacity
@@ -41,7 +50,11 @@ const SettingDetailScreen: FC<Props & RouteProps> = ({ navigation, route }) => {
         style={styles.itemContainer}
         onPress={() => {
           onSettingPress({ dispatch, label: conversionData.label, item });
-          navigation.goBack();
+          if (conversionData.label === LABEL.ENQUIRY) {
+            handlePress();
+          } else {
+            navigation.goBack();
+          }
         }}
       >
         <Feather
