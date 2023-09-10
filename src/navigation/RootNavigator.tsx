@@ -1,4 +1,7 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {
+  NativeStackNavigationOptions,
+  createNativeStackNavigator,
+} from '@react-navigation/native-stack';
 import { Props, RootStackParamList } from '../../types/type';
 import {
   BUTTON_TITLE,
@@ -8,7 +11,7 @@ import {
   startButton,
 } from '../contents';
 import AppScreen from '../screens/AppScreen';
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 import { LinearGradient } from 'expo-linear-gradient';
 import { color } from '../styles';
@@ -30,6 +33,17 @@ import SettingDetailScreen from '../screens/SettingDetailScreen';
 import QuizScreen from '../screens/QuizScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+
+const options: NativeStackNavigationOptions =
+  Platform.OS === 'ios'
+    ? {
+        headerShown: false,
+        presentation: 'fullScreenModal',
+      }
+    : {
+        headerShown: false,
+        animation: 'slide_from_right',
+      };
 
 export const RootNavigator = () => {
   return (
@@ -56,67 +70,67 @@ export const RootNavigator = () => {
       <Stack.Screen
         name='RandomTest'
         component={RandomTestScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='IntroductionToMedicine'
         component={IntroductionToMedicineScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='ClinicalMedicineOverview'
         component={ClinicalMedicineOverviewScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='BiomedicalMeasurementInstrumentation'
         component={BiomedicalMeasurementInstrumentationScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='MedicalTherapeuticEquipment'
         component={MedicalTherapeuticEquipmentScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='MedDevSafety'
         component={MedDevSafetyScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='MedicalElectricalAndElectronicEngineering'
         component={MedicalElectricalAndElectronicEngineeringScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='BiologicalFunctionSubstitutionEquipment'
         component={BiologicalFunctionSubstitutionEquipmentScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='MedicalMechanicalEngineering'
         component={MedicalMechanicalEngineeringScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='BiologicalMaterialScienceAndEngineering'
         component={BiologicalMaterialScienceAndEngineeringScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='QuestionTest'
         component={QuestionTestScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='SettingScreen'
         component={SettingScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
       <Stack.Screen
         name='SettingDetailScreen'
         component={SettingDetailScreen}
-        options={{ headerShown: false, presentation: 'fullScreenModal' }}
+        options={options}
       />
     </Stack.Navigator>
   );
