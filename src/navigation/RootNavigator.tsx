@@ -136,7 +136,7 @@ export const RootNavigator = () => {
   );
 };
 
-/** Home画面 */
+/** TOP画面 */
 export const HomeScreen = ({ navigation }: Props) => {
   const dispatch = useRootDispatch();
   useEffect(() => {
@@ -183,7 +183,7 @@ export const HomeScreen = ({ navigation }: Props) => {
   );
 };
 
-/** ExamMenu画面 */
+/** 試験選択画面 */
 export const ExamMenuScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
@@ -197,7 +197,7 @@ export const ExamMenuScreen = ({ navigation }: Props) => {
   );
 };
 
-/** ByField画面 */
+/** 分野別選択画面 */
 export const ByFieldScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
@@ -210,7 +210,7 @@ export const ByFieldScreen = ({ navigation }: Props) => {
   );
 };
 
-/** NinetyQuestionTest画面 */
+/** ランダムテストのスタート画面 */
 export const RandomTestScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
@@ -224,7 +224,7 @@ export const RandomTestScreen = ({ navigation }: Props) => {
   );
 };
 
-/** IntroductionToMedicine画面 */
+/** 医学概論のスタート画面 */
 export const IntroductionToMedicineScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
@@ -238,7 +238,7 @@ export const IntroductionToMedicineScreen = ({ navigation }: Props) => {
   );
 };
 
-/** ClinicalMedicineOverview画面 */
+/** 臨床医学総論のスタート画面 */
 export const ClinicalMedicineOverviewScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
@@ -252,7 +252,7 @@ export const ClinicalMedicineOverviewScreen = ({ navigation }: Props) => {
   );
 };
 
-/** BiomedicalMeasurementInstrumentation画面 */
+/** 生体計測装置学のスタート画面 */
 export const BiomedicalMeasurementInstrumentationScreen = ({
   navigation,
 }: Props) => {
@@ -268,7 +268,7 @@ export const BiomedicalMeasurementInstrumentationScreen = ({
   );
 };
 
-/** MedicalTherapeuticEquipment画面 */
+/** 医用治療機器学のスタート画面 */
 export const MedicalTherapeuticEquipmentScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
@@ -282,7 +282,7 @@ export const MedicalTherapeuticEquipmentScreen = ({ navigation }: Props) => {
   );
 };
 
-/** MedDevSafety画面 */
+/** 医用機器安全管理学のスタート画面 */
 export const MedDevSafetyScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
@@ -296,7 +296,7 @@ export const MedDevSafetyScreen = ({ navigation }: Props) => {
   );
 };
 
-/** MedicalElectricalAndElectronicEngineering画面 */
+/** 医用電気電子工学のスタート画面 */
 export const MedicalElectricalAndElectronicEngineeringScreen = ({
   navigation,
 }: Props) => {
@@ -312,7 +312,7 @@ export const MedicalElectricalAndElectronicEngineeringScreen = ({
   );
 };
 
-/** BiologicalFunctionSubstitutionEquipment画面 */
+/** 生体機能代行装置学のスタート画面 */
 export const BiologicalFunctionSubstitutionEquipmentScreen = ({
   navigation,
 }: Props) => {
@@ -328,7 +328,7 @@ export const BiologicalFunctionSubstitutionEquipmentScreen = ({
   );
 };
 
-/** MedicalMechanicalEngineering画面 */
+/** 医用機械工学のスタート画面 */
 export const MedicalMechanicalEngineeringScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
@@ -342,7 +342,7 @@ export const MedicalMechanicalEngineeringScreen = ({ navigation }: Props) => {
   );
 };
 
-/** BiologicalMaterialScienceAndEngineering画面 */
+/** 生体物性材料工学のスタート画面 */
 export const BiologicalMaterialScienceAndEngineeringScreen = ({
   navigation,
 }: Props) => {

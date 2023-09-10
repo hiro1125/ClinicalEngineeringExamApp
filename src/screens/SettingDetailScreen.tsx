@@ -27,6 +27,7 @@ type ListItemProps = {
   check: boolean;
 };
 
+/** 設定の詳細画面 */
 const SettingDetailScreen: FC<Props & RouteProps> = ({ navigation, route }) => {
   const dispatch = useRootDispatch();
   const { data } = route.params;

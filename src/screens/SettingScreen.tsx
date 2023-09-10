@@ -15,6 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Text } from 'react-native-elements';
 import Header from '../components/Header';
 
+/** 設定画面 */
 const SettingScreen: FC<Props> = ({ navigation }) => {
   const renderItem: ListRenderItem<SettingData> = ({ item, index }) => {
     return (
