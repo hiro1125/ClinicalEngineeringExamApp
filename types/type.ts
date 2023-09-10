@@ -17,7 +17,7 @@ export type RootStackParamList = {
   BiologicalFunctionSubstitutionEquipment: undefined;
   MedicalMechanicalEngineering: undefined;
   BiologicalMaterialScienceAndEngineering: undefined;
-  NinetyQuestionTest: undefined;
+  RandomTest: undefined;
   IntroductionToMedicineTest: undefined;
   Result: undefined;
   SettingScreen: undefined;
@@ -34,7 +34,7 @@ export type RouteButton = {
     | 'Home'
     | 'ExamMenu'
     | 'ByField'
-    | 'NinetyQuestionTest'
+    | 'RandomTest'
     | 'QuestionTest'
     | 'IntroductionToMedicine'
     | 'ClinicalMedicineOverview'

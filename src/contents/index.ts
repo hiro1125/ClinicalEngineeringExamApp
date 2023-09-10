@@ -114,7 +114,7 @@ export const examMenuButton: RouteButton[] = [
   },
   {
     title: BUTTON_TITLE.RANDOM_TEST,
-    navigationName: 'NinetyQuestionTest',
+    navigationName: 'RandomTest',
     quizData: randomTest,
   },
   {

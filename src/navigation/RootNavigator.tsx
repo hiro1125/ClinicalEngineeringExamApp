@@ -54,8 +54,8 @@ export const RootNavigator = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name='NinetyQuestionTest'
-        component={NinetyQuestionTestScreen}
+        name='RandomTest'
+        component={RandomTestScreen}
         options={{ headerShown: false, presentation: 'fullScreenModal' }}
       />
       <Stack.Screen
@@ -197,7 +197,7 @@ export const ByFieldScreen = ({ navigation }: Props) => {
 };
 
 /** NinetyQuestionTest画面 */
-export const NinetyQuestionTestScreen = ({ navigation }: Props) => {
+export const RandomTestScreen = ({ navigation }: Props) => {
   return (
     <LinearGradient colors={color} style={styles.linearGradient}>
       <AppScreen
