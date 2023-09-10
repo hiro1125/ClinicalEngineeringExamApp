@@ -5,7 +5,7 @@ import { shuffle } from 'lodash';
 import { QuizData } from '../../types/type';
 import { useNavigation } from '@react-navigation/native';
 import { useRootSelector } from '../redux/store/store';
-import { FONTSIZE } from '../styles';
+import { COMMON_BUTTON_STYLE, FONTSIZE, SIZE } from '../styles';
 
 type GameRestartScreenProps = {
   score: number;
@@ -91,22 +91,16 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   resumeButton: {
+    ...COMMON_BUTTON_STYLE,
     backgroundColor: '#27ae60',
-    padding: 15,
-    borderRadius: 10,
-    marginBottom: 10,
   },
   restartButton: {
-    backgroundColor: '#c0392b',
-    padding: 15,
-    borderRadius: 10,
+    ...COMMON_BUTTON_STYLE,
+    backgroundColor: '##c0392b',
   },
   byFieldButton: {
+    ...COMMON_BUTTON_STYLE,
     backgroundColor: '#2d82a8',
-    paddingVertical: 15,
-    paddingHorizontal: 35,
-    borderRadius: 10,
-    marginTop: 10,
   },
   playButtonText: {
     color: '#fff',

@@ -23,3 +23,10 @@ export const FONTSIZE = {
   SIZE25PX: RFPercentage(3.5),
   SIZE32PX: RFPercentage(4.2),
 };
+
+export const COMMON_BUTTON_STYLE = {
+  paddingVertical: 15,
+  paddingHorizontal: 35,
+  borderRadius: 10,
+  marginTop: SIZE.BASIC_HIGHT * 2,
+};
