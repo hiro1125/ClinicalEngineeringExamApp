@@ -12,6 +12,7 @@ export const SIZE = {
 };
 
 export const FONTSIZE = {
+  SIZE5PX: RFPercentage(1.0),
   SIZE14PX: RFPercentage(1.9),
   SIZE15PX: RFPercentage(2.0),
   SIZE16PX: RFPercentage(2.2),

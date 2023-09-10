@@ -6,6 +6,7 @@ import {
   StyleSheet,
   SafeAreaView,
   Alert,
+  Platform,
 } from 'react-native';
 import { Props, QuizData } from '../../types/type';
 import { BUTTON_TEXT } from '../contents';
@@ -112,11 +113,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
-    width: SIZE.BASIC_WIDTH * 94,
-    height: SIZE.BASIC_HIGHT * 38,
+    width:
+      Platform.OS === 'android' ? SIZE.BASIC_WIDTH * 94 : SIZE.BASIC_WIDTH * 90,
+    height:
+      Platform.OS === 'android' ? SIZE.BASIC_HIGHT * 44 : SIZE.BASIC_HIGHT * 38,
     borderRadius: 15,
     backgroundColor: 'white',
-    fontSize: FONTSIZE.SIZE14PX,
+    fontSize: FONTSIZE.SIZE5PX,
     textAlign: 'center',
     textTransform: 'capitalize',
     shadowColor: '#aaa',
@@ -127,6 +130,7 @@ const styles = StyleSheet.create({
     marginBottom: SIZE.BASIC_HIGHT * 1,
     marginRight: SIZE.BASIC_WIDTH * 2,
     marginLeft: SIZE.BASIC_WIDTH * 2,
+    margin: SIZE.BASIC_HIGHT * 0.2,
   },
   questionText: {
     fontSize: FONTSIZE.SIZE16PX,
