@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import {
   FlatList,
-  Linking,
   ListRenderItem,
   SafeAreaView,
   StyleSheet,
@@ -36,13 +35,6 @@ const SettingDetailScreen: FC<Props & RouteProps> = ({ navigation, route }) => {
   const conversionData = settingAdaptor(data);
   const checkListData = conversionData.data;
 
-  const handlePress = () => {
-    const contactFormURL =
-      'https://clinical-engineering-exam-app-hp.vercel.app/EnquiryForm';
-
-    Linking.openURL(contactFormURL);
-  };
-
   const renderItem: ListRenderItem<ListItemProps> = ({ item, index }) => {
     return (
       <TouchableOpacity
@@ -50,11 +42,7 @@ const SettingDetailScreen: FC<Props & RouteProps> = ({ navigation, route }) => {
         style={styles.itemContainer}
         onPress={() => {
           onSettingPress({ dispatch, label: conversionData.label, item });
-          if (conversionData.label === LABEL.ENQUIRY) {
-            handlePress();
-          } else {
-            navigation.goBack();
-          }
+          navigation.goBack();
         }}
       >
         <Feather

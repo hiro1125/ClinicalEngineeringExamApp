@@ -10,6 +10,10 @@ import { medicalMechanicalEngineering } from '../quiz/medicalMechanicalEngineeri
 import { medicalTherapeuticEquipment } from '../quiz/medicalTherapeuticEquipment';
 import { randomTest } from '../quiz/randomTest';
 
+/** お問い合わせのURL */
+export const CONTACT_FORM_URL =
+  'https://clinical-engineering-exam-app-hp.vercel.app/EnquiryForm';
+
 /** 各ボタンで使用するテキスト */
 export const BUTTON_TEXT = {
   RETURN: '戻る',
@@ -37,7 +41,7 @@ export const LABEL = {
   NUMBER_OF_QUESTIONS: '問題数の設定',
   QUESTION_TIME_LIMIT: '問題時間の設定',
   SOUND_EFFECTS: '効果音の設定',
-  ENQUIRY: 'お問い合わせ',
+  ENQUIRY: 'アプリに関するお問い合わせはこちら',
 };
 
 export const settingData: SettingData[] = [

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import {
   FlatList,
+  Linking,
   ListRenderItem,
   SafeAreaView,
   StyleSheet,
@@ -9,7 +10,7 @@ import {
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Props, SettingData } from '../../types/type';
-import { settingData } from '../contents';
+import { CONTACT_FORM_URL, LABEL, settingData } from '../contents';
 import { FONTSIZE, SIZE, color } from '../styles';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Text } from 'react-native-elements';
@@ -24,7 +25,13 @@ const SettingScreen: FC<Props> = ({ navigation }) => {
           <TouchableOpacity
             key={index}
             style={styles.itemContainer}
-            onPress={() => navigation.navigate('SettingDetailScreen', { data })}
+            onPress={() => {
+              if (data.label === LABEL.ENQUIRY) {
+                Linking.openURL(CONTACT_FORM_URL);
+              } else {
+                navigation.navigate('SettingDetailScreen', { data });
+              }
+            }}
           >
             <Text h4 style={styles.subTitleText}>
               {data.label}
@@ -40,7 +47,6 @@ const SettingScreen: FC<Props> = ({ navigation }) => {
     <LinearGradient colors={color} style={styles.linearGradient}>
       <SafeAreaView style={{ flex: 1 }}>
         <Header navigation={navigation} title={'設定'} />
-
         <FlatList
           data={settingData}
           renderItem={renderItem}
