@@ -1,7 +1,7 @@
 {
   "expo": {
     "jsEngine": "jsc",
-    "name": "ClinicalEngineeringExamApp",
+    "name": "臨床工学技士国家試験",
     "slug": "ClinicalEngineeringExamApp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -14,9 +14,14 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "ppa.lecrev.ph-ppa-maxe-gnireenigne-lacinilc",
+      "buildNumber": "1.0.0"
     },
     "android": {
+      "package": "ppa.lecrev.ph-ppa-maxe-gnireenigne-lacinilc",
+      "versionCode": 1,
+      "permissions": [],
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon_adaptive_foreground.png",
         "backgroundImage": "./assets/icon_adaptive_background.png"
