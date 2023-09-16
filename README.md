@@ -4,10 +4,14 @@
 
 隙間時間に国家試験の勉強ができるスマホアプリです。
 
-![feature](https://github.com/hiro1125/Me-National-Exam-Preparation-App/assets/103874549/402d8f29-0b1d-4463-a506-651b3fb26cc5)
+![feature](https://github.com/hiro1125/ClinicalEngineeringExamApp/assets/103874549/bc97a9a8-cdb3-44bc-bce6-2e294d7f0ea5)
 
 ## ダウンロード
 
+【iOS】
+準備中・・・
+
+【Android】
 準備中・・・
 
 ## 背景
@@ -23,7 +27,7 @@
 
 ## 工夫点
 
-- ユーザーが制限時間や問題数を任意に設定できるようにしました。
+- PC 版には無いユーザーが制限時間や問題数を任意に設定できるようにしました。
 - ストレージを用いて、アプリをタスクキルしてもユーザーが設定した状態を保持できるようにしました。
 
 ## 使用技術一覧
