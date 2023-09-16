@@ -4,7 +4,7 @@
 
 隙間時間に国家試験の勉強ができるスマホアプリです。
 
-![feature](https://github.com/hiro1125/ClinicalEngineeringExamApp/assets/103874549/bc97a9a8-cdb3-44bc-bce6-2e294d7f0ea5)
+![feature](https://github.com/hiro1125/ClinicalEngineeringExamApp/assets/103874549/e63f051a-d2a2-4698-a154-31247c1dbec1)
 
 ## ダウンロード
 
