@@ -12,7 +12,7 @@
 準備中・・・
 
 【Android】
-準備中・・・
+https://play.google.com/store/apps/details?id=com.ponde.ClinicalEngineeringExamApp
 
 ## 背景
 
