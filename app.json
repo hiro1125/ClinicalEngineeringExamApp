@@ -12,14 +12,16 @@
       "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "ppa.lecrev.ph-ppa-maxe-gnireenigne-lacinilc",
       "buildNumber": "1.0.0"
     },
     "android": {
-      "package": "ppa.lecrev.ph-ppa-maxe-gnireenigne-lacinilc",
+      "package": "com.ponde.ClinicalEngineeringExamApp",
       "versionCode": 1,
       "permissions": [],
       "adaptiveIcon": {
@@ -29,6 +31,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d9022470-3e03-459a-9182-f04b692b4e24"
+      }
     }
   }
 }
