@@ -37,6 +37,7 @@ https://play.google.com/store/apps/details?id=com.ponde.ClinicalEngineeringExamA
   - React-Navigation v6.1.6
 - ReactNative v0.71.6
 - ReduxToolkit v1.9.5
+- TypeScript V4.9.4
 
 - 開発環境
   - MacBookAir(M1)
